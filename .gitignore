@@ -1,0 +1,27 @@
+# macOS / editor files
+.DS_Store
+.vscode/*.log
+.idea/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+
+# Training outputs and model checkpoints
+runs/
+wandb/
+outputs/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
