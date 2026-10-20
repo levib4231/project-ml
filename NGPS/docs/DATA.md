@@ -1,33 +1,26 @@
-# Data Format
+# Data Format and Isolation
 
-NGPS expects locally prepared volumes saved as NumPy arrays with shape:
-
-```text
-(D, H, W)
-```
-
-The values should be `float32` and normalized to `[0, 1]`.
-
-Use this folder structure:
+Training volumes are NumPy arrays with shape `(D,H,W)`, a floating dtype, finite
+values, and a declared normalization in `[0,1]`. The loader rejects invalid
+values; it does not silently clip them.
 
 ```text
 DATA_ROOT/
-  train/
-    noisy/
-      case001.npy
-      case002.npy
-    clean/        # optional for evaluation
-      case001.npy
-      case002.npy
-  val/
-    noisy/
-      case101.npy
-    clean/
-      case101.npy
+  train/noisy/*.npy
+  val/noisy/*.npy
 ```
 
-Clean volumes are not used during NGPS training. They are only used by
-`scripts/evaluate_volume.py`.
+Training inventory objects contain only a case ID and noisy path. A separate,
+explicit evaluation inventory may attach matching clean references. Clean
+volumes must not be used to train, build guides, select checkpoints, or tune
+hyperparameters unless a later approved protocol says otherwise.
 
-Medical datasets are not included in this repository. Please download and
-prepare datasets according to their original license and access terms.
+Random crops are derived from the configured seed, epoch, and sample index. The
+dataset caches at most one raw/guide volume pair per worker by default to bound
+memory use. Palmetto worker count and memory still require measurement before a
+full run.
+
+The files under `Data/Clean` are committed project artifacts whose source and
+license are unresolved. See [DATA_PROVENANCE.md](DATA_PROVENANCE.md). Do not
+identify them as IXI, redistribute them, or regenerate/delete them based only
+on filenames or converter comments.

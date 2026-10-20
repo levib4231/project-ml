@@ -58,7 +58,10 @@ class NeighborGuidedPatchSampler(nn.Module):
         shifted_guides = self._shift_stack(guide_neighbor)
         diff_sq = (guide_center - shifted_guides).pow(2)
         kernel = self.ssd_kernel.to(device=diff_sq.device, dtype=diff_sq.dtype)
-        return F.conv2d(diff_sq, kernel, padding=self.cfg.patch_size // 2, groups=self.num_shifts)
+        patch_pad = self.cfg.patch_size // 2
+        if patch_pad:
+            diff_sq = F.pad(diff_sq, (patch_pad, patch_pad, patch_pad, patch_pad), mode="reflect")
+        return F.conv2d(diff_sq, kernel, groups=self.num_shifts)
 
     @torch.no_grad()
     def forward_direction(

@@ -26,10 +26,10 @@ class NGPSConfig:
     nafnet_dec_blocks: Tuple[int, ...] = (2, 2, 2, 2)
 
     def __post_init__(self) -> None:
-        if self.patch_size % 2 != 1:
-            raise ValueError("patch_size must be odd.")
-        if self.search_window % 2 != 1:
-            raise ValueError("search_window must be odd.")
+        if self.patch_size < 1 or self.patch_size % 2 != 1:
+            raise ValueError("patch_size must be a positive odd integer.")
+        if self.search_window < 1 or self.search_window % 2 != 1:
+            raise ValueError("search_window must be a positive odd integer.")
         if self.topk < 1 or self.topk > self.search_window * self.search_window:
             raise ValueError("topk must be in [1, search_window ** 2].")
         if self.median_kernel % 2 != 1:
@@ -47,6 +47,20 @@ class TrainingConfig:
     weight_decay: float = 1e-5
     num_workers: int = 0
     seed: int = 42
+
+    def __post_init__(self) -> None:
+        if self.epochs < 1:
+            raise ValueError("epochs must be positive.")
+        if self.batch_size < 1:
+            raise ValueError("batch_size must be positive.")
+        if self.crop_size < 1:
+            raise ValueError("crop_size must be positive.")
+        if self.lr <= 0:
+            raise ValueError("lr must be positive.")
+        if self.weight_decay < 0:
+            raise ValueError("weight_decay must be non-negative.")
+        if self.num_workers < 0:
+            raise ValueError("num_workers must be non-negative.")
 
 
 def _update_dataclass(cls: type, values: Dict[str, Any]):

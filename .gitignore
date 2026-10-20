@@ -25,3 +25,9 @@ checkpoints/
 *.pt
 *.pth
 *.safetensors
+
+# Generated manifests and metric tables (curated manifests under NGPS/manifests are tracked)
+*.tmp
+validation.jsonl
+run_manifest.json
+corruption_manifest.json

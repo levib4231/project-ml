@@ -28,15 +28,15 @@ def _center_indices(depth: int, central_fraction: float, margin: int) -> List[in
     return list(range(lo, hi))
 
 
-def _crop(arrays: Sequence[np.ndarray], crop_size: int) -> List[np.ndarray]:
+def _crop(arrays: Sequence[np.ndarray], crop_size: int, rng: np.random.Generator) -> List[np.ndarray]:
     arrays = list(arrays)
     if crop_size <= 0:
         return arrays
     height, width = arrays[0].shape
     if height <= crop_size or width <= crop_size:
         return arrays
-    top = np.random.randint(0, height - crop_size + 1)
-    left = np.random.randint(0, width - crop_size + 1)
+    top = int(rng.integers(0, height - crop_size + 1))
+    left = int(rng.integers(0, width - crop_size + 1))
     return [arr[top : top + crop_size, left : left + crop_size] for arr in arrays]
 
 
@@ -50,11 +50,18 @@ class VolumeTripletDataset(Dataset):
         crop_size: int = 256,
         central_fraction: float = 1.0,
         cache_guides: bool = True,
+        seed: int = 42,
+        max_cached_volumes: int = 1,
     ) -> None:
         self.items = list(items)
         self.cfg = cfg
         self.crop_size = crop_size
         self.cache_guides = cache_guides
+        self.seed = int(seed)
+        self.epoch = 0
+        self.max_cached_volumes = int(max_cached_volumes)
+        if self.max_cached_volumes < 1:
+            raise ValueError("max_cached_volumes must be positive.")
         self.samples: List[Tuple[int, int]] = []
         self._raw_cache: Dict[Path, np.ndarray] = {}
         self._guide_cache: Dict[Path, np.ndarray] = {}
@@ -66,11 +73,18 @@ class VolumeTripletDataset(Dataset):
         if not self.samples:
             raise RuntimeError("No valid slice triplets were found.")
 
+    def set_epoch(self, epoch: int) -> None:
+        self.epoch = int(epoch)
+
     def __len__(self) -> int:
         return len(self.samples)
 
     def _raw(self, item: VolumeItem) -> np.ndarray:
         if item.noisy_path not in self._raw_cache:
+            if len(self._raw_cache) >= self.max_cached_volumes:
+                evicted = next(iter(self._raw_cache))
+                self._raw_cache.pop(evicted)
+                self._guide_cache.pop(evicted, None)
             self._raw_cache[item.noisy_path] = load_volume(item.noisy_path)
         return self._raw_cache[item.noisy_path]
 
@@ -88,6 +102,7 @@ class VolumeTripletDataset(Dataset):
         guide = self._guide(item, raw)
         prev_z, next_z = z - 1, z + 1
 
+        rng = np.random.default_rng(np.random.SeedSequence([self.seed, self.epoch, int(index)]))
         arrays = _crop(
             [
                 raw[z],
@@ -98,5 +113,6 @@ class VolumeTripletDataset(Dataset):
                 guide[next_z],
             ],
             self.crop_size,
+            rng,
         )
         return tuple(torch.from_numpy(np.ascontiguousarray(arr)).unsqueeze(0).float() for arr in arrays)
