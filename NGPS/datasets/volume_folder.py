@@ -36,10 +36,18 @@ def list_volume_items(data_root: str | Path, split: str) -> List[VolumeItem]:
     return items
 
 
-def load_volume(path: str | Path) -> np.ndarray:
-    """Load a float32 volume shaped (D, H, W), clipped to [0, 1]."""
+def validate_volume(volume: np.ndarray, *, unit_range: bool = False) -> np.ndarray:
+    """Strict validation; Gaussian observations/predictions are not range bounded."""
+    if volume.ndim != 3 or min(volume.shape) < 1:
+        raise ValueError(f"Expected nonempty (D, H, W), got {volume.shape}")
+    if volume.dtype != np.float32:
+        raise ValueError(f"Expected float32, got {volume.dtype}")
+    if not np.isfinite(volume).all():
+        raise ValueError("Volume contains non-finite values")
+    if unit_range and (volume.min() < 0 or volume.max() > 1):
+        raise ValueError("Clean data must be explicitly normalized to [0,1]; no clipping")
+    return volume
 
-    volume = np.load(path).astype(np.float32)
-    if volume.ndim != 3:
-        raise ValueError(f"Expected volume shaped (D, H, W), got {volume.shape}: {path}")
-    return np.clip(volume, 0.0, 1.0)
+
+def load_volume(path: str | Path, *, unit_range: bool = False) -> np.ndarray:
+    return validate_volume(np.load(path, allow_pickle=False), unit_range=unit_range)

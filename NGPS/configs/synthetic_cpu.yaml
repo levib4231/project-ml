@@ -1,0 +1,17 @@
+# Pipeline verification only, not a scientific hyperparameter recommendation.
+ngps:
+  patch_size: 3
+  search_window: 3
+  topk: 2
+  bilateral_d: 3
+  median_kernel: 3
+  nafnet_width: 4
+  nafnet_enc_blocks: [1]
+  nafnet_middle_blocks: 1
+  nafnet_dec_blocks: [1]
+training:
+  epochs: 1
+  batch_size: 2
+  crop_size: 12
+  num_workers: 0
+  seed: 42

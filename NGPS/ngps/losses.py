@@ -34,6 +34,12 @@ def masked_mse(
     normalize_by_active_pixels: bool = True,
     eps: float = 1e-8,
 ) -> torch.Tensor:
+    if pred.shape != target.shape:
+        raise ValueError(f"Prediction and target shapes must match: {pred.shape} != {target.shape}")
+    if mask.ndim != pred.ndim or mask.shape[0] != pred.shape[0] or mask.shape[2:] != pred.shape[2:]:
+        raise ValueError(f"Mask must have shape (B,1|C,H,W), got {mask.shape} for {pred.shape}")
+    if mask.shape[1] not in (1, pred.shape[1]):
+        raise ValueError(f"Mask channel dimension must be 1 or {pred.shape[1]}, got {mask.shape[1]}")
     mask = mask.to(device=pred.device, dtype=pred.dtype)
     if mask.shape != pred.shape:
         mask = mask.expand_as(pred)

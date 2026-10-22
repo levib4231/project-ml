@@ -4,47 +4,38 @@ import argparse
 from pathlib import Path
 import sys
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np
-import torch
-from tqdm import tqdm
 
-from ngps import build_nafnet
-from ngps.config import NGPSConfig
-
-
-def _to_bchw(slice_: np.ndarray, device: torch.device) -> torch.Tensor:
-    return torch.from_numpy(slice_.astype(np.float32)).unsqueeze(0).unsqueeze(0).to(device)
+from datasets.preparation import file_hash
+from datasets.volume_folder import load_volume
+from ngps.inference import infer_volume, load_model, timed_inference
+from ngps.provenance import provenance, write_json
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Denoise one .npy volume with a trained NGPS/NAFNet checkpoint.")
+def main():
+    parser = argparse.ArgumentParser(description="Unclipped complete-volume NAFNet inference")
     parser.add_argument("--checkpoint", required=True)
     parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
-    parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--device", default="cpu")
     args = parser.parse_args()
-
-    device = torch.device(args.device)
-    state = torch.load(args.checkpoint, map_location=device)
-    cfg_state = state.get("ngps_config", {})
-    cfg = NGPSConfig(**cfg_state) if isinstance(cfg_state, dict) else cfg_state
-    model = build_nafnet(cfg).to(device)
-    model.load_state_dict(state["model"])
-    model.eval()
-
-    volume = np.clip(np.load(args.input).astype(np.float32), 0.0, 1.0)
-    outputs = []
-    with torch.no_grad():
-        for z in tqdm(range(volume.shape[0]), desc="Infer"):
-            pred = model(_to_bchw(volume[z], device)).squeeze().cpu().numpy()
-            outputs.append(np.clip(pred.astype(np.float32), 0.0, 1.0))
-    output = np.stack(outputs, axis=0)
-    Path(args.output).parent.mkdir(parents=True, exist_ok=True)
-    np.save(args.output, output)
-    print(f"Saved denoised volume to {args.output}")
+    model, metadata = load_model(args.checkpoint, args.device)
+    result, seconds = timed_inference(lambda v: infer_volume(model, v, args.device),
+                                      load_volume(args.input), args.device)
+    output = Path(args.output)
+    if output.suffix != ".npy":
+        output = Path(str(output) + ".npy")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    # Hash inputs before writing; retain their identities even if paths later move.
+    checkpoint_hash, input_hash = file_hash(args.checkpoint), file_hash(args.input)
+    np.save(output, result)
+    write_json(str(output) + ".json", {**provenance(args.device), "inference_seconds": seconds,
+               "shape": list(result.shape), "checkpoint": str(Path(args.checkpoint).resolve()),
+               "checkpoint_sha256": checkpoint_hash, "input": str(Path(args.input).resolve()),
+               "input_sha256": input_hash, "prediction_sha256": file_hash(output),
+               "training": metadata, "manifest_hash": metadata["manifest_hash"], "clipping": False})
+    print(f"Saved {output}; complete-volume inference {seconds:.6f} s")
 
 
 if __name__ == "__main__":

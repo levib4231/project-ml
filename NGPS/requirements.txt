@@ -1,3 +1,5 @@
+# Optional source conversion: pip install nibabel h5py (see docs/DATA.md).
+# CPU CI installs torch from the official CPU wheel index first.
 numpy>=1.23
 scipy>=1.9
 opencv-python>=4.7

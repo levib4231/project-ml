@@ -1,171 +1,122 @@
 # NGPS: Neighbor-Guided Patch Sampling
 
-PyTorch implementation of **Neighbor-Guided Patch Sampling (NGPS)** for
-volumetric self-supervised denoising.
+Local correctness/reproducibility implementation for the CPSC T3 assignment in
+[levib4231/project-ml](https://github.com/levib4231/project-ml). A 2D NAFNet is
+trained on noisy adjacent slices, with guide-based matching for dynamic regions.
+This is **not** a verified reproduction of published results or a clinical tool.
 
-NGPS trains a 2D slice denoiser with neighboring slices while accounting for
-through-plane misalignment. During training, it builds pseudo-targets by:
-
-1. generating an edge-preserving BF+MF guide,
-2. detecting direction-aware static/dynamic regions,
-3. matching local guide patches across adjacent slices,
-4. retrieving Top-K raw neighboring pixels as dynamic-region targets, and
-5. optimizing a hybrid reconstruction and regional-consistency objective.
-
-At inference time, the trained model is a standard denoiser forward pass. There
-is no guide generation or patch search during deployment.
-
-## Repository Contents
-
-```text
-configs/                  YAML configs for NGPS, NS-N2N-style baseline, and demo
-datasets/                 Local .npy volume loaders and synthetic demo generator
-docs/                     Data format and method-code mapping
-examples/                 One-command demo scripts
-ngps/                     NGPS modules, NAFNet backbone, losses, metrics
-scripts/                  Train, infer, evaluate, and demo-data scripts
-```
-
-## Installation
+## Install
 
 ```bash
-git clone https://github.com/cv-cho/NGPS.git
-cd NGPS
+git clone https://github.com/levib4231/project-ml.git
+cd project-ml/NGPS
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-For CUDA-enabled training, install the PyTorch build matching your CUDA version
-from the official PyTorch instructions.
+For CPU-only PyTorch, install `torch` from
+`https://download.pytorch.org/whl/cpu` first. For CUDA use the official PyTorch
+installation instructions. Python 3.12 is used in CPU CI. Optional MINC/NIfTI
+conversion dependencies and normalization caveats are in [DATA](docs/DATA.md).
 
-## Quick Synthetic Demo
+## Self-contained synthetic check
 
-The demo creates small synthetic volumes with simple moving structures and
-Gaussian noise. It does not require medical data.
-
-```bash
-python scripts/make_synthetic_demo_data.py --output-root data/synthetic
-python scripts/train_ngps.py \
-  --data-root data/synthetic \
-  --config configs/synthetic_demo.yaml \
-  --output-dir runs/synthetic_ngps \
-  --device cpu
-python scripts/infer_volume.py \
-  --checkpoint runs/synthetic_ngps/model_final.pth \
-  --input data/synthetic/val/noisy/val_case_000.npy \
-  --output outputs/synthetic_val_case_000_ngps.npy \
-  --device cpu
-python scripts/evaluate_volume.py \
-  --pred outputs/synthetic_val_case_000_ngps.npy \
-  --clean data/synthetic/val/clean/val_case_000.npy
-```
-
-PowerShell users can run:
-
-```powershell
-.\examples\train_synthetic_demo.ps1
-```
-
-## Data Preparation
-
-Prepare volumes as `.npy` arrays with shape `(D, H, W)`, dtype `float32`, and
-values normalized to `[0, 1]`.
-
-```text
-DATA_ROOT/
-  train/
-    noisy/
-      case001.npy
-      case002.npy
-    clean/        # optional, used only for evaluation
-      case001.npy
-      case002.npy
-  val/
-    noisy/
-      case101.npy
-    clean/
-      case101.npy
-```
-
-Clean references are not used by `scripts/train_ngps.py`. They are only needed
-when running `scripts/evaluate_volume.py`.
-
-Medical datasets and derived volumes are not redistributed here. Please obtain
-AAPM-Mayo, LIDC-IDRI, IXI, or other datasets from their official sources and
-follow their license terms.
-
-## Training NGPS
+From `NGPS/`, with a fresh output directory **outside** the repository:
 
 ```bash
-python scripts/train_ngps.py \
-  --data-root /path/to/DATA_ROOT \
-  --config configs/ngps_nafnet_default.yaml \
-  --output-dir runs/ngps \
-  --device cuda
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python scripts/synthetic_pipeline.py \
+  --work-dir /tmp/project-ml-synthetic-run
 ```
 
-The default config follows the paper setting:
+This creates ten distinct toy subjects, a 6/2/2 subject split, and all three
+noise levels; it trains a tiny NGPS at the default sigma 0.06 for one fixed
+epoch, infers a complete volume, and writes held-out model and NLM metrics in
+JSON/CSV. It is a pipeline check, not a
+benchmark. The older `examples/train_synthetic_demo.*` folder-based commands are
+legacy and are **superseded by this example**; training now requires a manifest.
+Those files are outside this pass's permitted edit scope.
 
-```text
-patch size      7 x 7
-search window   15 x 15
-Top-K           4
-mask threshold  0.05
-RC weight       0.5
-optimizer       AdamW, lr=2e-4, weight_decay=1e-5
-backbone        NAFNet width 32
-```
+## Prepare assignment data
 
-## Same-Backbone NS-N2N-Style Baseline
+`configs/subjects_v1.json` fixes the ten existing BrainWeb subject identities:
 
-For objective-level comparisons with the same denoiser backbone:
+- train: 04, 06, 18, 41, 42, 43
+- validation: 05, 38
+- test: 20, 44
+
+**The existing BrainWeb intensity scale has not been verified.** Inspect source
+metadata/conversion provenance before choosing a normalization. Preparation never
+infers min/max or silently clips. If inputs have independently been confirmed to
+be in `[0,1]`:
 
 ```bash
-python scripts/train_nsn2n.py \
-  --data-root /path/to/DATA_ROOT \
-  --config configs/nsn2n_nafnet_default.yaml \
-  --output-dir runs/nsn2n \
-  --device cuda
+python scripts/prepare_data.py --manifest configs/subjects_v1.json \
+  --output-root /absolute/path/prepared-v1 --normalization already-unit
 ```
 
-## Inference
+Otherwise use `--normalization fixed-range --lower L --upper U`, replacing `L`
+and `U` with justified, predeclared bounds (not test-derived bounds). Preparation
+rejects out-of-range sources. See [DATA](docs/DATA.md) for the full contract.
+
+## Train: same backbone, distinct objectives
 
 ```bash
-python scripts/infer_volume.py \
-  --checkpoint runs/ngps/model_final.pth \
-  --input /path/to/noisy_volume.npy \
-  --output outputs/denoised_volume.npy \
-  --device cuda
+python scripts/train_ngps.py --manifest /absolute/path/prepared-v1/manifest.json \
+  --sigma 0.06 --method ngps --config configs/ngps_nafnet_default.yaml \
+  --output-dir /absolute/path/runs/ngps-s006 --device cpu
 ```
 
-Inference uses only the trained NAFNet denoiser.
+Repeat separately for sigma `0.03`, `0.06`, and `0.10`. Replace `--method` with:
 
-## Evaluation
+| Method | Actual training objective |
+|---|---|
+| `ngps` | static adjacent targets + guide-matched Top-K dynamic targets + regional consistency |
+| `adjacent` | unmasked same-coordinate previous/next noisy targets; no guide, no consistency term |
+| `blindspot` | randomly replace 5% of noisy pixels; MSE only at replaced coordinates; no adjacent targets |
+| `nsn2n` | static-region adjacent reconstruction + regional and interpolation consistency |
+
+`train_nsn2n.py` is also an NS-N2N entry point. NLM requires no training. All
+neural methods use a **predeclared final-epoch checkpoint**, never clean-reference
+selection. Fixed masked noisy validation is monitoring only. Run metadata records
+config, seeds, full manifest/hash, commit/dirty flag, environment, epoch, mask and
+matching diagnostics, and validation history. See [REPRODUCIBILITY](docs/REPRODUCIBILITY.md).
+
+## Inference and held-out evaluation
 
 ```bash
-python scripts/evaluate_volume.py \
-  --pred outputs/denoised_volume.npy \
-  --clean /path/to/clean_volume.npy \
-  --output-csv outputs/metrics.csv
+python scripts/infer_volume.py --checkpoint /absolute/path/runs/ngps-s006/model_final.pth \
+  --input /absolute/path/noisy.npy --output /absolute/path/prediction.npy --device cpu
+python scripts/evaluate_manifest.py --manifest /absolute/path/prepared-v1/manifest.json \
+  --method model --checkpoint /absolute/path/runs/ngps-s006/model_final.pth \
+  --sigma 0.06 --output-prefix /absolute/path/results/ngps-s006 --device cpu
+python scripts/evaluate_manifest.py --manifest /absolute/path/prepared-v1/manifest.json \
+  --method nlm --output-prefix /absolute/path/results/nlm
 ```
 
-The evaluation script reports PSNR, SSIM, FSIM, HFEN, and GMSD over slices and
-optionally writes per-slice metrics to CSV.
+Evaluation opens **test subjects only**, checks data hashes and checkpoint split
+provenance, and processes **every slice**, including boundary slices. NLM runs all
+three sigmas unless `--sigma` is supplied. Reports contain per-subject metrics,
+equal-subject aggregate means/population SD per sigma, and complete-volume wall
+time. Outputs: `.json`, `.csv`, and `_aggregate.csv`.
 
-## Method-Code Mapping
+Metrics: PSNR (`data_range=1`), SSIM, normalized LoG HFEN, explicitly named
+`SobelGradientMagnitudeSimilarity`, and GMSD. The gradient metric is **not FSIM**.
+No observation or prediction clipping is performed. A standalone
+`evaluate_volume.py --pred ... --clean ... --output-csv ...` remains available,
+but does not enforce the held-out protocol.
 
-See [docs/METHOD_MAPPING.md](docs/METHOD_MAPPING.md).
+## Tests
 
-## Citation
+From the repository root:
 
-If you use this code, please cite:
-
-```bibtex
-@inproceedings{"",
-  title     = {NGPS: Structure-Preserving Self-Supervised Denoising via Neighbor-Guided Patch Sampling},
-  author    = {""},
-  booktitle = {""},
-  year      = {2026}
-}
+```bash
+python -m compileall -q NGPS
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python NGPS/scripts/smoke_test.py
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m unittest discover -s NGPS/tests -v
+git diff --check
 ```
+
+[Method mapping and NAFNet comparison](docs/METHOD_MAPPING.md) documents changed
+architecture semantics. Old checkpoints must be retrained; they are rejected
+rather than silently interpreted with the new global residual.

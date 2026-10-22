@@ -20,6 +20,13 @@ dependencies = [
   "PyYAML>=6.0",
 ]
 
+[project.optional-dependencies]
+# Only for separately audited MINC/NIfTI conversion; prepare_data.py takes .npy.
+data-prep = ["nibabel>=5.0", "h5py>=3.8"]
+
+[project.urls]
+Repository = "https://github.com/levib4231/project-ml"
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["ngps*", "datasets*"]

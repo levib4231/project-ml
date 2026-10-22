@@ -23,8 +23,8 @@ def _one_volume(seed: int, depth: int, size: int, noise_sigma: float) -> tuple[n
         clean = 0.08 + 0.45 * ellipse.astype(np.float32) + 0.22 * vessel.astype(np.float32) + 0.18 * ring.astype(np.float32)
         clean = scipy.ndimage.gaussian_filter(clean, sigma=0.7)
         volume.append(clean)
-    clean_vol = np.clip(np.stack(volume, axis=0), 0.0, 1.0).astype(np.float32)
-    noisy = np.clip(clean_vol + rng.normal(0.0, noise_sigma, clean_vol.shape).astype(np.float32), 0.0, 1.0)
+    clean_vol = np.stack(volume, axis=0).astype(np.float32)
+    noisy = clean_vol + rng.normal(0.0, noise_sigma, clean_vol.shape).astype(np.float32)
     return noisy.astype(np.float32), clean_vol
 
 
