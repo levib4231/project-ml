@@ -1,6 +1,6 @@
 # macOS / editor files
 .DS_Store
-.vscode/*.log
+*.log
 .idea/
 
 # Python artifacts
@@ -26,8 +26,12 @@ checkpoints/
 *.pth
 *.safetensors
 
-# Generated manifests and metric tables (curated manifests under NGPS/manifests are tracked)
-*.tmp
-validation.jsonl
-run_manifest.json
-corruption_manifest.json
+# Local project documents, source data, and supplemental assets
+/docs/
+/Data/**/*.npy
+/Data/**/*.mnc
+/Data/**/*.mnc.gz
+/*.pdf
+/*.docx
+/*.pptx
+/Figure_1.png

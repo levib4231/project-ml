@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "kind": "source",
+  "seed": 42,
+  "description": "BrainWeb source identity only; intensity scale is NOT verified. Explicit normalization required.",
+  "subjects": [
+    {
+      "subject_id": "subject04",
+      "split": "train",
+      "source": "../../Data/Clean/subject04_clean.npy",
+      "source_sha256": "5daf62d84e7eeb59796fc52f81a160314ed9a731f4192319eb82d2f10ac55178",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        3.179201030434342e-06,
+        0.32989737391471863
+      ]
+    },
+    {
+      "subject_id": "subject05",
+      "split": "val",
+      "source": "../../Data/Clean/subject05_clean.npy",
+      "source_sha256": "c17641d714bd9d59e355a2a074b7aa282d1f2e1450977e835b30bc63715883e6",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        4.5087726903147995e-06,
+        0.3377731144428253
+      ]
+    },
+    {
+      "subject_id": "subject06",
+      "split": "train",
+      "source": "../../Data/Clean/subject06_clean.npy",
+      "source_sha256": "cca2bfbb21cfef3533efe86ea4f95367c56f60b99adf47100a9b2c9da446640d",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        3.1123154258239083e-06,
+        0.3241250216960907
+      ]
+    },
+    {
+      "subject_id": "subject18",
+      "split": "train",
+      "source": "../../Data/Clean/subject18_clean.npy",
+      "source_sha256": "64cc65af874041489d5b137665260966f7bdc2589bfc8bd3dfc157d0debeb40d",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        3.466857151579461e-06,
+        0.3279474377632141
+      ]
+    },
+    {
+      "subject_id": "subject20",
+      "split": "test",
+      "source": "../../Data/Clean/subject20_clean.npy",
+      "source_sha256": "145c3bbe79c357bce15975c46f30f6dc0b9e040d5bacb9cbd8024ea7ebc7a384",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        4.195631390757626e-06,
+        0.32470375299453735
+      ]
+    },
+    {
+      "subject_id": "subject38",
+      "split": "val",
+      "source": "../../Data/Clean/subject38_clean.npy",
+      "source_sha256": "064492bf4abe3d00f7737b3928eb0d983524c5fdc5c82914693e6075bbda058d",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        1.8255458371640998e-06,
+        0.32530125975608826
+      ]
+    },
+    {
+      "subject_id": "subject41",
+      "split": "train",
+      "source": "../../Data/Clean/subject41_clean.npy",
+      "source_sha256": "a573f391e82cd7356c6161ff36e3bca8ae216036521108ca210f03090aaa3f93",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        3.970457782997983e-06,
+        0.3253161907196045
+      ]
+    },
+    {
+      "subject_id": "subject42",
+      "split": "train",
+      "source": "../../Data/Clean/subject42_clean.npy",
+      "source_sha256": "1c640359f91b5c9fece08ce1a99efc6efb9e4b12328ff4c25f792ef098e41c6e",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        2.6652405722416006e-06,
+        0.3252803087234497
+      ]
+    },
+    {
+      "subject_id": "subject43",
+      "split": "train",
+      "source": "../../Data/Clean/subject43_clean.npy",
+      "source_sha256": "7e34f440f3a0e304b258e63745ff6c81dfddf29cd3097959edcf0d1a7e00298e",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        2.32921888709825e-06,
+        0.32540130615234375
+      ]
+    },
+    {
+      "subject_id": "subject44",
+      "split": "test",
+      "source": "../../Data/Clean/subject44_clean.npy",
+      "source_sha256": "53853146babdb942d5595744286707df780b83afa6a3213c2e1089e7a5edaf62",
+      "source_dtype": "float32",
+      "source_shape": [
+        181,
+        256,
+        256
+      ],
+      "source_range": [
+        3.585004378692247e-06,
+        0.3281469941139221
+      ]
+    }
+  ]
+}

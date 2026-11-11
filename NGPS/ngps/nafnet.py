@@ -82,6 +82,8 @@ class NAFNet(nn.Module):
         dec_blk_nums: Tuple[int, ...] = (2, 2, 2, 2),
     ) -> None:
         super().__init__()
+        if len(enc_blk_nums) != len(dec_blk_nums):
+            raise ValueError("Encoder and decoder depths must match")
         self.padder_size = 2 ** len(enc_blk_nums)
         self.intro = nn.Conv2d(img_channel, width, kernel_size=3, padding=1, bias=True)
         self.ending = nn.Conv2d(width, img_channel, kernel_size=3, padding=1, bias=True)
@@ -109,10 +111,11 @@ class NAFNet(nn.Module):
         pad_w = (self.padder_size - width % self.padder_size) % self.padder_size
         if pad_h == 0 and pad_w == 0:
             return x, height, width
-        return F.pad(x, (0, pad_w, 0, pad_h), mode="reflect"), height, width
+        return F.pad(x, (0, pad_w, 0, pad_h)), height, width
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x, height, width = self._pad_to_stride(x)
+        residual = x
         x = self.intro(x)
         skips = []
         for encoder, down in zip(self.encoders, self.downs):
@@ -123,7 +126,7 @@ class NAFNet(nn.Module):
         for decoder, up, skip in zip(self.decoders, self.ups, reversed(skips)):
             x = up(x)
             x = decoder(x + skip)
-        x = self.ending(x)
+        x = self.ending(x) + residual
         return x[:, :, :height, :width]
 
 

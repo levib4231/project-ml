@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 import numpy as np
 
@@ -11,65 +11,43 @@ import numpy as np
 class VolumeItem:
     case_id: str
     noisy_path: Path
-
-
-@dataclass(frozen=True)
-class EvaluationVolumeItem:
-    case_id: str
-    noisy_path: Path
-    clean_path: Path
+    clean_path: Optional[Path] = None
 
 
 def list_volume_items(data_root: str | Path, split: str) -> List[VolumeItem]:
-    """List only noisy volumes from ``DATA_ROOT/split/noisy/*.npy``."""
+    """List volumes from DATA_ROOT/split/noisy/*.npy.
+
+    If DATA_ROOT/split/clean contains a matching file, it is attached for
+    evaluation. Clean volumes are never required for NGPS training.
+    """
 
     root = Path(data_root)
     noisy_dir = root / split / "noisy"
+    clean_dir = root / split / "clean"
     if not noisy_dir.exists():
         raise FileNotFoundError(f"No noisy directory found: {noisy_dir}")
 
     items = []
     for noisy_path in sorted(noisy_dir.glob("*.npy")):
-        load_volume(noisy_path)
-        items.append(VolumeItem(noisy_path.stem, noisy_path))
+        clean_path = clean_dir / noisy_path.name
+        items.append(VolumeItem(noisy_path.stem, noisy_path, clean_path if clean_path.exists() else None))
     if not items:
         raise RuntimeError(f"No .npy volumes found in {noisy_dir}")
     return items
 
 
-def list_evaluation_items(data_root: str | Path, split: str) -> List[EvaluationVolumeItem]:
-    """Explicitly attach and validate clean references for evaluation only."""
-
-    noisy_items = list_volume_items(data_root, split)
-    clean_dir = Path(data_root) / split / "clean"
-    evaluation_items: List[EvaluationVolumeItem] = []
-    for item in noisy_items:
-        clean_path = clean_dir / item.noisy_path.name
-        if not clean_path.is_file():
-            raise FileNotFoundError(f"Missing evaluation-only clean reference: {clean_path}")
-        try:
-            clean = load_volume(clean_path)
-        except Exception as exc:
-            raise ValueError(f"Invalid evaluation-only clean reference: {clean_path}") from exc
-        noisy = load_volume(item.noisy_path)
-        if clean.shape != noisy.shape:
-            raise ValueError(f"Evaluation shape mismatch for {item.case_id}: noisy={noisy.shape}, clean={clean.shape}")
-        evaluation_items.append(EvaluationVolumeItem(item.case_id, item.noisy_path, clean_path))
-    return evaluation_items
-
-
-def load_volume(path: str | Path) -> np.ndarray:
-    """Load a normalized volume, rejecting invalid data instead of clipping it."""
-
-    volume = np.load(path, allow_pickle=False)
-    if volume.ndim != 3:
-        raise ValueError(f"Expected volume shaped (D, H, W), got {volume.shape}: {path}")
-    if not np.issubdtype(volume.dtype, np.floating):
-        raise ValueError(f"Expected floating-point volume, got {volume.dtype}: {path}")
+def validate_volume(volume: np.ndarray, *, unit_range: bool = False) -> np.ndarray:
+    """Strict validation; Gaussian observations/predictions are not range bounded."""
+    if volume.ndim != 3 or min(volume.shape) < 1:
+        raise ValueError(f"Expected nonempty (D, H, W), got {volume.shape}")
+    if volume.dtype != np.float32:
+        raise ValueError(f"Expected float32, got {volume.dtype}")
     if not np.isfinite(volume).all():
-        raise ValueError(f"Volume contains non-finite values: {path}")
-    minimum = float(volume.min())
-    maximum = float(volume.max())
-    if minimum < 0.0 or maximum > 1.0:
-        raise ValueError(f"Expected values in [0, 1], got [{minimum}, {maximum}]: {path}")
-    return volume.astype(np.float32, copy=False)
+        raise ValueError("Volume contains non-finite values")
+    if unit_range and (volume.min() < 0 or volume.max() > 1):
+        raise ValueError("Clean data must be explicitly normalized to [0,1]; no clipping")
+    return volume
+
+
+def load_volume(path: str | Path, *, unit_range: bool = False) -> np.ndarray:
+    return validate_volume(np.load(path, allow_pickle=False), unit_range=unit_range)
