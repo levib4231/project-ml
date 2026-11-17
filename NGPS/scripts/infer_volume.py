@@ -9,6 +9,7 @@ import numpy as np
 
 from datasets.preparation import file_hash
 from datasets.volume_folder import load_volume
+from ngps.device import preferred_device
 from ngps.inference import infer_volume, load_model, timed_inference
 from ngps.provenance import provenance, write_json
 
@@ -18,7 +19,7 @@ def main():
     parser.add_argument("--checkpoint", required=True)
     parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
-    parser.add_argument("--device", default="cpu")
+    parser.add_argument("--device", default=preferred_device())
     args = parser.parse_args()
     model, metadata = load_model(args.checkpoint, args.device)
     result, seconds = timed_inference(lambda v: infer_volume(model, v, args.device),

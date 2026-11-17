@@ -11,6 +11,8 @@ from pathlib import Path
 import numpy as np
 import torch
 
+from .device import device_name
+
 
 def source_record(snapshot=None):
     """Fingerprint runtime code/configs, including untracked files, never data.
@@ -54,7 +56,7 @@ def provenance(device, *, source_snapshot=None):
     return {"commit": git("rev-parse", "HEAD"),
             "git_dirty": None if status == "unavailable" else bool(status),
             "source": source_record(source_snapshot),
-            "device": str(device), "device_name": torch.cuda.get_device_name(device) if str(device).startswith("cuda") else platform.processor(),
+            "device": str(device), "device_name": device_name(device),
             "platform": platform.platform(), "python": platform.python_version(),
             "torch": str(torch.__version__), "numpy": np.__version__,
             "torch_threads": torch.get_num_threads(),

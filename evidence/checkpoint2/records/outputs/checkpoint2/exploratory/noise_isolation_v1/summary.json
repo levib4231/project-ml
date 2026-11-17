@@ -1,0 +1,1616 @@
+{
+  "protocol_hash": "390737626b638597496b4b99263af3ead636c6296b704ad9be23b3ffc1ad0f09",
+  "runs": [
+    {
+      "noise": "gaussian",
+      "variant": "full_ngps",
+      "method": "ngps",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/full_ngps/model_final.pth",
+      "checkpoint_sha256": "1a117b1a5d92824718da516fb3da9ff4129dbf0530f8d22833421f06fcee5c74",
+      "updates": 531,
+      "wall_seconds": 213.88582674998906,
+      "within_cap": true,
+      "training_seconds": 196.17519533300947,
+      "validation_seconds": 16.91955337500258,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.008164503131054776,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.007200455901663743,
+          "n2n": 0.004859056124698701,
+          "dynamic": 0.0023413997805276586,
+          "rc": 0.001928094428362809,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.04853323271336725
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0040414961355389745
+        }
+      ]
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_rc",
+      "method": "ngps",
+      "ablation": "no_rc",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_rc/model_final.pth",
+      "checkpoint_sha256": "630cb0d2d9de21eb8f282957d629b1f2dadd109de6164e20a40f1a33237ed2bd",
+      "updates": 531,
+      "wall_seconds": 205.48753158398904,
+      "within_cap": true,
+      "training_seconds": 185.37239500001306,
+      "validation_seconds": 19.36723016599717,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.007464282343553453,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.007464282343553453,
+          "n2n": 0.004995346080297832,
+          "dynamic": 0.0024689362752863,
+          "rc": 0.0022449008098267644,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.045757070041249334
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.00408807683764702
+        }
+      ]
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_dynamic",
+      "method": "ngps",
+      "ablation": "no_dynamic",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_dynamic/model_final.pth",
+      "checkpoint_sha256": "bd9452661aaba9ac6927effa86d5b7bbd75cb6240c178cbd8295610dcde79b51",
+      "updates": 531,
+      "wall_seconds": 212.4633807499922,
+      "within_cap": true,
+      "training_seconds": 194.1681418340013,
+      "validation_seconds": 17.57584499999939,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.005462873592909615,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.004694146583411008,
+          "n2n": 0.004694146583411008,
+          "dynamic": 0.0,
+          "rc": 0.0015374540053770603,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.01698321807277152
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003937355201046227
+        }
+      ]
+    },
+    {
+      "noise": "gaussian",
+      "variant": "adjacent",
+      "method": "adjacent",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/adjacent/model_final.pth",
+      "checkpoint_sha256": "92d4487a80418f55449e3ef39c29758d897e61cf62c0f6c3ed076d24c2c253f3",
+      "updates": 531,
+      "wall_seconds": 89.13805399999546,
+      "within_cap": true,
+      "training_seconds": 71.12504220899427,
+      "validation_seconds": 17.322639165999135,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.004911543906661077,
+          "gradient_l2_norm": 0.013706216514952439
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003993318461703772
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "full_ngps",
+      "method": "ngps",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/full_ngps/model_final.pth",
+      "checkpoint_sha256": "6d0a915131e7d4f3475bcf192bbf41f88ecb11256eb05b4a4f8b92f1a7e47e5a",
+      "updates": 531,
+      "wall_seconds": 158.40953862499737,
+      "within_cap": true,
+      "training_seconds": 150.87160570900596,
+      "validation_seconds": 6.778171082987683,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.006384584834586949,
+          "dynamic_active_fraction": 0.005385059421345339,
+          "dynamic_empty_fraction": 0.0423728813559322,
+          "static_active_fraction": 0.9946149405786546,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005615481268877616,
+          "n2n": 0.003457228532332836,
+          "dynamic": 0.0021582527270764436,
+          "rc": 0.001538207155726666,
+          "ic": 0.0,
+          "match_cost_mean": 7.693098913342714e-05,
+          "match_cost_max": 0.013246231712400913,
+          "gradient_l2_norm": 0.06250987852276382
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.002226411871606869
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "no_rc",
+      "method": "ngps",
+      "ablation": "no_rc",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_rc/model_final.pth",
+      "checkpoint_sha256": "e8cb3efe1386a9a81f4426ca8e83dad712e389e4d84f17f603305bb0ab85d53f",
+      "updates": 531,
+      "wall_seconds": 161.75742783400347,
+      "within_cap": true,
+      "training_seconds": 154.63327283300168,
+      "validation_seconds": 6.440777041003457,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.005889546653613616,
+          "dynamic_active_fraction": 0.005385059421345339,
+          "dynamic_empty_fraction": 0.0423728813559322,
+          "static_active_fraction": 0.9946149405786546,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005889546653613616,
+          "n2n": 0.003582918877264383,
+          "dynamic": 0.0023066277799118494,
+          "rc": 0.001816230613528707,
+          "ic": 0.0,
+          "match_cost_mean": 7.693098913342714e-05,
+          "match_cost_max": 0.013246231712400913,
+          "gradient_l2_norm": 0.06251849303295635
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0022514564126298125
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "no_dynamic",
+      "method": "ngps",
+      "ablation": "no_dynamic",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_dynamic/model_final.pth",
+      "checkpoint_sha256": "7314b89eabfed293142d4d37e57e38c5bcddc50f186a2219e79e152235962694",
+      "updates": 531,
+      "wall_seconds": 98.16082166599517,
+      "within_cap": true,
+      "training_seconds": 92.08781570800056,
+      "validation_seconds": 5.437317000003532,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.003815170580068719,
+          "dynamic_active_fraction": 0.005385059421345339,
+          "dynamic_empty_fraction": 0.0423728813559322,
+          "static_active_fraction": 0.9946149405786546,
+          "static_empty_fraction": 0.0,
+          "recon": 0.00324511102584003,
+          "n2n": 0.00324511102584003,
+          "dynamic": 0.0,
+          "rc": 0.0011401191198988554,
+          "ic": 0.0,
+          "match_cost_mean": 7.693098913342714e-05,
+          "match_cost_max": 0.013246231712400913,
+          "gradient_l2_norm": 0.015383279890921704
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0021733677719704097
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "adjacent",
+      "method": "adjacent",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/adjacent/model_final.pth",
+      "checkpoint_sha256": "85360289cc41ecdd9b112db364a5be29ea40b248289ba26aefec3a1f7390f04d",
+      "updates": 531,
+      "wall_seconds": 35.63590895899688,
+      "within_cap": true,
+      "training_seconds": 29.6074014580081,
+      "validation_seconds": 5.4149333750101505,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.003403505672597223,
+          "gradient_l2_norm": 0.012937431833171855
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0021889975207321885
+        }
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "noise": "gaussian",
+      "variant": "full_ngps",
+      "subject": "subject20",
+      "PSNR": 35.81167079357844,
+      "SSIM": 0.7981549618316217,
+      "HFEN": 1.1119140633561992,
+      "SobelGradientMagnitudeSimilarity": 0.6476616592697018,
+      "GMSD": 0.059584171217943425,
+      "inference_seconds": 2.611323707998963,
+      "volume_seconds": 2.6565920419961913,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.0017780662969394928,
+          "mse": 0.0002682612830722509,
+          "spatial_centered_error_variance": 0.00026509976331593886
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.003508027288241214,
+          "mse": 0.00017896520653234695,
+          "spatial_centered_error_variance": 0.00016665895107730196
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.004525971819142432,
+          "mse": 0.00038083918833525245,
+          "spatial_centered_error_variance": 0.000360354767427581
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": -0.006373740210713846,
+          "mse": 0.0005439468001177995,
+          "spatial_centered_error_variance": 0.0005033222358441289
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "full_ngps",
+      "subject": "subject44",
+      "PSNR": 35.597109458551394,
+      "SSIM": 0.7955394475722152,
+      "HFEN": 1.013171058333381,
+      "SobelGradientMagnitudeSimilarity": 0.6547420436506113,
+      "GMSD": 0.05996192098487148,
+      "inference_seconds": 3.022071083993069,
+      "volume_seconds": 3.06720716599375,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.0016407738935528759,
+          "mse": 0.0002816671817696684,
+          "spatial_centered_error_variance": 0.0002789750427999037
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.0036416866789927608,
+          "mse": 0.00018467780433682399,
+          "spatial_centered_error_variance": 0.00017141592246887067
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.0055286875693669624,
+          "mse": 0.00043258412582086394,
+          "spatial_centered_error_variance": 0.0004020177395811913
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": -0.0069802490702241616,
+          "mse": 0.0005278601724721583,
+          "spatial_centered_error_variance": 0.00047913629538979304
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_rc",
+      "subject": "subject20",
+      "PSNR": 35.483244690057425,
+      "SSIM": 0.7718768657851527,
+      "HFEN": 1.2375215934126416,
+      "SobelGradientMagnitudeSimilarity": 0.6195498830047101,
+      "GMSD": 0.06852347881260498,
+      "inference_seconds": 2.9051008749956964,
+      "volume_seconds": 2.953955834003864,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.000931920518211409,
+          "mse": 0.0002871860975954549,
+          "spatial_centered_error_variance": 0.0002863176217431915
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.00231117635064376,
+          "mse": 0.0002057646799412891,
+          "spatial_centered_error_variance": 0.0002004231438175141
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.0037783253419076167,
+          "mse": 0.0003874093924136708,
+          "spatial_centered_error_variance": 0.0003731336500243695
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": -0.005941173610777645,
+          "mse": 0.0005399439965022123,
+          "spatial_centered_error_variance": 0.0005046464526288116
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_rc",
+      "subject": "subject44",
+      "PSNR": 35.30147994084767,
+      "SSIM": 0.7708898737476954,
+      "HFEN": 1.1133087010673397,
+      "SobelGradientMagnitudeSimilarity": 0.6307264487387726,
+      "GMSD": 0.06852158080807048,
+      "inference_seconds": 2.8325545839907136,
+      "volume_seconds": 2.868036249987199,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.0008141446924472269,
+          "mse": 0.0002994814871645301,
+          "spatial_centered_error_variance": 0.0002988186555842901
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.0024248338965307467,
+          "mse": 0.00021020867073508846,
+          "spatial_centered_error_variance": 0.000204328851309324
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.004757694946813584,
+          "mse": 0.0004340490393992584,
+          "spatial_centered_error_variance": 0.00041141337819232296
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": -0.006537320183128538,
+          "mse": 0.0005282839270726055,
+          "spatial_centered_error_variance": 0.00048554737189586563
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_dynamic",
+      "subject": "subject20",
+      "PSNR": 36.879733418773704,
+      "SSIM": 0.8721270621229629,
+      "HFEN": 0.8733651516187256,
+      "SobelGradientMagnitudeSimilarity": 0.6962606419515873,
+      "GMSD": 0.049381523912782825,
+      "inference_seconds": 2.8766221669939114,
+      "volume_seconds": 2.9210579589998815,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.0011847894428530738,
+          "mse": 0.00022369318664410297,
+          "spatial_centered_error_variance": 0.00022228946062020693
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.0021561535528669285,
+          "mse": 0.00010114882041104162,
+          "spatial_centered_error_variance": 9.649982226750095e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.008438577644664744,
+          "mse": 0.00045077841221291646,
+          "spatial_centered_error_variance": 0.0003795688195478809
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": -0.006649197622765176,
+          "mse": 0.0005606299258071082,
+          "spatial_centered_error_variance": 0.0005164180967805221
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_dynamic",
+      "subject": "subject44",
+      "PSNR": 36.5270988901205,
+      "SSIM": 0.8646554135273732,
+      "HFEN": 0.8343840853944009,
+      "SobelGradientMagnitudeSimilarity": 0.692872936883684,
+      "GMSD": 0.05098073881181235,
+      "inference_seconds": 2.774162667003111,
+      "volume_seconds": 2.8219507500034524,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.001181637528041727,
+          "mse": 0.00024008293192968313,
+          "spatial_centered_error_variance": 0.00023868666468200656
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.002389013473216433,
+          "mse": 0.00011124083139663293,
+          "spatial_centered_error_variance": 0.0001055334460214233
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.009493860705872895,
+          "mse": 0.0005188192962586115,
+          "spatial_centered_error_variance": 0.0004286859051560941
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": -0.0070387137355008835,
+          "mse": 0.0005275393478638198,
+          "spatial_centered_error_variance": 0.000477995856813491
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "adjacent",
+      "subject": "subject20",
+      "PSNR": 36.14094225733987,
+      "SSIM": 0.7967344089757443,
+      "HFEN": 1.0608459576058782,
+      "SobelGradientMagnitudeSimilarity": 0.6610289601331257,
+      "GMSD": 0.05620679798541148,
+      "inference_seconds": 2.6184162080026,
+      "volume_seconds": 2.663457874994492,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.0004879878378911618,
+          "mse": 0.00025137612956828306,
+          "spatial_centered_error_variance": 0.00025113799743835334
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.0011401082218805735,
+          "mse": 0.00015407509867061732,
+          "spatial_centered_error_variance": 0.00015277525191301764
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.0057297107346981945,
+          "mse": 0.00040164884038270906,
+          "spatial_centered_error_variance": 0.0003688192552793934
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": -0.004983423655242841,
+          "mse": 0.0005360341802970607,
+          "spatial_centered_error_variance": 0.0005111996689694267
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "adjacent",
+      "subject": "subject44",
+      "PSNR": 35.8997861740947,
+      "SSIM": 0.7937667467718768,
+      "HFEN": 0.9735694418954586,
+      "SobelGradientMagnitudeSimilarity": 0.6660840182014591,
+      "GMSD": 0.05676714903083296,
+      "inference_seconds": 2.644613291005953,
+      "volume_seconds": 2.6892096669907914,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.00047588259999459243,
+          "mse": 0.00026525620246201846,
+          "spatial_centered_error_variance": 0.0002650297382130409
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.0013298412297348035,
+          "mse": 0.00016081303346574736,
+          "spatial_centered_error_variance": 0.00015904455576944482
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.006858022329871545,
+          "mse": 0.0004602775771403212,
+          "spatial_centered_error_variance": 0.00041324510686330447
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": -0.005592731136924086,
+          "mse": 0.0005139245569754564,
+          "spatial_centered_error_variance": 0.0004826459154055362
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "noisy",
+      "subject": "subject20",
+      "PSNR": 24.435036850880323,
+      "SSIM": 0.24087832536743825,
+      "HFEN": 2.79263432052254,
+      "SobelGradientMagnitudeSimilarity": 0.2697569126088316,
+      "GMSD": 0.16998824543057225,
+      "inference_seconds": 0.0035300419986015186,
+      "volume_seconds": 0.047791708988370374,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": -2.9993181932983668e-05,
+          "mse": 0.0036016603338384365,
+          "spatial_centered_error_variance": 0.003601659434247475
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": -3.8814335260723796e-05,
+          "mse": 0.003602218181690389,
+          "spatial_centered_error_variance": 0.003602216675137767
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": -1.571339342336472e-05,
+          "mse": 0.0035972914363017667,
+          "spatial_centered_error_variance": 0.0035972911893910344
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": -4.560825963215821e-06,
+          "mse": 0.0036020285029080175,
+          "spatial_centered_error_variance": 0.0036020284821068845
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "gaussian",
+      "variant": "noisy",
+      "subject": "subject44",
+      "PSNR": 24.43918087459457,
+      "SSIM": 0.25223258292185746,
+      "HFEN": 2.450434263239908,
+      "SobelGradientMagnitudeSimilarity": 0.2900513917701679,
+      "GMSD": 0.16945692649862384,
+      "inference_seconds": 0.0034753749932860956,
+      "volume_seconds": 0.05036041600396857,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": -1.6606875952461197e-05,
+          "mse": 0.0035982281690812128,
+          "spatial_centered_error_variance": 0.003598227893292883
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": -1.1064979898452954e-05,
+          "mse": 0.003596935293642547,
+          "spatial_centered_error_variance": 0.0035969351712087667
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": -3.6351363453244156e-05,
+          "mse": 0.0036050200056782053,
+          "spatial_centered_error_variance": 0.00360501868425658
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": -2.5047901456952693e-05,
+          "mse": 0.003599091674810879,
+          "spatial_centered_error_variance": 0.0035990910474135115
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "rician",
+      "variant": "full_ngps",
+      "subject": "subject20",
+      "PSNR": 24.61390559497503,
+      "SSIM": 0.3792254202208242,
+      "HFEN": 1.0250187417420233,
+      "SobelGradientMagnitudeSimilarity": 0.6419104857997999,
+      "GMSD": 0.06646052293108971,
+      "inference_seconds": 2.6568724169919733,
+      "volume_seconds": 2.7078383750049397,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.05152481757892526,
+          "mse": 0.0034841552779550106,
+          "spatial_centered_error_variance": 0.0008293484514134848
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.0671038913328682,
+          "mse": 0.004597178169368653,
+          "spatial_centered_error_variance": 9.424593735526526e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.03161617338480391,
+          "mse": 0.0013345739489415032,
+          "spatial_centered_error_variance": 0.00033499152944352036
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": 0.0035799022972126844,
+          "mse": 0.00047353517380275444,
+          "spatial_centered_error_variance": 0.00046071947334516575
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "rician",
+      "variant": "full_ngps",
+      "subject": "subject44",
+      "PSNR": 24.721207504796087,
+      "SSIM": 0.3881759535920653,
+      "HFEN": 0.9610651010307818,
+      "SobelGradientMagnitudeSimilarity": 0.6396818012822398,
+      "GMSD": 0.06987358390955635,
+      "inference_seconds": 2.531906040996546,
+      "volume_seconds": 2.5795504590059863,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.05028609241455648,
+          "mse": 0.0034032195161543062,
+          "spatial_centered_error_variance": 0.0008745284258289929
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.06710260877459324,
+          "mse": 0.004598297113076313,
+          "spatial_centered_error_variance": 9.553700872019461e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.03222018108427358,
+          "mse": 0.001397685003447537,
+          "spatial_centered_error_variance": 0.0003595449343441558
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": 0.0035016524778249754,
+          "mse": 0.00044354363806190465,
+          "spatial_centered_error_variance": 0.00043128206798644683
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "rician",
+      "variant": "no_rc",
+      "subject": "subject20",
+      "PSNR": 24.72416464250365,
+      "SSIM": 0.3784402902470735,
+      "HFEN": 1.0824228011442152,
+      "SobelGradientMagnitudeSimilarity": 0.6315484942652244,
+      "GMSD": 0.06504376944751371,
+      "inference_seconds": 2.9628472500044154,
+      "volume_seconds": 3.0078823329968145,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.050750503101044585,
+          "mse": 0.0033965015894370657,
+          "spatial_centered_error_variance": 0.0008208880244279294
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.06606189700994249,
+          "mse": 0.004475978182504942,
+          "spatial_centered_error_variance": 0.00011180394595269297
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.030722840108408988,
+          "mse": 0.0012937853604047197,
+          "spatial_centered_error_variance": 0.00034989245607785547
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": 0.0038923283833714644,
+          "mse": 0.0004868420728052253,
+          "spatial_centered_error_variance": 0.00047169185256122615
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "rician",
+      "variant": "no_rc",
+      "subject": "subject44",
+      "PSNR": 24.830157671521082,
+      "SSIM": 0.3879680417655839,
+      "HFEN": 1.0053604953196826,
+      "SobelGradientMagnitudeSimilarity": 0.6332897863335373,
+      "GMSD": 0.0680586396618772,
+      "inference_seconds": 2.9706556249875575,
+      "volume_seconds": 3.006644332999713,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.04953652551811461,
+          "mse": 0.0033184614251016743,
+          "spatial_centered_error_variance": 0.0008645940646948535
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.06605635231366393,
+          "mse": 0.004476448948654746,
+          "spatial_centered_error_variance": 0.000113007267667853
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.03132896296531673,
+          "mse": 0.0013554607267121316,
+          "spatial_centered_error_variance": 0.00037395680622994445
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": 0.003810400744608849,
+          "mse": 0.00046061217750271815,
+          "spatial_centered_error_variance": 0.0004460930236682023
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "rician",
+      "variant": "no_dynamic",
+      "subject": "subject20",
+      "PSNR": 24.23139491176041,
+      "SSIM": 0.37335566263131015,
+      "HFEN": 0.9208761213234117,
+      "SobelGradientMagnitudeSimilarity": 0.6371327207233366,
+      "GMSD": 0.07950264709945047,
+      "inference_seconds": 2.7894314160075737,
+      "volume_seconds": 2.834304207994137,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.05479310400402188,
+          "mse": 0.0038005926939958415,
+          "spatial_centered_error_variance": 0.0007983084476002829
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.07013807418415237,
+          "mse": 0.004975016919086033,
+          "spatial_centered_error_variance": 5.566746882436924e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.03695160855436441,
+          "mse": 0.00169827041357235,
+          "spatial_centered_error_variance": 0.000332849038817373
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": 0.006560398994667115,
+          "mse": 0.0005293105376977386,
+          "spatial_centered_error_variance": 0.0004862717027285095
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "rician",
+      "variant": "no_dynamic",
+      "subject": "subject44",
+      "PSNR": 24.330432812517394,
+      "SSIM": 0.3803138135776954,
+      "HFEN": 0.8905007532946971,
+      "SobelGradientMagnitudeSimilarity": 0.6237041512246948,
+      "GMSD": 0.08363271732583066,
+      "inference_seconds": 2.5936320000037085,
+      "volume_seconds": 2.6345957910089055,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.05361482302328746,
+          "mse": 0.0037192050373434067,
+          "spatial_centered_error_variance": 0.0008446557895249726
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.07020339878533692,
+          "mse": 0.004986212775096935,
+          "spatial_centered_error_variance": 5.76955740838886e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.03784330916764228,
+          "mse": 0.0017892574013594082,
+          "spatial_centered_error_variance": 0.0003571413526016502
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": 0.006427668210812441,
+          "mse": 0.0004820829125759153,
+          "spatial_centered_error_variance": 0.00044076799394762646
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "rician",
+      "variant": "adjacent",
+      "subject": "subject20",
+      "PSNR": 24.16975675973915,
+      "SSIM": 0.375005228232092,
+      "HFEN": 0.9735150034256403,
+      "SobelGradientMagnitudeSimilarity": 0.6573546350990211,
+      "GMSD": 0.06713299662162915,
+      "inference_seconds": 2.6821433330042055,
+      "volume_seconds": 2.7291114999970887,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.055518179223525865,
+          "mse": 0.003857029505776411,
+          "spatial_centered_error_variance": 0.0007747612814808717
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.07059261957024722,
+          "mse": 0.005057898184278748,
+          "spatial_centered_error_variance": 7.458024648909565e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.03661897396212952,
+          "mse": 0.0016649585209363865,
+          "spatial_centered_error_variance": 0.0003240092668972665
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": 0.00891838010527259,
+          "mse": 0.0005362741208601611,
+          "spatial_centered_error_variance": 0.0004567366171580391
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "rician",
+      "variant": "adjacent",
+      "subject": "subject44",
+      "PSNR": 24.272824910166726,
+      "SSIM": 0.38351097881621876,
+      "HFEN": 0.9219763954041412,
+      "SobelGradientMagnitudeSimilarity": 0.6503210963465232,
+      "GMSD": 0.0707960732137136,
+      "inference_seconds": 2.6493152499897406,
+      "volume_seconds": 2.6951039580017095,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.05432773068782806,
+          "mse": 0.003770803099411683,
+          "spatial_centered_error_variance": 0.0008193007777225084
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.0706188199748692,
+          "mse": 0.005062963108749077,
+          "spatial_centered_error_variance": 7.594537410609017e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.037328343649674814,
+          "mse": 0.0017414157741324017,
+          "spatial_centered_error_variance": 0.00034801053450418424
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": 0.008751063319232916,
+          "mse": 0.0005003428103058031,
+          "spatial_centered_error_variance": 0.00042376170108857926
+        }
+      },
+      "subject_id": "subject44"
+    },
+    {
+      "noise": "rician",
+      "variant": "noisy",
+      "subject": "subject20",
+      "PSNR": 22.680902972165953,
+      "SSIM": 0.18223173953617436,
+      "HFEN": 2.003429542588924,
+      "SobelGradientMagnitudeSimilarity": 0.3398340392178593,
+      "GMSD": 0.11366920877062814,
+      "inference_seconds": 0.0034391660010442138,
+      "volume_seconds": 0.047961542004486546,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.05383623051260751,
+          "mse": 0.005404172541969879,
+          "spatial_centered_error_variance": 0.002505832826163267
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8397595,
+          "mean_signed_error": 0.06837414597268333,
+          "mse": 0.0062462144639152456,
+          "spatial_centered_error_variance": 0.0015711906264214376
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1258178,
+          "mean_signed_error": 0.028584844895588227,
+          "mse": 0.0033080971554842334,
+          "spatial_centered_error_variance": 0.0024910037977793975
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2206243,
+          "mean_signed_error": 0.012901125755286893,
+          "mse": 0.003394470484716409,
+          "spatial_centered_error_variance": 0.0032280314389626827
+        }
+      },
+      "subject_id": "subject20"
+    },
+    {
+      "noise": "rician",
+      "variant": "noisy",
+      "subject": "subject44",
+      "PSNR": 22.73304303480839,
+      "SSIM": 0.19366563919230761,
+      "HFEN": 1.7894208622242205,
+      "SobelGradientMagnitudeSimilarity": 0.3612031270621231,
+      "GMSD": 0.1138092060033129,
+      "inference_seconds": 0.0034209169971290976,
+      "volume_seconds": 0.04793191699718591,
+      "error_strata": {
+        "all": {
+          "pixels": 11862016,
+          "mean_signed_error": 0.05268977402255575,
+          "mse": 0.005340899474963076,
+          "spatial_centered_error_variance": 0.0025646871884150843
+        },
+        "low_x_lt_0.02": {
+          "pixels": 8164770,
+          "mean_signed_error": 0.06831891914408691,
+          "mse": 0.006237080860795563,
+          "spatial_centered_error_variance": 0.001569606147779278
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "pixels": 1242076,
+          "mean_signed_error": 0.028267290295596704,
+          "mse": 0.0033190100991956476,
+          "spatial_centered_error_variance": 0.002519970398540112
+        },
+        "high_x_ge_0.10": {
+          "pixels": 2455170,
+          "mean_signed_error": 0.013069790756110835,
+          "mse": 0.0033834893464148212,
+          "spatial_centered_error_variance": 0.003212669916006301
+        }
+      },
+      "subject_id": "subject44"
+    }
+  ],
+  "aggregates": [
+    {
+      "noise": "gaussian",
+      "variant": "full_ngps",
+      "metrics": {
+        "PSNR": {
+          "mean": 35.70439012606492,
+          "std_population": 0.10728066751352472,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.7968472047019184,
+          "std_population": 0.0013077571297032686,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 1.0625425608447903,
+          "std_population": 0.04937150251140909,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6512018514601565,
+          "std_population": 0.0035401921904547606,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.05977304610140745,
+          "std_population": 0.00018887488346402623,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.0017094200952461843,
+          "mse": 0.0002749642324209597,
+          "spatial_centered_error_variance": 0.0002720374030579213
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.0035748569836169873,
+          "mse": 0.00018182150543458547,
+          "spatial_centered_error_variance": 0.00016903743677308631
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.005027329694254698,
+          "mse": 0.0004067116570780582,
+          "spatial_centered_error_variance": 0.00038118625350438615
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": -0.006676994640469004,
+          "mse": 0.0005359034862949789,
+          "spatial_centered_error_variance": 0.000491229265616961
+        }
+      }
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_rc",
+      "metrics": {
+        "PSNR": {
+          "mean": 35.392362315452544,
+          "std_population": 0.09088237460487747,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.7713833697664241,
+          "std_population": 0.0004934960187286674,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 1.1754151472399905,
+          "std_population": 0.06210644617265093,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6251381658717414,
+          "std_population": 0.0055882828670312246,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.06852252981033774,
+          "std_population": 9.490022672489773e-07,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.000873032605329318,
+          "mse": 0.0002933337923799925,
+          "spatial_centered_error_variance": 0.0002925681386637408
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.0023680051235872536,
+          "mse": 0.00020798667533818878,
+          "spatial_centered_error_variance": 0.00020237599756341905
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.004268010144360601,
+          "mse": 0.0004107292159064646,
+          "spatial_centered_error_variance": 0.00039227351410834623
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": -0.006239246896953091,
+          "mse": 0.000534113961787409,
+          "spatial_centered_error_variance": 0.0004950969122623386
+        }
+      }
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_dynamic",
+      "metrics": {
+        "PSNR": {
+          "mean": 36.7034161544471,
+          "std_population": 0.17631726432660244,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.868391237825168,
+          "std_population": 0.003735824297794843,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 0.8538746185065633,
+          "std_population": 0.019490533112162367,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6945667894176357,
+          "std_population": 0.0016938525339516564,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.050181131362297585,
+          "std_population": 0.000799607449514763,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.0011832134854474004,
+          "mse": 0.00023188805928689305,
+          "spatial_centered_error_variance": 0.00023048806265110673
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.002272583513041681,
+          "mse": 0.00010619482590383728,
+          "spatial_centered_error_variance": 0.00010101663414446212
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.00896621917526882,
+          "mse": 0.000484798854235764,
+          "spatial_centered_error_variance": 0.0004041273623519875
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": -0.00684395567913303,
+          "mse": 0.0005440846368354639,
+          "spatial_centered_error_variance": 0.0004972069767970066
+        }
+      }
+    },
+    {
+      "noise": "gaussian",
+      "variant": "adjacent",
+      "metrics": {
+        "PSNR": {
+          "mean": 36.02036421571729,
+          "std_population": 0.12057804162258634,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.7952505778738106,
+          "std_population": 0.0014838311019337858,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 1.0172076997506685,
+          "std_population": 0.043638257855209805,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6635564891672925,
+          "std_population": 0.002527529034166698,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.05648697350812222,
+          "std_population": 0.00028017552271073984,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.00048193521894287713,
+          "mse": 0.00025831616601515076,
+          "spatial_centered_error_variance": 0.00025808386782569714
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.0012349747258076885,
+          "mse": 0.00015744406606818236,
+          "spatial_centered_error_variance": 0.00015590990384123122
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.006293866532284869,
+          "mse": 0.00043096320876151516,
+          "spatial_centered_error_variance": 0.0003910321810713489
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": -0.005288077396083463,
+          "mse": 0.0005249793686362585,
+          "spatial_centered_error_variance": 0.0004969227921874814
+        }
+      }
+    },
+    {
+      "noise": "gaussian",
+      "variant": "noisy",
+      "metrics": {
+        "PSNR": {
+          "mean": 24.437108862737446,
+          "std_population": 0.002072011857123357,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.24655545414464786,
+          "std_population": 0.005677128777209606,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 2.621534291881224,
+          "std_population": 0.17110002864131602,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.27990415218949977,
+          "std_population": 0.010147239580668155,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.16972258596459805,
+          "std_population": 0.0002656594659742051,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": -2.3300028942722433e-05,
+          "mse": 0.0035999442514598246,
+          "spatial_centered_error_variance": 0.003599943663770179
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": -2.4939657579588376e-05,
+          "mse": 0.003599576737666468,
+          "spatial_centered_error_variance": 0.003599575923173267
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": -2.603237843830444e-05,
+          "mse": 0.003601155720989986,
+          "spatial_centered_error_variance": 0.0036011549368238074
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": -1.4804363710084258e-05,
+          "mse": 0.0036005600888594485,
+          "spatial_centered_error_variance": 0.003600559764760198
+        }
+      }
+    },
+    {
+      "noise": "rician",
+      "variant": "full_ngps",
+      "metrics": {
+        "PSNR": {
+          "mean": 24.66755654988556,
+          "std_population": 0.053650954910528625,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.38370068690644477,
+          "std_population": 0.004475266685620538,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 0.9930419213864026,
+          "std_population": 0.03197682035562077,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6407961435410199,
+          "std_population": 0.0011143422587800433,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.06816705342032303,
+          "std_population": 0.0017065304892333183,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.05090545499674087,
+          "mse": 0.003443687397054658,
+          "spatial_centered_error_variance": 0.0008519384386212388
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.06710325005373072,
+          "mse": 0.004597737641222483,
+          "spatial_centered_error_variance": 9.489147303772994e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.03191817723453874,
+          "mse": 0.0013661294761945202,
+          "spatial_centered_error_variance": 0.0003472682318938381
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": 0.0035407773875188297,
+          "mse": 0.0004585394059323295,
+          "spatial_centered_error_variance": 0.0004460007706658063
+        }
+      }
+    },
+    {
+      "noise": "rician",
+      "variant": "no_rc",
+      "metrics": {
+        "PSNR": {
+          "mean": 24.777161157012365,
+          "std_population": 0.052996514508716785,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.3832041660063287,
+          "std_population": 0.004763875759255215,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 1.043891648231949,
+          "std_population": 0.038531152912266275,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6324191402993808,
+          "std_population": 0.0008706460341564304,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.06655120455469546,
+          "std_population": 0.001507435107181744,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.0501435143095796,
+          "mse": 0.00335748150726937,
+          "spatial_centered_error_variance": 0.0008427410445613914
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.0660591246618032,
+          "mse": 0.004476213565579844,
+          "spatial_centered_error_variance": 0.00011240560681027297
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.03102590153686286,
+          "mse": 0.0013246230435584256,
+          "spatial_centered_error_variance": 0.0003619246311539
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": 0.003851364563990157,
+          "mse": 0.0004737271251539717,
+          "spatial_centered_error_variance": 0.00045889243811471424
+        }
+      }
+    },
+    {
+      "noise": "rician",
+      "variant": "no_dynamic",
+      "metrics": {
+        "PSNR": {
+          "mean": 24.280913862138902,
+          "std_population": 0.04951895037849141,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.37683473810450274,
+          "std_population": 0.003479075473192622,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 0.9056884373090544,
+          "std_population": 0.015187684014357272,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6304184359740157,
+          "std_population": 0.006714284749320898,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.08156768221264057,
+          "std_population": 0.002065035113190096,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.05420396351365467,
+          "mse": 0.003759898865669624,
+          "spatial_centered_error_variance": 0.0008214821185626277
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.07017073648474464,
+          "mse": 0.004980614847091483,
+          "spatial_centered_error_variance": 5.668152145412892e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.037397458861003346,
+          "mse": 0.001743763907465879,
+          "spatial_centered_error_variance": 0.0003449951957095116
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": 0.006494033602739778,
+          "mse": 0.0005056967251368269,
+          "spatial_centered_error_variance": 0.000463519848338068
+        }
+      }
+    },
+    {
+      "noise": "rician",
+      "variant": "adjacent",
+      "metrics": {
+        "PSNR": {
+          "mean": 24.22129083495294,
+          "std_population": 0.05153407521378739,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.37925810352415534,
+          "std_population": 0.0042528752920633905,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 0.9477456994148907,
+          "std_population": 0.02576930401074956,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.6538378657227721,
+          "std_population": 0.0035167693762489516,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.06896453491767138,
+          "std_population": 0.001831538296042226,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.054922954955676964,
+          "mse": 0.0038139163025940467,
+          "spatial_centered_error_variance": 0.00079703102960169
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.07060571977255821,
+          "mse": 0.005060430646513913,
+          "spatial_centered_error_variance": 7.526281029759291e-05
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.03697365880590217,
+          "mse": 0.001703187147534394,
+          "spatial_centered_error_variance": 0.00033600990070072534
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": 0.008834721712252754,
+          "mse": 0.0005183084655829821,
+          "spatial_centered_error_variance": 0.0004402491591233092
+        }
+      }
+    },
+    {
+      "noise": "rician",
+      "variant": "noisy",
+      "metrics": {
+        "PSNR": {
+          "mean": 22.70697300348717,
+          "std_population": 0.026070031321218323,
+          "n_subjects": 2
+        },
+        "SSIM": {
+          "mean": 0.18794868936424097,
+          "std_population": 0.005716949828066628,
+          "n_subjects": 2
+        },
+        "HFEN": {
+          "mean": 1.8964252024065722,
+          "std_population": 0.10700434018235183,
+          "n_subjects": 2
+        },
+        "SobelGradientMagnitudeSimilarity": {
+          "mean": 0.3505185831399912,
+          "std_population": 0.01068454392213189,
+          "n_subjects": 2
+        },
+        "GMSD": {
+          "mean": 0.11373920738697052,
+          "std_population": 6.999861634238158e-05,
+          "n_subjects": 2
+        }
+      },
+      "error_strata": {
+        "all": {
+          "mean_signed_error": 0.05326300226758163,
+          "mse": 0.005372536008466478,
+          "spatial_centered_error_variance": 0.0025352600072891755
+        },
+        "low_x_lt_0.02": {
+          "mean_signed_error": 0.06834653255838513,
+          "mse": 0.006241647662355404,
+          "spatial_centered_error_variance": 0.0015703983871003578
+        },
+        "mid_0.02_le_x_lt_0.10": {
+          "mean_signed_error": 0.028426067595592464,
+          "mse": 0.0033135536273399407,
+          "spatial_centered_error_variance": 0.0025054870981597544
+        },
+        "high_x_ge_0.10": {
+          "mean_signed_error": 0.012985458255698863,
+          "mse": 0.003388979915565615,
+          "spatial_centered_error_variance": 0.0032203506774844915
+        }
+      }
+    }
+  ],
+  "limitations": "Exposed test subjects, single seed/sigma; component removals change objective and cannot identify matching versus target-noise bias alone. Equal sigma is not equal effective corruption. Reference strata are evaluation only.",
+  "prediction_sha256": {
+    "predictions/gaussian/adjacent/subject20.npy": "41ca441110180e69268114af2f17ec745bfe224b2edce1df251e5d3e5eaa7044",
+    "predictions/gaussian/adjacent/subject44.npy": "489c05e2eaacc5f9f2af617b2ef4510a3eb9b354127753897c509a0799b77bb6",
+    "predictions/gaussian/full_ngps/subject20.npy": "f90c0d59ff2a408f8bbe2247f2f656d0c8a3798cd00b3d063bee2be7f4b172d0",
+    "predictions/gaussian/full_ngps/subject44.npy": "524130bb1a942efcb3a6a879aa2ca8d490ad2a238983a6bdc9351d632bf41d9b",
+    "predictions/gaussian/no_dynamic/subject20.npy": "37a63f15386f717f88a202e48f5bcaa937af5768ba791200d0671c66171ac8f2",
+    "predictions/gaussian/no_dynamic/subject44.npy": "473f7eec5c04f6a47a1689be5e0d06628f106d368944a647569903cd50bd05b5",
+    "predictions/gaussian/no_rc/subject20.npy": "e366c5bbdddc3c20431629864c2685e871b0ac8852949723502fdfcf5ffe0091",
+    "predictions/gaussian/no_rc/subject44.npy": "15c12b91b89d0f80db3d5829b641e698896f89206469618da42de0a112faff9c",
+    "predictions/gaussian/noisy/subject20.npy": "5d93ec2c6992d625cd91af5ab931030d94e7f1cce2a8c3329d851a908efc9103",
+    "predictions/gaussian/noisy/subject44.npy": "6c20c15362ecb20cb0d33f1c56de5098a9de429fcbd0b4429f538dfffab61b33",
+    "predictions/rician/adjacent/subject20.npy": "a84791be15e886485a1ae1f7a70df299fcc37f206a3615c11406175d3f9cbbba",
+    "predictions/rician/adjacent/subject44.npy": "a40961146b19186a0f593b0413b78dca9e65ab84db2854476e927aed817dcb2b",
+    "predictions/rician/full_ngps/subject20.npy": "bdf9ea511801fdae32f1dba5c7cfbdbb49353d9c404f5b8b152c35a2a9e4987a",
+    "predictions/rician/full_ngps/subject44.npy": "edeeb16e90b98efbbf1477b4123a49c756770c6c561db9127a79d334d4678c9c",
+    "predictions/rician/no_dynamic/subject20.npy": "3950b4440b838d6fdbdcda0039951ab7ae43560f6cd959bc9b6d7dd48e7610e0",
+    "predictions/rician/no_dynamic/subject44.npy": "89d3d325c24a3cd6504954d4e2b616d3d80a95ed94ee81d9e4198ee8c07bd004",
+    "predictions/rician/no_rc/subject20.npy": "fb02b444265c75f3ffc6dd06ea32532aad14adb733faa95429fb4beef893d27c",
+    "predictions/rician/no_rc/subject44.npy": "c9e308957ee2e2dac92ab54571ab47758ee9d767b1107b7e8fc0c88f1b37290f",
+    "predictions/rician/noisy/subject20.npy": "87db7a7755ce27ec7fef29769de2e01b1981f816e70153a55963dd21108f24ee",
+    "predictions/rician/noisy/subject44.npy": "a8b1449b465755d4558b84771af1f052d177882df6fc70b5937528915f39e92c"
+  }
+}

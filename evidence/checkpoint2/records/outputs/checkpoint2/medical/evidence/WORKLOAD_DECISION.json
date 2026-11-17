@@ -1,0 +1,8 @@
+{
+  "decision": "One fixed final epoch for all nine models; batch cap projected from the matched pilot",
+  "cap_seconds": 600,
+  "reason": "The initial 10-epoch conservative full-validation projection exceeded 600 seconds. A single epoch allocates more of the same cap to optimizer updates.",
+  "selection_uses_clean_references": false,
+  "test_results_inspected": false,
+  "initial_pilot": "/content/drive/MyDrive/ProjectML-Checkpoint2/pilot-v1/pilot.json"
+}

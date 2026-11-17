@@ -1,0 +1,38 @@
+{
+  "kind": "exploratory_BrainWeb_Rician_matched_to_MPS531",
+  "source_tree_sha256": "cc43049b91ec13a712b7798682eb05a52415b9c9482336abd4e5cb09c869986e",
+  "orchestrator_sha256": "d3fd5f0cc15cdea8fa3c0d9f98eab5036604a04982fd0f38ef298503f743956f",
+  "parent_gaussian_manifest_hash": "ed8b1c8c57c4ffa4bff50feb7fe0abba0a608465b6b97d697ad1cc5887716ead",
+  "formula": "hypot(x+n1,n2), independent N(0,sigma^2) components; float32, no clipping",
+  "normalization": {
+    "policy": "already-unit",
+    "lower": null,
+    "upper": null
+  },
+  "sigmas": [
+    0.03,
+    0.06,
+    0.1
+  ],
+  "noise_seed": "stable_seed(42,subject,noise:sigma); same n1 stream as Gaussian; subsequent independent n2 stream",
+  "training": "Fresh independent sigma-specific models, full agreed6/2/2 split; seed42, shared width16, one epoch capped531 updates, fixed final checkpoint",
+  "methods": [
+    "ngps",
+    "blindspot",
+    "adjacent"
+  ],
+  "controls": [
+    "nlm",
+    "noisy"
+  ],
+  "controls_limitation": "NLM uses existing Gaussian-calibrated parameters, not a dedicated Rician correction",
+  "budget_seconds": 3600,
+  "budget_reason": "Independent Rician MPS pilot and full validation projection before production; fixed531 updates to match completed Gaussian MPS benchmark, not a transferred T4 cap",
+  "success": "NGPS PSNR >= stronger trained comparator at every sigma, zero tolerance",
+  "test_subjects": [
+    "subject20",
+    "subject44"
+  ],
+  "limitations": "Already exposed test subjects: exploratory only, no clean tuning; BrainWeb signal scaling unchanged, not paper IXI normalization/noise levels/training or numerical replication. Equal sigma is component SD, not equal effective Gaussian/Rician MSE.",
+  "design_hash": "1813c5a56e123b07f2bc8bc4c3badda26e0a9d0b7983d9b2e15362df7b233523"
+}

@@ -1,0 +1,1046 @@
+{
+  "commit": "unavailable",
+  "git_dirty": null,
+  "source": {
+    "files_sha256": {
+      "LICENSE": "54ab637ba237608268d25f810ee75756589796a02e2e06a3fbcd40886dcb2a8f",
+      "README.md": "16c52a0228443e15300fccfeb0135e3ce841a637d8241162b6bb9e575111e0d3",
+      "configs/checkpoint2.yaml": "371f9ad64dc9f1006d6a69f27428d413560af0e1652a5fc3ecb359a1b6ac729c",
+      "configs/ngps_nafnet_default.yaml": "8df9976edc5566ce330eddf935ce0ee11a24b98a9805ce01565f158a0203b4d9",
+      "configs/nsn2n_nafnet_default.yaml": "8784c30d6e80521dcad2e2667a39d9663aa4d032a159225eb91df9ef4951c206",
+      "configs/subjects_v1.json": "620d846dc9ca67dd87adb60df9f782c110a7dd48ddaf826fa663352682628cc5",
+      "configs/synthetic_cpu.yaml": "9bcf506e00b60fa06700dfe33fb1908bbde543eb1f395e409461da468990885e",
+      "configs/synthetic_demo.yaml": "c850caa2ff67793dcf9d77c0b5fdb7d698e826d69c064620bf651a6848db6e29",
+      "datasets/__init__.py": "9420e8f07f7af27d40162d5cffa11c4baa9a3167e720e4a381cfd782da2703f3",
+      "datasets/manifest.py": "fd915ce9db799a876e01a1138d48356a27d1151ae0fc322fdf093e8e17a50cd8",
+      "datasets/preparation.py": "769a9d5e2db9ef16e49512fe60f7cdd89684a0c5a7cf76934b87db0d666212ce",
+      "datasets/synthetic.py": "7ebef2e4b5b9481906c18fdc7e2b75c5143c780ad4f644b0872f3d026f840185",
+      "datasets/triplet_dataset.py": "1e410b0e5dbe475b2ceed10631853d29af188fdad71d58494a88a9c65ecae0af",
+      "datasets/volume_folder.py": "020e5910d5321e880236266a6c64081e4b80740bf27ee31a4ef6980ca8cfa03a",
+      "docs/CHECKPOINT_1_EVIDENCE.md": "56e3256b27d67a3c9b9e5696962a6a969d4f694f82c5cd144231b64c703cd225",
+      "docs/CHECKPOINT_2.md": "1c3463333f2318ed98ca4259a9499eec20ec65e8efbe6c51d074744581fb1872",
+      "docs/DATA.md": "2457bef10db599c87a0610a054b48b79cde699ee375f4c553f413ea5fd1c1acf",
+      "docs/METHOD_MAPPING.md": "f6cf52a22d80248e903db107679807c948766b13938e67c0f15c7e11fdb10e8d",
+      "docs/REPRODUCIBILITY.md": "b863c2800ae6fc0695e52e9a23e75c36eeedd5bd42cf52996c5d5912c5b07e56",
+      "ngps/__init__.py": "bf00b4987ed6a0634313b0ae23772cebd221784052a073c5ec5e4c9c7ac75b7f",
+      "ngps/baselines.py": "811d6010267c2decbbda41445baa54ba9ba134fb33639840f94c2990fdb1426b",
+      "ngps/checkpoint2.py": "9b398694ca8514f78200927310289d0f750552935abe3469a76cbfa4bc10fcee",
+      "ngps/config.py": "f67d3b74c77b935ddf3a499c1d63af20894c0158bd55b9a59d94985c7e03462c",
+      "ngps/evaluation.py": "9242b246f8d5e8f5883808de1057494542c6787c177bc0f14efae8363b02985b",
+      "ngps/guide.py": "f03db8b387d916852b5a99ea9ac866ac7656e9f3cc79e01d49a735581e0a42dd",
+      "ngps/inference.py": "4679f8889b7b8cf3ed4cb7a81651b8b4384c0c34b5ffbb469e5031296461bb8c",
+      "ngps/losses.py": "18e80b681100484162bb1f82392ac483873c971b3f9acaeb94963b9521b3fa44",
+      "ngps/metrics.py": "5edcfebf3afce02bcff1c9f577e299470665cc60c69ce59396ea1f82a3d529e0",
+      "ngps/nafnet.py": "4dc40ee62150cbb2e22eadcb5145bc18a172ec2bce0c02785f4edfc095255aa8",
+      "ngps/provenance.py": "d838c163111b8736c7ff8621f1f6634c87796261c12c529022d3e8dcfe296c6a",
+      "ngps/sampler.py": "e3c141727808af34ec32edfd2d64a2e44ecde97785002b34d58a54723bfdd7a7",
+      "ngps/seed.py": "bede852c816966dc81597c5882e354ef4ca441ab9bbaa1c5439fd5ba73025915",
+      "ngps/training.py": "d5e62a3bf929f017663e2bc6746da91e137ab588a0d3c33b9ae89c20b9cbe6ab",
+      "notebooks/checkpoint2_colab.ipynb": "e5355cb3629dde167003cfab97fcd47220fa343702b4f7ac0295ed74a47fb8f5",
+      "pyproject.toml": "020264ed0ddcc76584be1d71543ded372b06efb8621a30ba8dd63bc2fd2b431c",
+      "requirements-colab.txt": "37e51f1d335f69e4c10e7ae22d5cca6f79a113adc2128d48c7069cb128855cc2",
+      "requirements.txt": "cfe332c1542b8e081c21059ff4662eb4af6059c559e61f7d997a4c2013b03366",
+      "scripts/checkpoint2.py": "91dfca14f8aecb7c25eba845a7562675994ab6989d1f533db3923a2316e5f9d2",
+      "scripts/evaluate_manifest.py": "8111dce5add8756013b4d91cfb86e86275aef4d5e19a0787b6a9acfc356fd345",
+      "scripts/evaluate_volume.py": "07e0d74e2013753b14e01ab26899d2af111da8044c32115a048874d4c3c0aa41",
+      "scripts/export_checkpoint2_source.py": "88db6f479ab259d16019fafa18ec58c49d43565c5f3d6c51a459063296d58cfb",
+      "scripts/infer_volume.py": "a2568acc9970042362121dc23819c53178b3921efd16cc50480f3265a8f31ea9",
+      "scripts/make_synthetic_demo_data.py": "54a73228a3832f78b44c67e822475894cb2e7fd04ef11541f2e0df3e5d7f6fef",
+      "scripts/prepare_data.py": "5288f77529a53af05b2e020676837bf8b123b03211db8f2dac1eb0afe6100d96",
+      "scripts/smoke_test.py": "1b8620fa2a0c49a5a6d79cd1146bdcd6bd92367e61b64f96ce9c94aa2cbeb77a",
+      "scripts/synthetic_pipeline.py": "747e347f9115417e9a04d0d9d8f13a85482907e1d067109b2804b0654445baea",
+      "scripts/train_ngps.py": "d14832ff788bb45a2c6ba318643b902eea261384c84d389f235fe169e2fb6e43",
+      "scripts/train_nsn2n.py": "c242c75301174caf26fd701e14cbe20fe8d77470ab3acb340b8bbc74b06f3ed6",
+      "scripts/verify_brainweb.py": "b2cb94e94986d87a91100b312a92761d66cbc11e7eb0dfdfdd807806ef05461c",
+      "tests/test_checkpoint2.py": "a1d5af33945e80282ea38b123f37b27c59130138ed4714d1ed66f8da9f6952bc",
+      "tests/test_config_crop.py": "25376d73f90f111235329e329a2b459fc804cfe4dfb9c76be42b16423a981c6a",
+      "tests/test_correctness.py": "176153a111bddaf355c1f32422bbd7a1af025492635408fd8b71dce146f8fdb2",
+      "tests/test_sampler_losses.py": "802175327a12ad004f47e2e6f0075af1979d4d105ec1485d2607408b1f76e498"
+    },
+    "tree_sha256": "bb4ec5e39671c1a20ca10f08850ef10008d46ea98f247b0e4136c817b6474ac4",
+    "snapshot": "source_snapshot.zip",
+    "snapshot_sha256": "bbcbdf8ffd24d753beaab91580cc2b32dd3ef8f35dfb39d6262cd5b1695901f9"
+  },
+  "device": "cuda",
+  "device_name": "Tesla T4",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.35",
+  "python": "3.12.13",
+  "torch": "2.5.1+cu124",
+  "numpy": "1.26.4",
+  "torch_threads": 1,
+  "dependencies": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "skimage": "0.24.0",
+    "cv2": "4.10.0",
+    "yaml": "6.0.2",
+    "torch": "2.5.1+cu124"
+  },
+  "schema_version": 1,
+  "architecture_version": 2,
+  "config": {
+    "ngps": {
+      "mask_threshold": 0.05,
+      "nafnet_dec_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_enc_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_middle_blocks": 1,
+      "nafnet_width": 16,
+      "patch_size": 7,
+      "rc_weight": 0.5,
+      "search_window": 15,
+      "topk": 4
+    },
+    "training": {
+      "batch_size": 1,
+      "crop_size": 128,
+      "epochs": 1,
+      "lr": 0.0002,
+      "num_workers": 0,
+      "seed": 42,
+      "weight_decay": 1e-05
+    }
+  },
+  "ngps_config": {
+    "patch_size": 7,
+    "search_window": 15,
+    "topk": 4,
+    "mask_threshold": 0.05,
+    "bilateral_d": 5,
+    "bilateral_sigma_color": 35.0,
+    "bilateral_sigma_space": 50.0,
+    "median_kernel": 5,
+    "rc_weight": 0.5,
+    "nafnet_width": 16,
+    "nafnet_enc_blocks": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "nafnet_middle_blocks": 1,
+    "nafnet_dec_blocks": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "training_config": {
+    "epochs": 1,
+    "batch_size": 1,
+    "crop_size": 128,
+    "lr": 0.0002,
+    "weight_decay": 1e-05,
+    "num_workers": 0,
+    "seed": 42
+  },
+  "seed": 42,
+  "manifest": {
+    "schema_version": 1,
+    "kind": "prepared",
+    "seed": 42,
+    "source_manifest_hash": "2ed1fc79c4f8bbb75a68e5e1af313130278d467a19f8ba6c0efa0595e8e422ae",
+    "normalization": {
+      "policy": "already-unit",
+      "lower": null,
+      "upper": null
+    },
+    "noise": "unclipped independent additive Gaussian; numpy default_rng PCG64",
+    "numpy_version": "1.26.4",
+    "subjects": [
+      {
+        "subject_id": "subject04",
+        "split": "train",
+        "source": "../sources-resume1/subject04_clean.npy",
+        "source_sha256": "5daf62d84e7eeb59796fc52f81a160314ed9a731f4192319eb82d2f10ac55178",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          3.179201030434342e-06,
+          0.32989737391471863
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_000/clean.npy",
+        "clean_sha256": "5daf62d84e7eeb59796fc52f81a160314ed9a731f4192319eb82d2f10ac55178",
+        "noisy": {
+          "0.03": {
+            "path": "subject_000/noisy_0.03.npy",
+            "seed": 4027541635,
+            "sha256": "0ae1cfc6b9e7a2685314a4f25ccb39386fe0a556ea186a0f1c64d8395a55549b",
+            "range": [
+              -0.1599763035774231,
+              0.41034868359565735
+            ]
+          },
+          "0.06": {
+            "path": "subject_000/noisy_0.06.npy",
+            "seed": 1819812602,
+            "sha256": "f6daa3cda028857c4e26b221ab2b9919ee028d37eabd26afcf85923d769807d1",
+            "range": [
+              -0.29415953159332275,
+              0.5678397417068481
+            ]
+          },
+          "0.10": {
+            "path": "subject_000/noisy_0.10.npy",
+            "seed": 775612674,
+            "sha256": "d0bf940f5038796dfb5072b004044092081c2320a204696ddbb8992e4933b683",
+            "range": [
+              -0.496267706155777,
+              0.708693265914917
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject05",
+        "split": "val",
+        "source": "../sources-resume1/subject05_clean.npy",
+        "source_sha256": "c17641d714bd9d59e355a2a074b7aa282d1f2e1450977e835b30bc63715883e6",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          4.5087726903147995e-06,
+          0.3377731144428253
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_001/clean.npy",
+        "clean_sha256": "c17641d714bd9d59e355a2a074b7aa282d1f2e1450977e835b30bc63715883e6",
+        "noisy": {
+          "0.03": {
+            "path": "subject_001/noisy_0.03.npy",
+            "seed": 208466755,
+            "sha256": "e870d4098483cc2c22059e2b63b030aa13fe611f987aef22db5a34b53e883c14",
+            "range": [
+              -0.16395257413387299,
+              0.40752726793289185
+            ]
+          },
+          "0.06": {
+            "path": "subject_001/noisy_0.06.npy",
+            "seed": 2218256707,
+            "sha256": "f3f7a94fedd8d141e6c4f060d0a17015fc44d799c573c3bd7c4119dfdf3a4760",
+            "range": [
+              -0.3023471534252167,
+              0.5332668423652649
+            ]
+          },
+          "0.10": {
+            "path": "subject_001/noisy_0.10.npy",
+            "seed": 67994690,
+            "sha256": "833338fa767ae183dec9e0db236d967419c21d256d2b0dacf8bc94b08bc22620",
+            "range": [
+              -0.5187870264053345,
+              0.7000044584274292
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject06",
+        "split": "train",
+        "source": "../sources-resume1/subject06_clean.npy",
+        "source_sha256": "cca2bfbb21cfef3533efe86ea4f95367c56f60b99adf47100a9b2c9da446640d",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          3.1123154258239083e-06,
+          0.3241250216960907
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_002/clean.npy",
+        "clean_sha256": "cca2bfbb21cfef3533efe86ea4f95367c56f60b99adf47100a9b2c9da446640d",
+        "noisy": {
+          "0.03": {
+            "path": "subject_002/noisy_0.03.npy",
+            "seed": 2933998692,
+            "sha256": "89f966fdd38ec0a94f37eb4600264f0313239facc693b721862f7a48dbaa13bb",
+            "range": [
+              -0.1676560789346695,
+              0.4097185432910919
+            ]
+          },
+          "0.06": {
+            "path": "subject_002/noisy_0.06.npy",
+            "seed": 2661753386,
+            "sha256": "b074e509e256a455b5ec5eef58d8c5194c3e880704695615b70e385feec7d5d7",
+            "range": [
+              -0.3034830093383789,
+              0.5202897191047668
+            ]
+          },
+          "0.10": {
+            "path": "subject_002/noisy_0.10.npy",
+            "seed": 1237002217,
+            "sha256": "ee74a95826e239c933c4b79087551083fb893fef59c3c3ec8b2d1a3c68f198f6",
+            "range": [
+              -0.526451826095581,
+              0.7141590714454651
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject18",
+        "split": "train",
+        "source": "../sources-resume1/subject18_clean.npy",
+        "source_sha256": "64cc65af874041489d5b137665260966f7bdc2589bfc8bd3dfc157d0debeb40d",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          3.466857151579461e-06,
+          0.3279474377632141
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_003/clean.npy",
+        "clean_sha256": "64cc65af874041489d5b137665260966f7bdc2589bfc8bd3dfc157d0debeb40d",
+        "noisy": {
+          "0.03": {
+            "path": "subject_003/noisy_0.03.npy",
+            "seed": 1962241421,
+            "sha256": "25b296fa0b7143bbaaa853ff5d51dfae967640d2cb13d0ba0ffd8b75fd7b88ca",
+            "range": [
+              -0.16702887415885925,
+              0.4246680736541748
+            ]
+          },
+          "0.06": {
+            "path": "subject_003/noisy_0.06.npy",
+            "seed": 1383578462,
+            "sha256": "a2374087854befd638a313066ef37be8de31d9d693f5dd8d5cbba89bcc61063f",
+            "range": [
+              -0.3036385178565979,
+              0.5510916113853455
+            ]
+          },
+          "0.10": {
+            "path": "subject_003/noisy_0.10.npy",
+            "seed": 4102923239,
+            "sha256": "5b0dab1f03a11abef6dacb41eecf06e181bf098ea697624d7718e90f3af80293",
+            "range": [
+              -0.519253671169281,
+              0.8030713200569153
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject20",
+        "split": "test",
+        "source": "../sources-resume1/subject20_clean.npy",
+        "source_sha256": "145c3bbe79c357bce15975c46f30f6dc0b9e040d5bacb9cbd8024ea7ebc7a384",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          4.195631390757626e-06,
+          0.32470375299453735
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_004/clean.npy",
+        "clean_sha256": "145c3bbe79c357bce15975c46f30f6dc0b9e040d5bacb9cbd8024ea7ebc7a384",
+        "noisy": {
+          "0.03": {
+            "path": "subject_004/noisy_0.03.npy",
+            "seed": 696249232,
+            "sha256": "23ac08826738d3da4bdd1610b3c8772254fe328c9d9802188523274e68dfbcec",
+            "range": [
+              -0.14648222923278809,
+              0.40838873386383057
+            ]
+          },
+          "0.06": {
+            "path": "subject_004/noisy_0.06.npy",
+            "seed": 1251895212,
+            "sha256": "5d93ec2c6992d625cd91af5ab931030d94e7f1cce2a8c3329d851a908efc9103",
+            "range": [
+              -0.31729117035865784,
+              0.5635033845901489
+            ]
+          },
+          "0.10": {
+            "path": "subject_004/noisy_0.10.npy",
+            "seed": 2338200501,
+            "sha256": "9349f0d869abd9870a259e3371a6ce842318d58868cbdf6f1be6825a9e4aec56",
+            "range": [
+              -0.5134939551353455,
+              0.6653566360473633
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject38",
+        "split": "val",
+        "source": "../sources-resume1/subject38_clean.npy",
+        "source_sha256": "064492bf4abe3d00f7737b3928eb0d983524c5fdc5c82914693e6075bbda058d",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          1.8255458371640998e-06,
+          0.32530125975608826
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_005/clean.npy",
+        "clean_sha256": "064492bf4abe3d00f7737b3928eb0d983524c5fdc5c82914693e6075bbda058d",
+        "noisy": {
+          "0.03": {
+            "path": "subject_005/noisy_0.03.npy",
+            "seed": 973908991,
+            "sha256": "8ca028c04903026b3d6bc038e9752528cdea5dccb61599909fe60c1f41896f74",
+            "range": [
+              -0.1554192155599594,
+              0.40254512429237366
+            ]
+          },
+          "0.06": {
+            "path": "subject_005/noisy_0.06.npy",
+            "seed": 1996408375,
+            "sha256": "d81fb5cc49767b26f29690e0deb3d38b455db4afa775e3f725ddbf8ee9ab1c2f",
+            "range": [
+              -0.3026672899723053,
+              0.5411723852157593
+            ]
+          },
+          "0.10": {
+            "path": "subject_005/noisy_0.10.npy",
+            "seed": 107432863,
+            "sha256": "0201629ace7e7e5523c0c81476a949339cedadc773251aba8bc58cecbb1859e8",
+            "range": [
+              -0.5181396007537842,
+              0.6748099327087402
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject41",
+        "split": "train",
+        "source": "../sources-resume1/subject41_clean.npy",
+        "source_sha256": "a573f391e82cd7356c6161ff36e3bca8ae216036521108ca210f03090aaa3f93",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          3.970457782997983e-06,
+          0.3253161907196045
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_006/clean.npy",
+        "clean_sha256": "a573f391e82cd7356c6161ff36e3bca8ae216036521108ca210f03090aaa3f93",
+        "noisy": {
+          "0.03": {
+            "path": "subject_006/noisy_0.03.npy",
+            "seed": 3578340301,
+            "sha256": "764a44c48ec27d0b8325328d96f5b3ad6c2abd5c51dc58bdbe50690879fae293",
+            "range": [
+              -0.1454947590827942,
+              0.4005476236343384
+            ]
+          },
+          "0.06": {
+            "path": "subject_006/noisy_0.06.npy",
+            "seed": 42612723,
+            "sha256": "7179b1fa2391d0b37705ca643148cfa172c2c97fc21262d1ef568b91f5ff7342",
+            "range": [
+              -0.30129945278167725,
+              0.5100932717323303
+            ]
+          },
+          "0.10": {
+            "path": "subject_006/noisy_0.10.npy",
+            "seed": 1836435788,
+            "sha256": "4ab292bb8fa39a65bb8c7224f910e35327788e73b6480ee982685981fcebc91e",
+            "range": [
+              -0.5076116323471069,
+              0.6868682503700256
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject42",
+        "split": "train",
+        "source": "../sources-resume1/subject42_clean.npy",
+        "source_sha256": "1c640359f91b5c9fece08ce1a99efc6efb9e4b12328ff4c25f792ef098e41c6e",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          2.6652405722416006e-06,
+          0.3252803087234497
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_007/clean.npy",
+        "clean_sha256": "1c640359f91b5c9fece08ce1a99efc6efb9e4b12328ff4c25f792ef098e41c6e",
+        "noisy": {
+          "0.03": {
+            "path": "subject_007/noisy_0.03.npy",
+            "seed": 2452136909,
+            "sha256": "508012b09b425ebd157ed31373b7fd23df6c70ff475bdc87e1418146b0712367",
+            "range": [
+              -0.14574848115444183,
+              0.41097041964530945
+            ]
+          },
+          "0.06": {
+            "path": "subject_007/noisy_0.06.npy",
+            "seed": 3643624677,
+            "sha256": "12cd0064491b9968d2679a0b6bf78a155e8fe7abc29f87faac321e859d0181c8",
+            "range": [
+              -0.3247445225715637,
+              0.5249446630477905
+            ]
+          },
+          "0.10": {
+            "path": "subject_007/noisy_0.10.npy",
+            "seed": 3770598757,
+            "sha256": "eb4a1a45c927cd1c91af6c5f522afcb99e09b98f1d1b7cf198bef3ca36e17152",
+            "range": [
+              -0.5053481459617615,
+              0.6663531064987183
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject43",
+        "split": "train",
+        "source": "../sources-resume1/subject43_clean.npy",
+        "source_sha256": "7e34f440f3a0e304b258e63745ff6c81dfddf29cd3097959edcf0d1a7e00298e",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          2.32921888709825e-06,
+          0.32540130615234375
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_008/clean.npy",
+        "clean_sha256": "7e34f440f3a0e304b258e63745ff6c81dfddf29cd3097959edcf0d1a7e00298e",
+        "noisy": {
+          "0.03": {
+            "path": "subject_008/noisy_0.03.npy",
+            "seed": 3121827753,
+            "sha256": "5521edf87bb31218e4800b3820014f43fbf952c2503921b8f78323ebd37b6dcf",
+            "range": [
+              -0.1429567188024521,
+              0.4098508358001709
+            ]
+          },
+          "0.06": {
+            "path": "subject_008/noisy_0.06.npy",
+            "seed": 266555549,
+            "sha256": "ef48651f4ef9623fe8d51d8961f7f32bd22ac30bd97590b5b09df53e71b48f1a",
+            "range": [
+              -0.3103248178958893,
+              0.5304617881774902
+            ]
+          },
+          "0.10": {
+            "path": "subject_008/noisy_0.10.npy",
+            "seed": 2200507659,
+            "sha256": "b47e261b64317641cd2e53ca410b5cfc1837bd3dd68943f9877c65d128841c8c",
+            "range": [
+              -0.5850261449813843,
+              0.7361840009689331
+            ]
+          }
+        }
+      },
+      {
+        "subject_id": "subject44",
+        "split": "test",
+        "source": "../sources-resume1/subject44_clean.npy",
+        "source_sha256": "53853146babdb942d5595744286707df780b83afa6a3213c2e1089e7a5edaf62",
+        "source_dtype": "float32",
+        "source_shape": [
+          181,
+          256,
+          256
+        ],
+        "source_range": [
+          3.585004378692247e-06,
+          0.3281469941139221
+        ],
+        "shape": [
+          181,
+          256,
+          256
+        ],
+        "clean_dtype": "float32",
+        "clean": "subject_009/clean.npy",
+        "clean_sha256": "53853146babdb942d5595744286707df780b83afa6a3213c2e1089e7a5edaf62",
+        "noisy": {
+          "0.03": {
+            "path": "subject_009/noisy_0.03.npy",
+            "seed": 2218203090,
+            "sha256": "b99136c4b800b26833ffe06619642928fd182c1f66ee48e381542a56e06c5351",
+            "range": [
+              -0.1483784168958664,
+              0.4180377125740051
+            ]
+          },
+          "0.06": {
+            "path": "subject_009/noisy_0.06.npy",
+            "seed": 3674854893,
+            "sha256": "6c20c15362ecb20cb0d33f1c56de5098a9de429fcbd0b4429f538dfffab61b33",
+            "range": [
+              -0.311533659696579,
+              0.5750468373298645
+            ]
+          },
+          "0.10": {
+            "path": "subject_009/noisy_0.10.npy",
+            "seed": 1678074496,
+            "sha256": "2ee75cf562b2ae339c26c89f4f1ab46e9d89d88c46f383b5dda71ec7286fb8a4",
+            "range": [
+              -0.5229218602180481,
+              0.7406983971595764
+            ]
+          }
+        }
+      }
+    ],
+    "verification": {
+      "schema_version": 1,
+      "status": "verified_fixed_reference",
+      "verified_at_utc": "2026-11-11T20:23:54.573929+00:00",
+      "source_manifest_hash": "2ed1fc79c4f8bbb75a68e5e1af313130278d467a19f8ba6c0efa0595e8e422ae",
+      "normalization": {
+        "policy": "already-unit",
+        "historical_real_intensity_divisor": 4095,
+        "note": "Course fixed scale, not a claim that MINC real intensity spans 0..4095."
+      },
+      "dataset_page": "https://brainweb.bic.mni.mcgill.ca/brainweb/anatomic_normal_20.html",
+      "terms_page": "https://brainweb.bic.mni.mcgill.ca/brainweb/#references",
+      "terms": "Public download with requested citations; no explicit redistribution license established. Obtain data directly; do not bundle volumes.",
+      "reference_limitation": "Public T1 images are fixed reference signals, not demonstrated noise-free anatomy. MINC history refers to pn3_rf20 coil settings. Metrics quantify recovery of these references after added Gaussian noise, not clinical effectiveness or removal of native artifacts.",
+      "subjects": [
+        {
+          "subject_id": "subject04",
+          "source_sha256": "5daf62d84e7eeb59796fc52f81a160314ed9a731f4192319eb82d2f10ac55178",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject04_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject04_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "ef867ce38f9f15a1e5261ef89eef604aa65d8bab6f6fa89c5cc42c07756e4a1e",
+          "decompressed_minc_sha256": "d75d9adbcc4abe6595337ec210eba2d5b3448d4d860d82c554df3884043d9419",
+          "local_minc_sha256": "ef867ce38f9f15a1e5261ef89eef604aa65d8bab6f6fa89c5cc42c07756e4a1e",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:00:21 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject04/classes//subject04_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject04/classes//subject04all.mnc /data/ipl/ipl7/broche/subjects/subject04/classes//subject04_bck.mnc\nWed Feb  1 21:20:29 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject04/classes/subject04_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject04_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject05",
+          "source_sha256": "c17641d714bd9d59e355a2a074b7aa282d1f2e1450977e835b30bc63715883e6",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject05_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject05_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "95e3be43407ce1677ef258164f365b2210c157ebfb0fcd979bfff2472b72e01a",
+          "decompressed_minc_sha256": "835e74ce356a878862739545206065dfbbcdc9826b46dbecc0c57d243f3dddfb",
+          "local_minc_sha256": "95e3be43407ce1677ef258164f365b2210c157ebfb0fcd979bfff2472b72e01a",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:06:06 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject05/classes//subject05_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject05/classes//subject05all.mnc /data/ipl/ipl7/broche/subjects/subject05/classes//subject05_bck.mnc\nWed Feb  1 21:29:45 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject05/classes/subject05_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject05_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject06",
+          "source_sha256": "cca2bfbb21cfef3533efe86ea4f95367c56f60b99adf47100a9b2c9da446640d",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject06_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject06_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "d6f9acd54f29faa9dbe48646139e92052431c3989e02f806c57e39d9c237afbf",
+          "decompressed_minc_sha256": "94d2c628c428ff9323ef073044c05eb4692a9c46d968173c669c206b533d8260",
+          "local_minc_sha256": "d6f9acd54f29faa9dbe48646139e92052431c3989e02f806c57e39d9c237afbf",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:11:00 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject06/classes//subject06_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject06/classes//subject06all.mnc /data/ipl/ipl7/broche/subjects/subject06/classes//subject06_bck.mnc\nWed Feb  1 21:38:52 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject06/classes/subject06_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject06_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject18",
+          "source_sha256": "64cc65af874041489d5b137665260966f7bdc2589bfc8bd3dfc157d0debeb40d",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject18_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject18_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "b942a24f45402fb9326a51f048d542be6d1e1a385efc5610dcd8d7a8f485e5ad",
+          "decompressed_minc_sha256": "0ac19416834da43171dcb2adbf355ba62e938def4324611bef1a1e835f7c2046",
+          "local_minc_sha256": "b942a24f45402fb9326a51f048d542be6d1e1a385efc5610dcd8d7a8f485e5ad",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:15:56 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject18/classes//subject18_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject18/classes//subject18all.mnc /data/ipl/ipl7/broche/subjects/subject18/classes//subject18_bck.mnc\nWed Feb  1 21:47:55 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject18/classes/subject18_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject18_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject20",
+          "source_sha256": "145c3bbe79c357bce15975c46f30f6dc0b9e040d5bacb9cbd8024ea7ebc7a384",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject20_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject20_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "819d6660dfb8bbf149d8b5ac4b5f2e5162bd67a6ea65ac660a0c77cc7f27213e",
+          "decompressed_minc_sha256": "9654c5d0c3e29def3baf8bff3b780879e8e541a34bd5ba05930ff9839b6379a0",
+          "local_minc_sha256": "819d6660dfb8bbf149d8b5ac4b5f2e5162bd67a6ea65ac660a0c77cc7f27213e",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:20:47 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject20/classes//subject20_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject20/classes//subject20all.mnc /data/ipl/ipl7/broche/subjects/subject20/classes//subject20_bck.mnc\nWed Feb  1 21:57:06 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject20/classes/subject20_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject20_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject38",
+          "source_sha256": "064492bf4abe3d00f7737b3928eb0d983524c5fdc5c82914693e6075bbda058d",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject38_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject38_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "1b6ad6127da111703773c219997326bddada4f7784172629995e5870485377d7",
+          "decompressed_minc_sha256": "ad5631481a13df7c8f261ef19f1422677afe7bbb3125fafbafb1d9af66b5cc31",
+          "local_minc_sha256": "1b6ad6127da111703773c219997326bddada4f7784172629995e5870485377d7",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:25:56 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject38/classes//subject38_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject38/classes//subject38all.mnc /data/ipl/ipl7/broche/subjects/subject38/classes//subject38_bck.mnc\nWed Feb  1 22:06:17 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject38/classes/subject38_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject38_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject41",
+          "source_sha256": "a573f391e82cd7356c6161ff36e3bca8ae216036521108ca210f03090aaa3f93",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject41_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject41_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "5704557ac63ad202be98b2a4bafd8d99461f88067c5fd6043e33face869f0804",
+          "decompressed_minc_sha256": "7f93753e12187cfce883f2682037a50f6c3b795a3fd8dffbece72f2aa189ab6a",
+          "local_minc_sha256": "5704557ac63ad202be98b2a4bafd8d99461f88067c5fd6043e33face869f0804",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:30:51 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject41/classes//subject41_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject41/classes//subject41all.mnc /data/ipl/ipl7/broche/subjects/subject41/classes//subject41_bck.mnc\nWed Feb  1 22:15:30 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject41/classes/subject41_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject41_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject42",
+          "source_sha256": "1c640359f91b5c9fece08ce1a99efc6efb9e4b12328ff4c25f792ef098e41c6e",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject42_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject42_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "c371353ab92897b3d8ff93fb6403b856f460260caef3fbd3d053ed2ffb320c97",
+          "decompressed_minc_sha256": "40a27b6d2d319b982cf476c7569584eafc67f9e2feb0d9b1a931a68cc4de37b7",
+          "local_minc_sha256": "c371353ab92897b3d8ff93fb6403b856f460260caef3fbd3d053ed2ffb320c97",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:35:53 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject42/classes//subject42_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject42/classes//subject42all.mnc /data/ipl/ipl7/broche/subjects/subject42/classes//subject42_bck.mnc\nWed Feb  1 22:24:36 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject42/classes/subject42_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject42_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject43",
+          "source_sha256": "7e34f440f3a0e304b258e63745ff6c81dfddf29cd3097959edcf0d1a7e00298e",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject43_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject43_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "a6327f62bc783bd99ffe0e11a2b8e233fc9f8b70957fc9fdae4a01f9a334c1dc",
+          "decompressed_minc_sha256": "5004095b0580b43eb688be5913b6296e008b26bc01202814f96d42bf85535ebd",
+          "local_minc_sha256": "a6327f62bc783bd99ffe0e11a2b8e233fc9f8b70957fc9fdae4a01f9a334c1dc",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:40:32 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject43/classes//subject43_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject43/classes//subject43all.mnc /data/ipl/ipl7/broche/subjects/subject43/classes//subject43_bck.mnc\nWed Feb  1 22:33:45 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject43/classes/subject43_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject43_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        },
+        {
+          "subject_id": "subject44",
+          "source_sha256": "53853146babdb942d5595744286707df780b83afa6a3213c2e1089e7a5edaf62",
+          "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject44_t1w&download=1",
+          "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+          "alias": "subject44_t1w",
+          "format": "minc",
+          "compression": "gnuzip",
+          "authoritative_gzip_sha256": "b63480f26e469137b78c0ee985e12bbc6dcf31133e3d2ffc6942308e05ad07b9",
+          "decompressed_minc_sha256": "e960c03dfc1eecf4924b783e0250a311ff4768b2ecc2125cdefe1c5fcbe115e7",
+          "local_minc_sha256": "b63480f26e469137b78c0ee985e12bbc6dcf31133e3d2ffc6942308e05ad07b9",
+          "orientation": {
+            "zspace": {
+              "step_mm": 1.0,
+              "start_mm": -72.25
+            },
+            "yspace": {
+              "step_mm": 1.0,
+              "start_mm": -145.75
+            },
+            "xspace": {
+              "step_mm": 1.0,
+              "start_mm": -127.75
+            }
+          },
+          "history": "Wed Feb  1 17:45:16 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject44/classes//subject44_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject44/classes//subject44all.mnc /data/ipl/ipl7/broche/subjects/subject44/classes//subject44_bck.mnc\nWed Feb  1 22:42:42 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject44/classes/subject44_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject44_t1w_p4.mnc -verbose\n",
+          "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+          "conversion_max_abs_error": 0.0
+        }
+      ]
+    },
+    "verification_sha256": "7f19ffb748bd204bd3e6a3911bb7bf586468aaf6453a0d9e34131b27ba08dcbe"
+  },
+  "manifest_hash": "8c410870d0bbdeb541337e1518fc88fc22673b53eaa4259864800db8713b7305",
+  "method": "blindspot",
+  "sigma": 0.1,
+  "central_fraction": 1.0,
+  "experiment_hash": "f9bff72264a7676f80361f80320729f1572870d0d3415a2b256ca1e615678a8f",
+  "workload": {
+    "max_train_batches": 555,
+    "center_slices": null,
+    "train_subjects": null,
+    "max_val_batches": null
+  },
+  "training_subjects": [
+    "subject04",
+    "subject06",
+    "subject18",
+    "subject41",
+    "subject42",
+    "subject43"
+  ],
+  "training_samples": 1074,
+  "loss_convention": "active-pixel normalized reconstruction and RC; lambda_rc=cfg.rc_weight",
+  "selection": {
+    "rule": "fixed_final_epoch",
+    "epoch": 1,
+    "clean_references_used": false
+  },
+  "validation_protocol": "fixed random masked noisy pixels, all interior val slices; monitor only",
+  "validation_history": [
+    {
+      "epoch": 1,
+      "noisy_masked_mse": 0.010624969029518146
+    }
+  ],
+  "training_history": [
+    {
+      "epoch": 1,
+      "loss": 0.01351769464845593
+    }
+  ],
+  "epoch": 1,
+  "validation_seconds": 4.744872801000383,
+  "optimizer_steps": 555,
+  "training_seconds": 20.95641017900016,
+  "elapsed_seconds": 25.702527084000394,
+  "peak_cuda_memory_bytes": 85633024
+}

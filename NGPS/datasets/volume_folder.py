@@ -37,7 +37,7 @@ def list_volume_items(data_root: str | Path, split: str) -> List[VolumeItem]:
 
 
 def validate_volume(volume: np.ndarray, *, unit_range: bool = False) -> np.ndarray:
-    """Strict validation; Gaussian observations/predictions are not range bounded."""
+    """Strict validation. Gaussian observations and predictions are not range bounded."""
     if volume.ndim != 3 or min(volume.shape) < 1:
         raise ValueError(f"Expected nonempty (D, H, W), got {volume.shape}")
     if volume.dtype != np.float32:

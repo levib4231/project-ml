@@ -1,0 +1,8 @@
+{
+  "failure": "KeyError subject_id during summary aggregation after all frozen scoring",
+  "fix": "Reporting-only subject-to-subject_id alias; unchanged original scores.partial.json and all predictions/checkpoints",
+  "rescored": false,
+  "retrained": false,
+  "original_scores_sha256": "3dbd15bcfadb21205c4c9d11d789ac2ca395d5fc651ebb487641212dd84fddfe",
+  "finalizer_sha256": "36de50315dc26b67c9a112e84aacf546bb0684937ef443dadc55ad7bc60c4a04"
+}

@@ -1,0 +1,31 @@
+{
+  "load_count": 174,
+  "loaded_paths": [
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject04/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject04/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject04/noisy_0.10.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject05/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject05/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject05/noisy_0.10.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject06/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject06/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject06/noisy_0.10.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject18/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject18/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject18/noisy_0.10.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject38/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject38/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject38/noisy_0.10.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject41/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject41/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject41/noisy_0.10.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject42/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject42/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject42/noisy_0.10.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject43/noisy_0.03.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject43/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject43/noisy_0.10.npy"
+  ],
+  "forbidden_loads": 0,
+  "scope": "Pilot, training and preflight only; clean files accessed earlier solely to generate corruption, later solely for frozen scoring"
+}

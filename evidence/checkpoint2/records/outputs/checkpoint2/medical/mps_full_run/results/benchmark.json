@@ -1,0 +1,1482 @@
+{
+  "protocol_hash": "7506bdb7ea5efdf5e32bb9816a422a7fd61d40a75a99b5f8a6ab66ccbf36160c",
+  "kind": "medical",
+  "subjects": [
+    {
+      "subject_id": "subject20",
+      "sigma": 0.03,
+      "method": "ngps",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.541010958957486,
+      "volume_seconds": 2.575753084034659,
+      "PSNR": 37.5932396655414,
+      "SSIM": 0.8451033319214832,
+      "HFEN": 0.8822276826062914,
+      "SobelGradientMagnitudeSimilarity": 0.7006155380886563,
+      "GMSD": 0.033971383653128344,
+      "prediction_sha256": "041815a45e6647a3b7325f8e1d5c1fa4204c54e0f74d63d033f46fcb00505148",
+      "checkpoint_sha256": "5b7ba782eb7978c5cb3efa870d52165d657350cb88071348fd96b6c04dac482f"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.03,
+      "method": "ngps",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5763615829637274,
+      "volume_seconds": 2.6005741249537095,
+      "PSNR": 37.35957589448947,
+      "SSIM": 0.8441130366948801,
+      "HFEN": 0.7959201635576744,
+      "SobelGradientMagnitudeSimilarity": 0.7093941763619691,
+      "GMSD": 0.0343514586598175,
+      "prediction_sha256": "9c31408d9e78d92305809c543012eee58ec5de8b9fca70469fbec1fc082baf12",
+      "checkpoint_sha256": "5b7ba782eb7978c5cb3efa870d52165d657350cb88071348fd96b6c04dac482f"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.03,
+      "method": "blindspot",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5690329170320183,
+      "volume_seconds": 2.597479125019163,
+      "PSNR": 36.841340132957775,
+      "SSIM": 0.8519100048831616,
+      "HFEN": 0.8658563555604186,
+      "SobelGradientMagnitudeSimilarity": 0.6940932632809844,
+      "GMSD": 0.034623221808128594,
+      "prediction_sha256": "829601b64b939f2c4638707c040d156e70bfafe525e15670426c54cbd4114c79",
+      "checkpoint_sha256": "743590573ca40df2d331630a849f0c5755c391c65b2d7e7e9426b7d25b4cf252"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.03,
+      "method": "blindspot",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5423652089666575,
+      "volume_seconds": 2.568786459043622,
+      "PSNR": 36.5727218353866,
+      "SSIM": 0.8479711032692577,
+      "HFEN": 0.7853580337861625,
+      "SobelGradientMagnitudeSimilarity": 0.7017071428219916,
+      "GMSD": 0.03529589524420586,
+      "prediction_sha256": "314f4bce10646587f74ec9ace61613078c1e63e9c5d1a88b748e308e10c5cf41",
+      "checkpoint_sha256": "743590573ca40df2d331630a849f0c5755c391c65b2d7e7e9426b7d25b4cf252"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.03,
+      "method": "adjacent",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.540596291073598,
+      "volume_seconds": 2.5747668329859152,
+      "PSNR": 38.531688402858144,
+      "SSIM": 0.8901100229833913,
+      "HFEN": 0.8229426986934072,
+      "SobelGradientMagnitudeSimilarity": 0.7379927111594058,
+      "GMSD": 0.029879758525536863,
+      "prediction_sha256": "f957939c423993422170feffbb9b8db5f2dc6e1a04ab8e8b218a9d4a446a006a",
+      "checkpoint_sha256": "aaecf6901a60a6375129b5db7dca7d5ec74e695f52698ce1be2937974538c9b4"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.03,
+      "method": "adjacent",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5179019171046093,
+      "volume_seconds": 2.5434282920323312,
+      "PSNR": 38.23925981506297,
+      "SSIM": 0.8871293264298222,
+      "HFEN": 0.7478991318802807,
+      "SobelGradientMagnitudeSimilarity": 0.7433206300709129,
+      "GMSD": 0.030433174428524893,
+      "prediction_sha256": "90a7497235552db33f0767a53d12b6beb8d0a5cee3d712059d17a8fa92b91f17",
+      "checkpoint_sha256": "aaecf6901a60a6375129b5db7dca7d5ec74e695f52698ce1be2937974538c9b4"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.03,
+      "method": "nlm",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 8.49164175009355,
+      "volume_seconds": 8.520786582957953,
+      "PSNR": 41.31796358532189,
+      "SSIM": 0.9438397501713033,
+      "HFEN": 0.4338592104819598,
+      "SobelGradientMagnitudeSimilarity": 0.8044043990129924,
+      "GMSD": 0.02724728590258248,
+      "prediction_sha256": "3113b35199b582bf17254397d74b5f5275b45ad3fc17ba65b593fdf1bed26468",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.03,
+      "method": "nlm",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 8.558872541994788,
+      "volume_seconds": 8.591102166916244,
+      "PSNR": 40.5835173100557,
+      "SSIM": 0.939267320284991,
+      "HFEN": 0.44258556165089263,
+      "SobelGradientMagnitudeSimilarity": 0.8002508911638628,
+      "GMSD": 0.029593691038153038,
+      "prediction_sha256": "688078f1015d6b5c8aa91658cb3cb64945db4fa8cb3b79be9e97d7bfb1d75827",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.03,
+      "method": "noisy",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 0.004924999899230897,
+      "volume_seconds": 0.04118754202499986,
+      "PSNR": 30.459058223209176,
+      "SSIM": 0.5492130764349219,
+      "HFEN": 1.3950084032933356,
+      "SobelGradientMagnitudeSimilarity": 0.43926923339208845,
+      "GMSD": 0.0722846395402982,
+      "prediction_sha256": "23ac08826738d3da4bdd1610b3c8772254fe328c9d9802188523274e68dfbcec",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.03,
+      "method": "noisy",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 0.003360458998940885,
+      "volume_seconds": 0.033992292010225356,
+      "PSNR": 30.458097625752416,
+      "SSIM": 0.5603033869873969,
+      "HFEN": 1.2238917466026644,
+      "SobelGradientMagnitudeSimilarity": 0.4638290518884501,
+      "GMSD": 0.07171807783907948,
+      "prediction_sha256": "b99136c4b800b26833ffe06619642928fd182c1f66ee48e381542a56e06c5351",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.06,
+      "method": "ngps",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5014617500128224,
+      "volume_seconds": 2.5263629170367494,
+      "PSNR": 35.81167079357844,
+      "SSIM": 0.7981549618316217,
+      "HFEN": 1.1119140633561992,
+      "SobelGradientMagnitudeSimilarity": 0.6476616592697018,
+      "GMSD": 0.059584171217943425,
+      "prediction_sha256": "f90c0d59ff2a408f8bbe2247f2f656d0c8a3798cd00b3d063bee2be7f4b172d0",
+      "checkpoint_sha256": "98956bc2d2469f8a187533a78ce9565ce0a7590a7c4fb3ee79ad13f246e08c38"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.06,
+      "method": "ngps",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5105424580397084,
+      "volume_seconds": 2.541080916998908,
+      "PSNR": 35.597109458551394,
+      "SSIM": 0.7955394475722152,
+      "HFEN": 1.013171058333381,
+      "SobelGradientMagnitudeSimilarity": 0.6547420436506113,
+      "GMSD": 0.05996192098487148,
+      "prediction_sha256": "524130bb1a942efcb3a6a879aa2ca8d490ad2a238983a6bdc9351d632bf41d9b",
+      "checkpoint_sha256": "98956bc2d2469f8a187533a78ce9565ce0a7590a7c4fb3ee79ad13f246e08c38"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.06,
+      "method": "blindspot",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5401150410762057,
+      "volume_seconds": 2.5666687090415508,
+      "PSNR": 34.53937458689118,
+      "SSIM": 0.7224707931112312,
+      "HFEN": 1.1551064391162513,
+      "SobelGradientMagnitudeSimilarity": 0.5974904756519676,
+      "GMSD": 0.06328989242239552,
+      "prediction_sha256": "8dfc99743ee86235117ccac651dd8907b2442b5f6b391fc7574f31a51892817f",
+      "checkpoint_sha256": "d946208ff613de54dfd63d05953d8c34799ea57c4bec649621d241d53fe64a24"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.06,
+      "method": "blindspot",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.535014291992411,
+      "volume_seconds": 2.570496416068636,
+      "PSNR": 34.34558400353015,
+      "SSIM": 0.7193907192135622,
+      "HFEN": 1.0510987945683095,
+      "SobelGradientMagnitudeSimilarity": 0.60752734541893,
+      "GMSD": 0.06361605385472761,
+      "prediction_sha256": "51be5e3d4cf98b239f6a23e17ae8a45b15994cefdc99782c9b85fdc6f1a00174",
+      "checkpoint_sha256": "d946208ff613de54dfd63d05953d8c34799ea57c4bec649621d241d53fe64a24"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.06,
+      "method": "adjacent",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.55087208293844,
+      "volume_seconds": 2.57892100000754,
+      "PSNR": 36.14094225733987,
+      "SSIM": 0.7967344089757443,
+      "HFEN": 1.0608459576058782,
+      "SobelGradientMagnitudeSimilarity": 0.6610289601331257,
+      "GMSD": 0.05620679798541148,
+      "prediction_sha256": "41ca441110180e69268114af2f17ec745bfe224b2edce1df251e5d3e5eaa7044",
+      "checkpoint_sha256": "cfedd7e89baf598db1a7121990c7223625c574a1a6440753bbc1d4df7cc733d5"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.06,
+      "method": "adjacent",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.573471540934406,
+      "volume_seconds": 2.5994123748969287,
+      "PSNR": 35.8997861740947,
+      "SSIM": 0.7937667467718768,
+      "HFEN": 0.9735694418954586,
+      "SobelGradientMagnitudeSimilarity": 0.6660840182014591,
+      "GMSD": 0.05676714903083296,
+      "prediction_sha256": "489c05e2eaacc5f9f2af617b2ef4510a3eb9b354127753897c509a0799b77bb6",
+      "checkpoint_sha256": "cfedd7e89baf598db1a7121990c7223625c574a1a6440753bbc1d4df7cc733d5"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.06,
+      "method": "nlm",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 8.291989666991867,
+      "volume_seconds": 8.317869500024244,
+      "PSNR": 37.537740697489824,
+      "SSIM": 0.8661920810886514,
+      "HFEN": 0.6939578718243383,
+      "SobelGradientMagnitudeSimilarity": 0.7251197300563201,
+      "GMSD": 0.055827232803223215,
+      "prediction_sha256": "1266cafe02c6bfae36c27ceb9d02063ae74eb5f88e05868e7b1df9f10ce5f975",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.06,
+      "method": "nlm",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 8.273695625015534,
+      "volume_seconds": 8.29849724995438,
+      "PSNR": 36.97117769961796,
+      "SSIM": 0.8580803012117596,
+      "HFEN": 0.7017569564982672,
+      "SobelGradientMagnitudeSimilarity": 0.7087907521105603,
+      "GMSD": 0.06115903197247432,
+      "prediction_sha256": "6e074d9d1215cecd203badfe218c44ecc93bb231758d4dce2a7ba7d7633b20ff",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.06,
+      "method": "noisy",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 0.00492795801255852,
+      "volume_seconds": 0.034497959073632956,
+      "PSNR": 24.435036850880323,
+      "SSIM": 0.24087832536743825,
+      "HFEN": 2.79263432052254,
+      "SobelGradientMagnitudeSimilarity": 0.2697569126088316,
+      "GMSD": 0.16998824543057225,
+      "prediction_sha256": "5d93ec2c6992d625cd91af5ab931030d94e7f1cce2a8c3329d851a908efc9103",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.06,
+      "method": "noisy",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 0.0030748340068385005,
+      "volume_seconds": 0.03130058303941041,
+      "PSNR": 24.43918087459457,
+      "SSIM": 0.25223258292185746,
+      "HFEN": 2.450434263239908,
+      "SobelGradientMagnitudeSimilarity": 0.2900513917701679,
+      "GMSD": 0.16945692649862384,
+      "prediction_sha256": "6c20c15362ecb20cb0d33f1c56de5098a9de429fcbd0b4429f538dfffab61b33",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.1,
+      "method": "ngps",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.592894791974686,
+      "volume_seconds": 2.6349537909263745,
+      "PSNR": 34.0587992418838,
+      "SSIM": 0.6678088917340785,
+      "HFEN": 1.3412349497415743,
+      "SobelGradientMagnitudeSimilarity": 0.586571244245076,
+      "GMSD": 0.08927886558501101,
+      "prediction_sha256": "63c8132eaa9120fe7771366a16031d8efabccfac7af2c186e4daedbde035b24c",
+      "checkpoint_sha256": "95b681487d55f85e7ca99a0c80f1e36705a52a1145011b67169b5499c7fb8c1c"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.1,
+      "method": "ngps",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.596904083970003,
+      "volume_seconds": 2.625122542027384,
+      "PSNR": 33.87434764050184,
+      "SSIM": 0.6662319980065922,
+      "HFEN": 1.2218864556834184,
+      "SobelGradientMagnitudeSimilarity": 0.595347550857133,
+      "GMSD": 0.08942587620151636,
+      "prediction_sha256": "abbe42aee687f511de8295a613caaebd77561644782754f1754d92d76e3faa9b",
+      "checkpoint_sha256": "95b681487d55f85e7ca99a0c80f1e36705a52a1145011b67169b5499c7fb8c1c"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.1,
+      "method": "blindspot",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.613430583034642,
+      "volume_seconds": 2.642698875046335,
+      "PSNR": 32.975736814940724,
+      "SSIM": 0.6364602090288449,
+      "HFEN": 1.3238620017114924,
+      "SobelGradientMagnitudeSimilarity": 0.5382524709016578,
+      "GMSD": 0.0891413836436377,
+      "prediction_sha256": "9efe166205e1a975d1f8f0f6aaaa18345ef31d01d6c1ae8db93b879e2fdfe4b3",
+      "checkpoint_sha256": "9eca59facd56f9b9d38b8fe1765608612c8a232afa2c8194139a190ef0b84982"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.1,
+      "method": "blindspot",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.56809591606725,
+      "volume_seconds": 2.592903459095396,
+      "PSNR": 32.812824494546945,
+      "SSIM": 0.633791309130613,
+      "HFEN": 1.2128545203920227,
+      "SobelGradientMagnitudeSimilarity": 0.5495289188722221,
+      "GMSD": 0.08937473434604992,
+      "prediction_sha256": "f1b4e48bf1172f0f76f8a71b48eb8c1a1903c919ba6d07d023e0adf26f998615",
+      "checkpoint_sha256": "9eca59facd56f9b9d38b8fe1765608612c8a232afa2c8194139a190ef0b84982"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.1,
+      "method": "adjacent",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.5716480419505388,
+      "volume_seconds": 2.6028487500734627,
+      "PSNR": 34.704090576350104,
+      "SSIM": 0.7269449687822014,
+      "HFEN": 1.1141140520243356,
+      "SobelGradientMagnitudeSimilarity": 0.6204228259581888,
+      "GMSD": 0.07227806878682658,
+      "prediction_sha256": "04419f4b8da4c689794ee50cb7f53ec71ee2856603965705a1104d98e2ea9c25",
+      "checkpoint_sha256": "299d65e436c08965de22c156ece4dd904f3681d79cc98c304a6103a3a0d571c8"
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.1,
+      "method": "adjacent",
+      "slices": 181,
+      "device": "mps",
+      "device_name": "Apple MPS (arm64)",
+      "inference_seconds": 2.542945542023517,
+      "volume_seconds": 2.5693013329291716,
+      "PSNR": 34.459692098654465,
+      "SSIM": 0.7225104682886433,
+      "HFEN": 1.0430858655529127,
+      "SobelGradientMagnitudeSimilarity": 0.6248431403333969,
+      "GMSD": 0.0730149897834214,
+      "prediction_sha256": "266c3a00d79ccee2b3fb00f8f6eeaa475d4e41be8e15abb4f5e853bb0d7e99ca",
+      "checkpoint_sha256": "299d65e436c08965de22c156ece4dd904f3681d79cc98c304a6103a3a0d571c8"
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.1,
+      "method": "nlm",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 8.20950445800554,
+      "volume_seconds": 8.244951583095826,
+      "PSNR": 34.767742073750654,
+      "SSIM": 0.7513463015229888,
+      "HFEN": 0.9527200555933114,
+      "SobelGradientMagnitudeSimilarity": 0.6230851721368442,
+      "GMSD": 0.08202298131683913,
+      "prediction_sha256": "7e9be8fc25774e878052bde5020bf3ff8955c5bebed3ba65f6e3d7a6492cec06",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.1,
+      "method": "nlm",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 8.22745391598437,
+      "volume_seconds": 8.260071958997287,
+      "PSNR": 34.430342202056345,
+      "SSIM": 0.7429752510403826,
+      "HFEN": 0.9267888754112286,
+      "SobelGradientMagnitudeSimilarity": 0.6155725358599458,
+      "GMSD": 0.08596922561155827,
+      "prediction_sha256": "2825a5ceac7474677dfcd65a941c3fff8badb4ca588041c54b7b91dd20405877",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject20",
+      "sigma": 0.1,
+      "method": "noisy",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 0.005873957998119295,
+      "volume_seconds": 0.03775733301881701,
+      "PSNR": 20.000081170145727,
+      "SSIM": 0.10462900447370524,
+      "HFEN": 4.652883288610047,
+      "SobelGradientMagnitudeSimilarity": 0.18155789902197064,
+      "GMSD": 0.24201767434731372,
+      "prediction_sha256": "9349f0d869abd9870a259e3371a6ce842318d58868cbdf6f1be6825a9e4aec56",
+      "checkpoint_sha256": null
+    },
+    {
+      "subject_id": "subject44",
+      "sigma": 0.1,
+      "method": "noisy",
+      "slices": 181,
+      "device": "cpu",
+      "device_name": "arm",
+      "inference_seconds": 0.0032810410484671593,
+      "volume_seconds": 0.036090124980546534,
+      "PSNR": 20.00143295297904,
+      "SSIM": 0.11098818590207264,
+      "HFEN": 4.0790685474543285,
+      "SobelGradientMagnitudeSimilarity": 0.1973754423181655,
+      "GMSD": 0.24286707725314147,
+      "prediction_sha256": "2ee75cf562b2ae339c26c89f4f1ab46e9d89d88c46f383b5dda71ec7286fb8a4",
+      "checkpoint_sha256": null
+    }
+  ],
+  "aggregates": [
+    {
+      "method": "ngps",
+      "sigma": 0.03,
+      "metric": "PSNR",
+      "mean": 37.476407780015435,
+      "std_population": 0.11683188552596491,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.03,
+      "metric": "SSIM",
+      "mean": 0.8446081843081816,
+      "std_population": 0.0004951476133015498,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.03,
+      "metric": "HFEN",
+      "mean": 0.8390739230819828,
+      "std_population": 0.0431537595243085,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.03,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.7050048572253127,
+      "std_population": 0.004389319136656411,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.03,
+      "metric": "GMSD",
+      "mean": 0.03416142115647292,
+      "std_population": 0.00019003750334457836,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.03,
+      "metric": "inference_seconds",
+      "mean": 2.5586862709606066,
+      "std_population": 0.01767531200312078,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.03,
+      "metric": "volume_seconds",
+      "mean": 2.5881636044941843,
+      "std_population": 0.012410520459525287,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.03,
+      "metric": "PSNR",
+      "mean": 36.70703098417219,
+      "std_population": 0.13430914878558653,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.03,
+      "metric": "SSIM",
+      "mean": 0.8499405540762097,
+      "std_population": 0.0019694508069519334,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.03,
+      "metric": "HFEN",
+      "mean": 0.8256071946732906,
+      "std_population": 0.040249160887128044,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.03,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.697900203051488,
+      "std_population": 0.0038069397705036145,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.03,
+      "metric": "GMSD",
+      "mean": 0.03495955852616722,
+      "std_population": 0.0003363367180386316,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.03,
+      "metric": "inference_seconds",
+      "mean": 2.555699062999338,
+      "std_population": 0.013333854032680392,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.03,
+      "metric": "volume_seconds",
+      "mean": 2.5831327920313925,
+      "std_population": 0.014346332987770438,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.03,
+      "metric": "PSNR",
+      "mean": 38.38547410896056,
+      "std_population": 0.1462142938975859,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.03,
+      "metric": "SSIM",
+      "mean": 0.8886196747066067,
+      "std_population": 0.0014903482767845144,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.03,
+      "metric": "HFEN",
+      "mean": 0.7854209152868439,
+      "std_population": 0.03752178340656326,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.03,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.7406566706151594,
+      "std_population": 0.0026639594557535395,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.03,
+      "metric": "GMSD",
+      "mean": 0.03015646647703088,
+      "std_population": 0.0002767079514940148,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.03,
+      "metric": "inference_seconds",
+      "mean": 2.5292491040891036,
+      "std_population": 0.011347186984494328,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.03,
+      "metric": "volume_seconds",
+      "mean": 2.5590975625091232,
+      "std_population": 0.015669270476792008,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.03,
+      "metric": "PSNR",
+      "mean": 40.950740447688794,
+      "std_population": 0.367223137633097,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.03,
+      "metric": "SSIM",
+      "mean": 0.9415535352281472,
+      "std_population": 0.0022862149431561174,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.03,
+      "metric": "HFEN",
+      "mean": 0.4382223860664262,
+      "std_population": 0.004363175584466417,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.03,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.8023276450884276,
+      "std_population": 0.0020767539245648003,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.03,
+      "metric": "GMSD",
+      "mean": 0.02842048847036776,
+      "std_population": 0.0011732025677852788,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.03,
+      "metric": "inference_seconds",
+      "mean": 8.525257146044169,
+      "std_population": 0.03361539595061913,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.03,
+      "metric": "volume_seconds",
+      "mean": 8.555944374937098,
+      "std_population": 0.03515779197914526,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.03,
+      "metric": "PSNR",
+      "mean": 30.458577924480796,
+      "std_population": 0.00048029872838029064,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.03,
+      "metric": "SSIM",
+      "mean": 0.5547582317111595,
+      "std_population": 0.005545155276237501,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.03,
+      "metric": "HFEN",
+      "mean": 1.309450074948,
+      "std_population": 0.08555832834533561,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.03,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.45154914264026924,
+      "std_population": 0.012279909248180815,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.03,
+      "metric": "GMSD",
+      "mean": 0.07200135868968885,
+      "std_population": 0.00028328085060936453,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.03,
+      "metric": "inference_seconds",
+      "mean": 0.004142729449085891,
+      "std_population": 0.0007822704501450062,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.03,
+      "metric": "volume_seconds",
+      "mean": 0.037589917017612606,
+      "std_population": 0.0035976250073872507,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.06,
+      "metric": "PSNR",
+      "mean": 35.70439012606492,
+      "std_population": 0.10728066751352472,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.06,
+      "metric": "SSIM",
+      "mean": 0.7968472047019184,
+      "std_population": 0.0013077571297032686,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.06,
+      "metric": "HFEN",
+      "mean": 1.0625425608447903,
+      "std_population": 0.04937150251140909,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.06,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.6512018514601565,
+      "std_population": 0.0035401921904547606,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.06,
+      "metric": "GMSD",
+      "mean": 0.05977304610140745,
+      "std_population": 0.00018887488346402623,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.06,
+      "metric": "inference_seconds",
+      "mean": 2.5060021040262654,
+      "std_population": 0.004540354013442993,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.06,
+      "metric": "volume_seconds",
+      "mean": 2.5337219170178287,
+      "std_population": 0.007358999981079251,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.06,
+      "metric": "PSNR",
+      "mean": 34.44247929521066,
+      "std_population": 0.09689529168051436,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.06,
+      "metric": "SSIM",
+      "mean": 0.7209307561623968,
+      "std_population": 0.0015400369488344778,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.06,
+      "metric": "HFEN",
+      "mean": 1.1031026168422804,
+      "std_population": 0.052003822273970934,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.06,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.6025089105354489,
+      "std_population": 0.005018434883481249,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.06,
+      "metric": "GMSD",
+      "mean": 0.06345297313856157,
+      "std_population": 0.00016308071616604608,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.06,
+      "metric": "inference_seconds",
+      "mean": 2.5375646665343083,
+      "std_population": 0.0025503745418973267,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.06,
+      "metric": "volume_seconds",
+      "mean": 2.5685825625550933,
+      "std_population": 0.0019138535135425627,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.06,
+      "metric": "PSNR",
+      "mean": 36.02036421571729,
+      "std_population": 0.12057804162258634,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.06,
+      "metric": "SSIM",
+      "mean": 0.7952505778738106,
+      "std_population": 0.0014838311019337858,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.06,
+      "metric": "HFEN",
+      "mean": 1.0172076997506685,
+      "std_population": 0.043638257855209805,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.06,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.6635564891672925,
+      "std_population": 0.002527529034166698,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.06,
+      "metric": "GMSD",
+      "mean": 0.05648697350812222,
+      "std_population": 0.00028017552271073984,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.06,
+      "metric": "inference_seconds",
+      "mean": 2.562171811936423,
+      "std_population": 0.011299728997983038,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.06,
+      "metric": "volume_seconds",
+      "mean": 2.5891666874522343,
+      "std_population": 0.01024568744469434,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.06,
+      "metric": "PSNR",
+      "mean": 37.25445919855389,
+      "std_population": 0.28328149893593135,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.06,
+      "metric": "SSIM",
+      "mean": 0.8621361911502055,
+      "std_population": 0.004055889938445911,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.06,
+      "metric": "HFEN",
+      "mean": 0.6978574141613028,
+      "std_population": 0.0038995423369644344,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.06,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.7169552410834402,
+      "std_population": 0.008164488972879913,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.06,
+      "metric": "GMSD",
+      "mean": 0.05849313238784877,
+      "std_population": 0.002665899584625552,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.06,
+      "metric": "inference_seconds",
+      "mean": 8.2828426460037,
+      "std_population": 0.009147020988166332,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.06,
+      "metric": "volume_seconds",
+      "mean": 8.308183374989312,
+      "std_population": 0.009686125034932047,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.06,
+      "metric": "PSNR",
+      "mean": 24.437108862737446,
+      "std_population": 0.002072011857123357,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.06,
+      "metric": "SSIM",
+      "mean": 0.24655545414464786,
+      "std_population": 0.005677128777209606,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.06,
+      "metric": "HFEN",
+      "mean": 2.621534291881224,
+      "std_population": 0.17110002864131602,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.06,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.27990415218949977,
+      "std_population": 0.010147239580668155,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.06,
+      "metric": "GMSD",
+      "mean": 0.16972258596459805,
+      "std_population": 0.0002656594659742051,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.06,
+      "metric": "inference_seconds",
+      "mean": 0.00400139600969851,
+      "std_population": 0.0009265620028600097,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.06,
+      "metric": "volume_seconds",
+      "mean": 0.032899271056521684,
+      "std_population": 0.0015986880171112716,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.1,
+      "metric": "PSNR",
+      "mean": 33.96657344119282,
+      "std_population": 0.0922258006909793,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.1,
+      "metric": "SSIM",
+      "mean": 0.6670204448703354,
+      "std_population": 0.0007884468637431863,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.1,
+      "metric": "HFEN",
+      "mean": 1.2815607027124964,
+      "std_population": 0.059674247029077976,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.1,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.5909593975511045,
+      "std_population": 0.004388153306028486,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.1,
+      "metric": "GMSD",
+      "mean": 0.08935237089326369,
+      "std_population": 7.350530825267487e-05,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.1,
+      "metric": "inference_seconds",
+      "mean": 2.5948994379723445,
+      "std_population": 0.002004645997658372,
+      "n_subjects": 2
+    },
+    {
+      "method": "ngps",
+      "sigma": 0.1,
+      "metric": "volume_seconds",
+      "mean": 2.6300381664768793,
+      "std_population": 0.004915624449495226,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.1,
+      "metric": "PSNR",
+      "mean": 32.89428065474384,
+      "std_population": 0.08145616019688973,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.1,
+      "metric": "SSIM",
+      "mean": 0.635125759079729,
+      "std_population": 0.0013344499491159678,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.1,
+      "metric": "HFEN",
+      "mean": 1.2683582610517576,
+      "std_population": 0.055503740659734846,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.1,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.54389069488694,
+      "std_population": 0.005638223985282131,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.1,
+      "metric": "GMSD",
+      "mean": 0.08925805899484382,
+      "std_population": 0.00011667535120610945,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.1,
+      "metric": "inference_seconds",
+      "mean": 2.590763249550946,
+      "std_population": 0.022667333483695984,
+      "n_subjects": 2
+    },
+    {
+      "method": "blindspot",
+      "sigma": 0.1,
+      "metric": "volume_seconds",
+      "mean": 2.6178011670708656,
+      "std_population": 0.02489770797546953,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.1,
+      "metric": "PSNR",
+      "mean": 34.581891337502285,
+      "std_population": 0.12219923884781991,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.1,
+      "metric": "SSIM",
+      "mean": 0.7247277185354224,
+      "std_population": 0.0022172502467790456,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.1,
+      "metric": "HFEN",
+      "mean": 1.0785999587886241,
+      "std_population": 0.03551409323571142,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.1,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.6226329831457929,
+      "std_population": 0.0022101571876040893,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.1,
+      "metric": "GMSD",
+      "mean": 0.072646529285124,
+      "std_population": 0.0003684604982974113,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.1,
+      "metric": "inference_seconds",
+      "mean": 2.557296791987028,
+      "std_population": 0.014351249963510782,
+      "n_subjects": 2
+    },
+    {
+      "method": "adjacent",
+      "sigma": 0.1,
+      "metric": "volume_seconds",
+      "mean": 2.586075041501317,
+      "std_population": 0.01677370857214555,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.1,
+      "metric": "PSNR",
+      "mean": 34.599042137903496,
+      "std_population": 0.1686999358471546,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.1,
+      "metric": "SSIM",
+      "mean": 0.7471607762816856,
+      "std_population": 0.004185525241303056,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.1,
+      "metric": "HFEN",
+      "mean": 0.93975446550227,
+      "std_population": 0.012965590091041423,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.1,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.619328853998395,
+      "std_population": 0.003756318138449233,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.1,
+      "metric": "GMSD",
+      "mean": 0.0839961034641987,
+      "std_population": 0.0019731221473595698,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.1,
+      "metric": "inference_seconds",
+      "mean": 8.218479186994955,
+      "std_population": 0.00897472898941487,
+      "n_subjects": 2
+    },
+    {
+      "method": "nlm",
+      "sigma": 0.1,
+      "metric": "volume_seconds",
+      "mean": 8.252511771046557,
+      "std_population": 0.007560187950730324,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.1,
+      "metric": "PSNR",
+      "mean": 20.000757061562382,
+      "std_population": 0.0006758914166571373,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.1,
+      "metric": "SSIM",
+      "mean": 0.10780859518788893,
+      "std_population": 0.0031795907141837013,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.1,
+      "metric": "HFEN",
+      "mean": 4.365975918032188,
+      "std_population": 0.2869073705778593,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.1,
+      "metric": "SobelGradientMagnitudeSimilarity",
+      "mean": 0.18946667067006806,
+      "std_population": 0.007908771648097432,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.1,
+      "metric": "GMSD",
+      "mean": 0.2424423758002276,
+      "std_population": 0.0004247014529138726,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.1,
+      "metric": "inference_seconds",
+      "mean": 0.004577499523293227,
+      "std_population": 0.0012964584748260677,
+      "n_subjects": 2
+    },
+    {
+      "method": "noisy",
+      "sigma": 0.1,
+      "metric": "volume_seconds",
+      "mean": 0.03692372899968177,
+      "std_population": 0.0008336040191352367,
+      "n_subjects": 2
+    }
+  ],
+  "success_by_sigma": [
+    {
+      "sigma": 0.03,
+      "strongest_comparator": "adjacent",
+      "ngps_psnr": 37.476407780015435,
+      "comparator_psnr": 38.38547410896056,
+      "gap_db": -0.9090663289451228,
+      "tolerance_db": 0.0,
+      "target_met": false
+    },
+    {
+      "sigma": 0.06,
+      "strongest_comparator": "adjacent",
+      "ngps_psnr": 35.70439012606492,
+      "comparator_psnr": 36.02036421571729,
+      "gap_db": -0.3159740896523644,
+      "tolerance_db": 0.0,
+      "target_met": false
+    },
+    {
+      "sigma": 0.1,
+      "strongest_comparator": "adjacent",
+      "ngps_psnr": 33.96657344119282,
+      "comparator_psnr": 34.581891337502285,
+      "gap_db": -0.6153178963094632,
+      "tolerance_db": 0.0,
+      "target_met": false
+    }
+  ],
+  "all_targets_met": false,
+  "reference_limitation": "Public T1 images are fixed reference signals, not demonstrated noise-free anatomy. MINC history refers to pn3_rf20 coil settings. Metrics quantify recovery of these references after added Gaussian noise, not clinical effectiveness or removal of native artifacts.",
+  "variability": "Two independent held-out subjects; one training seed. Population SD, no clinical inference.",
+  "timing": "Warmup/model loading excluded. volume_seconds starts before load and ends after save; metrics/hash checks excluded.",
+  "hardware": {
+    "commit": "d5d86223fdee5135c00f53050eadfd681118c7ce",
+    "git_dirty": true,
+    "source": {
+      "files_sha256": {
+        "LICENSE": "54ab637ba237608268d25f810ee75756589796a02e2e06a3fbcd40886dcb2a8f",
+        "README.md": "1531d48d4e7a16df109ca35a10b323bb8cb1d6baa26fc63438b2d43d373769ff",
+        "configs/checkpoint2.yaml": "371f9ad64dc9f1006d6a69f27428d413560af0e1652a5fc3ecb359a1b6ac729c",
+        "configs/ngps_nafnet_default.yaml": "8df9976edc5566ce330eddf935ce0ee11a24b98a9805ce01565f158a0203b4d9",
+        "configs/nsn2n_nafnet_default.yaml": "8784c30d6e80521dcad2e2667a39d9663aa4d032a159225eb91df9ef4951c206",
+        "configs/subjects_v1.json": "620d846dc9ca67dd87adb60df9f782c110a7dd48ddaf826fa663352682628cc5",
+        "configs/synthetic_cpu.yaml": "9bcf506e00b60fa06700dfe33fb1908bbde543eb1f395e409461da468990885e",
+        "configs/synthetic_demo.yaml": "c850caa2ff67793dcf9d77c0b5fdb7d698e826d69c064620bf651a6848db6e29",
+        "datasets/__init__.py": "9420e8f07f7af27d40162d5cffa11c4baa9a3167e720e4a381cfd782da2703f3",
+        "datasets/manifest.py": "fd915ce9db799a876e01a1138d48356a27d1151ae0fc322fdf093e8e17a50cd8",
+        "datasets/preparation.py": "769a9d5e2db9ef16e49512fe60f7cdd89684a0c5a7cf76934b87db0d666212ce",
+        "datasets/synthetic.py": "7ebef2e4b5b9481906c18fdc7e2b75c5143c780ad4f644b0872f3d026f840185",
+        "datasets/triplet_dataset.py": "1e410b0e5dbe475b2ceed10631853d29af188fdad71d58494a88a9c65ecae0af",
+        "datasets/volume_folder.py": "020e5910d5321e880236266a6c64081e4b80740bf27ee31a4ef6980ca8cfa03a",
+        "docs/CHECKPOINT_1_EVIDENCE.md": "56e3256b27d67a3c9b9e5696962a6a969d4f694f82c5cd144231b64c703cd225",
+        "docs/CHECKPOINT_2.md": "bd4ebf62cce31d133622840c444dc0f9517ebe4130030006aed557341f6d07e7",
+        "docs/DATA.md": "2457bef10db599c87a0610a054b48b79cde699ee375f4c553f413ea5fd1c1acf",
+        "docs/METHOD_MAPPING.md": "f6cf52a22d80248e903db107679807c948766b13938e67c0f15c7e11fdb10e8d",
+        "docs/PROTOCOL_GUIDELINES.md": "8060b8fd5a5fdb434ced901ba8d1cf5335a5ed281743117c7a2959e6a4276019",
+        "docs/REPRODUCIBILITY.md": "6952a2d9474f9119b6b3dae5d48abad7677a05e05070da863c06cf4a0c4acd1c",
+        "ngps/__init__.py": "bf00b4987ed6a0634313b0ae23772cebd221784052a073c5ec5e4c9c7ac75b7f",
+        "ngps/baselines.py": "811d6010267c2decbbda41445baa54ba9ba134fb33639840f94c2990fdb1426b",
+        "ngps/checkpoint2.py": "d0cd4a4d608395cc96c381c8cb66beaf9fb67cc84e654e6f6fd24a5a2cfd956f",
+        "ngps/config.py": "f67d3b74c77b935ddf3a499c1d63af20894c0158bd55b9a59d94985c7e03462c",
+        "ngps/device.py": "8c1d4c0b620ba2eaba909cf38576d813eede60c76cf152b766ee53c3147955ec",
+        "ngps/evaluation.py": "9242b246f8d5e8f5883808de1057494542c6787c177bc0f14efae8363b02985b",
+        "ngps/guide.py": "f03db8b387d916852b5a99ea9ac866ac7656e9f3cc79e01d49a735581e0a42dd",
+        "ngps/inference.py": "ef6b76d8979486c31ec88304ff0ebba57b8bc343e569f245af65b7731c845245",
+        "ngps/losses.py": "18e80b681100484162bb1f82392ac483873c971b3f9acaeb94963b9521b3fa44",
+        "ngps/metrics.py": "5edcfebf3afce02bcff1c9f577e299470665cc60c69ce59396ea1f82a3d529e0",
+        "ngps/nafnet.py": "4dc40ee62150cbb2e22eadcb5145bc18a172ec2bce0c02785f4edfc095255aa8",
+        "ngps/provenance.py": "68bd808f201d74436b28d9e3944dc7d9aa9268e77b37f0c5a289099ad5043ff3",
+        "ngps/sampler.py": "e3c141727808af34ec32edfd2d64a2e44ecde97785002b34d58a54723bfdd7a7",
+        "ngps/seed.py": "bede852c816966dc81597c5882e354ef4ca441ab9bbaa1c5439fd5ba73025915",
+        "ngps/training.py": "6493c257515a87dc2d4e749f3543619697bcf1809d6cd2fae76f62ec93a61c5c",
+        "notebooks/checkpoint2_colab.ipynb": "e5355cb3629dde167003cfab97fcd47220fa343702b4f7ac0295ed74a47fb8f5",
+        "pyproject.toml": "4c95eb631e7ec77d0f058183231fe8e2017458eff73dc1ead8e7da7243006871",
+        "requirements-colab.txt": "37e51f1d335f69e4c10e7ae22d5cca6f79a113adc2128d48c7069cb128855cc2",
+        "requirements.txt": "cfe332c1542b8e081c21059ff4662eb4af6059c559e61f7d997a4c2013b03366",
+        "scripts/checkpoint2.py": "32b403870cad189d01292d1df3da3b21c3d7c7b1dc449b4c9deb19c4e8696557",
+        "scripts/evaluate_manifest.py": "8111dce5add8756013b4d91cfb86e86275aef4d5e19a0787b6a9acfc356fd345",
+        "scripts/evaluate_volume.py": "07e0d74e2013753b14e01ab26899d2af111da8044c32115a048874d4c3c0aa41",
+        "scripts/export_checkpoint2_source.py": "88db6f479ab259d16019fafa18ec58c49d43565c5f3d6c51a459063296d58cfb",
+        "scripts/infer_volume.py": "adf98b03f21083d508f647b10af3a4447ba5cdc3dcb2b007607f9f3715b5d6e0",
+        "scripts/make_synthetic_demo_data.py": "54a73228a3832f78b44c67e822475894cb2e7fd04ef11541f2e0df3e5d7f6fef",
+        "scripts/prepare_data.py": "5288f77529a53af05b2e020676837bf8b123b03211db8f2dac1eb0afe6100d96",
+        "scripts/smoke_test.py": "aa19c194ad5ff9f793ae109c9e2ee975e98704eae203a3e40ca6b3d28abcc7dd",
+        "scripts/synthetic_pipeline.py": "747e347f9115417e9a04d0d9d8f13a85482907e1d067109b2804b0654445baea",
+        "scripts/train_ngps.py": "d14832ff788bb45a2c6ba318643b902eea261384c84d389f235fe169e2fb6e43",
+        "scripts/train_nsn2n.py": "c242c75301174caf26fd701e14cbe20fe8d77470ab3acb340b8bbc74b06f3ed6",
+        "scripts/verify_brainweb.py": "b2cb94e94986d87a91100b312a92761d66cbc11e7eb0dfdfdd807806ef05461c",
+        "tests/test_checkpoint2.py": "a1d5af33945e80282ea38b123f37b27c59130138ed4714d1ed66f8da9f6952bc",
+        "tests/test_config_crop.py": "25376d73f90f111235329e329a2b459fc804cfe4dfb9c76be42b16423a981c6a",
+        "tests/test_correctness.py": "176153a111bddaf355c1f32422bbd7a1af025492635408fd8b71dce146f8fdb2",
+        "tests/test_device.py": "d8de94c8153d53ba0831bee4716667f5be19f0ef3961aa35683506bae0e1eec3",
+        "tests/test_sampler_losses.py": "802175327a12ad004f47e2e6f0075af1979d4d105ec1485d2607408b1f76e498"
+      },
+      "tree_sha256": "e32518cd327956031116e93f0ab6de83a27a8f6bbff6a3a2690717018991bc29"
+    },
+    "device": "mps",
+    "device_name": "Apple MPS (arm64)",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.13",
+    "torch": "2.13.0",
+    "numpy": "2.4.6",
+    "torch_threads": 8,
+    "dependencies": {
+      "numpy": "2.4.6",
+      "scipy": "1.18.1",
+      "skimage": "0.26.0",
+      "cv2": "5.0.0",
+      "yaml": "6.0.3",
+      "torch": "2.13.0"
+    }
+  },
+  "checkpoint_sha256": {
+    "ngps_s0.03": "5b7ba782eb7978c5cb3efa870d52165d657350cb88071348fd96b6c04dac482f",
+    "blindspot_s0.03": "743590573ca40df2d331630a849f0c5755c391c65b2d7e7e9426b7d25b4cf252",
+    "adjacent_s0.03": "aaecf6901a60a6375129b5db7dca7d5ec74e695f52698ce1be2937974538c9b4",
+    "ngps_s0.06": "98956bc2d2469f8a187533a78ce9565ce0a7590a7c4fb3ee79ad13f246e08c38",
+    "blindspot_s0.06": "d946208ff613de54dfd63d05953d8c34799ea57c4bec649621d241d53fe64a24",
+    "adjacent_s0.06": "cfedd7e89baf598db1a7121990c7223625c574a1a6440753bbc1d4df7cc733d5",
+    "ngps_s0.10": "95b681487d55f85e7ca99a0c80f1e36705a52a1145011b67169b5499c7fb8c1c",
+    "blindspot_s0.10": "9eca59facd56f9b9d38b8fe1765608612c8a232afa2c8194139a190ef0b84982",
+    "adjacent_s0.10": "299d65e436c08965de22c156ece4dd904f3681d79cc98c304a6103a3a0d571c8"
+  }
+}

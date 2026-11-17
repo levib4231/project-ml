@@ -1,0 +1,190 @@
+{
+  "design_hash": "97838d16bd3850c764519602d79cb6a99da5594acca65e84ded968f82bb7339a",
+  "pilots": [
+    {
+      "variant": "full_ngps",
+      "method": "ngps",
+      "ablation": null,
+      "updates": 16,
+      "wall_seconds": 8.55745220800054,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.02149710594676435,
+          "dynamic_active_fraction": 0.006153106689453125,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9938468933105469,
+          "static_empty_fraction": 0.0,
+          "recon": 0.016650552104692906,
+          "n2n": 0.009349921601824462,
+          "dynamic": 0.007300630415556952,
+          "rc": 0.009693107916973531,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012204737504362129,
+          "match_cost_max": 0.0016312638763338327,
+          "gradient_l2_norm": 0.13601928763091564
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.01284464355558157
+        }
+      ],
+      "training_subjects": [
+        "subject04"
+      ],
+      "training_samples": 16,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 142915072,
+        "driver_memory_bytes": 1447772160
+      },
+      "training_seconds": 7.11305079199883,
+      "validation_seconds": 0.11289579199910804
+    },
+    {
+      "variant": "ngps_no_rc",
+      "method": "ngps",
+      "ablation": "no_rc",
+      "updates": 16,
+      "wall_seconds": 6.72543216700069,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.016772809845861048,
+          "dynamic_active_fraction": 0.006153106689453125,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9938468933105469,
+          "static_empty_fraction": 0.0,
+          "recon": 0.016772809845861048,
+          "n2n": 0.009407671692315489,
+          "dynamic": 0.007365138066234067,
+          "rc": 0.009792809665668756,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012204737504362129,
+          "match_cost_max": 0.0016312638763338327,
+          "gradient_l2_norm": 0.12808047933503985
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.013036321848630905
+        }
+      ],
+      "training_subjects": [
+        "subject04"
+      ],
+      "training_samples": 16,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 60566528,
+        "driver_memory_bytes": 1447772160
+      },
+      "training_seconds": 6.064283792000424,
+      "validation_seconds": 0.02835354199851281
+    },
+    {
+      "variant": "ngps_no_dynamic",
+      "method": "ngps",
+      "ablation": "no_dynamic",
+      "updates": 16,
+      "wall_seconds": 6.3689631249999366,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.013996469555422664,
+          "dynamic_active_fraction": 0.006153106689453125,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9938468933105469,
+          "static_empty_fraction": 0.0,
+          "recon": 0.0092133634025231,
+          "n2n": 0.0092133634025231,
+          "dynamic": 0.0,
+          "rc": 0.009566212247591466,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012204737504362129,
+          "match_cost_max": 0.0016312638763338327,
+          "gradient_l2_norm": 0.06072976044379175
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.012637322768568993
+        }
+      ],
+      "training_subjects": [
+        "subject04"
+      ],
+      "training_samples": 16,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 60566528,
+        "driver_memory_bytes": 1447772160
+      },
+      "training_seconds": 5.737182875000144,
+      "validation_seconds": 0.02817887499986682
+    },
+    {
+      "variant": "adjacent",
+      "method": "adjacent",
+      "ablation": null,
+      "updates": 16,
+      "wall_seconds": 1.6762228330007929,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.009371260181069374,
+          "gradient_l2_norm": 0.04884448100347072
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.013031139969825745
+        }
+      ],
+      "training_subjects": [
+        "subject04"
+      ],
+      "training_samples": 16,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39141888,
+        "driver_memory_bytes": 1447788544
+      },
+      "training_seconds": 0.9887389579998853,
+      "validation_seconds": 0.02944050000041898
+    }
+  ],
+  "projections": [
+    {
+      "variant": "full_ngps",
+      "projected_seconds": 1555.807285969809
+    },
+    {
+      "variant": "ngps_no_rc",
+      "projected_seconds": 1252.6385752829885
+    },
+    {
+      "variant": "ngps_no_dynamic",
+      "projected_seconds": 1186.5369835780107
+    },
+    {
+      "variant": "adjacent",
+      "projected_seconds": 231.75763048017825
+    }
+  ],
+  "budget_seconds_per_run": 3600,
+  "protocol_hash": "7711525ade81fc61eb26c68a8bb2a57969ce6340b05805e0784b1e6a5949c7b6"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "kind": "pilot",
+  "manifest_hash": "ed8b1c8c57c4ffa4bff50feb7fe0abba0a608465b6b97d697ad1cc5887716ead",
+  "source_tree_sha256": "cc43049b91ec13a712b7798682eb05a52415b9c9482336abd4e5cb09c869986e",
+  "config": {
+    "ngps": {
+      "mask_threshold": 0.05,
+      "nafnet_dec_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_enc_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_middle_blocks": 1,
+      "nafnet_width": 16,
+      "patch_size": 7,
+      "rc_weight": 0.5,
+      "search_window": 15,
+      "topk": 4
+    },
+    "training": {
+      "batch_size": 1,
+      "crop_size": 128,
+      "epochs": 1,
+      "lr": 0.0002,
+      "num_workers": 0,
+      "seed": 42,
+      "weight_decay": 1e-05
+    }
+  },
+  "device": "mps",
+  "measurements": {
+    "ngps": {
+      "optimizer_steps": 16,
+      "training_seconds": 8.925472332999561,
+      "validation_seconds": 0.1511198330008483,
+      "peak_cuda_memory_bytes": null,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 142520832,
+        "driver_memory_bytes": 1447772160
+      },
+      "wall_seconds": 10.892811083998822
+    },
+    "blindspot": {
+      "optimizer_steps": 16,
+      "training_seconds": 1.0679695420003554,
+      "validation_seconds": 0.048290875000020606,
+      "peak_cuda_memory_bytes": null,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 38878720,
+        "driver_memory_bytes": 1447772160
+      },
+      "wall_seconds": 2.000054000000091
+    },
+    "adjacent": {
+      "optimizer_steps": 16,
+      "training_seconds": 1.1262522500001069,
+      "validation_seconds": 0.058808249999856343,
+      "peak_cuda_memory_bytes": null,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 38878720,
+        "driver_memory_bytes": 1447788544
+      },
+      "wall_seconds": 2.138704458000575
+    }
+  },
+  "note": "Subject04, sigma0.06, 16 center slices, one epoch, batch1. Not held-out evidence."
+}

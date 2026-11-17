@@ -1,4 +1,4 @@
-"""Frozen, matched Checkpoint 2 experiments. No test scoring during pilot/training."""
+"""Frozen, matched Checkpoint 2 experiments. No test scoring during pilot or training."""
 from __future__ import annotations
 
 from collections import defaultdict
@@ -18,6 +18,7 @@ from datasets.preparation import file_hash, prepare
 from datasets.volume_folder import load_volume
 from .baselines import nlm_volume
 from .config import load_config
+from .device import empty_cache, is_accelerator, require_device, synchronize
 from .evaluation import json_metrics
 from .guide import guide_filter_volume, make_misalignment_mask
 from .inference import infer_volume, load_model, timed_volume_file
@@ -35,11 +36,6 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def read_json(path):
     return json.loads(Path(path).read_text())
-
-
-def require_device(device):
-    if str(device).startswith('cuda') and not torch.cuda.is_available():
-        raise RuntimeError('CUDA GPU required but unavailable. Select a GPU runtime.')
 
 
 def prepare_verified(source_manifest, verification_path, output_root):
@@ -79,8 +75,9 @@ def pilot(manifest_path, config_path, output_dir, device='cuda'):
         checkpoint = train(manifest_path, cfg_path, out / method, device=device, method=method,
                            sigma=0.06, center_slices=16, train_subjects=['subject04'], max_val_batches=1)
         metadata = read_json(checkpoint.parent / 'metadata.json')
+        synchronize(device)
         measurements[method] = {key: metadata[key] for key in
-                                ('optimizer_steps', 'training_seconds', 'validation_seconds', 'peak_cuda_memory_bytes')}
+                                ('optimizer_steps', 'training_seconds', 'validation_seconds', 'peak_cuda_memory_bytes', 'device_memory')}
         measurements[method]['wall_seconds'] = time.perf_counter() - start
     result = {'schema_version': 1, 'kind': 'pilot', 'manifest_hash': manifest_hash(manifest),
               'source_tree_sha256': source_record()['tree_sha256'],
@@ -117,8 +114,8 @@ def freeze(manifest_path, config_path, output_dir, pilot_path=None,
         pilot_config = pilot_record['config']
         compare = json.loads(json.dumps(raw))
         compare['training'].update(epochs=1, batch_size=1, seed=42)
-        if pilot_config != compare or (not synthetic and not pilot_record['device'].startswith('cuda')):
-            raise ValueError('Pilot must use the same configuration and a CUDA GPU')
+        if pilot_config != compare or (not synthetic and not is_accelerator(pilot_record['device'])):
+            raise ValueError('Pilot must use the same configuration and a CUDA or Apple MPS accelerator')
     if max_train_batches is not None and (type(max_train_batches) is not int or max_train_batches < 1):
         raise ValueError('max_train_batches must be a positive integer')
     estimates = None
@@ -198,6 +195,8 @@ def run_name(method, sigma):
 def validate_checkpoint(metadata, protocol, method, sigma):
     from .inference import validate_selection
     validate_selection(metadata)
+    if metadata.get('exploratory', {}).get('ablation') is not None:
+        raise ValueError('Ablation checkpoints cannot substitute for full NGPS')
     if (metadata['method'] != method or metadata['sigma'] != sigma
             or metadata['manifest_hash'] != protocol['manifest_hash']
             or metadata.get('experiment_hash') != protocol['protocol_hash']
@@ -244,6 +243,7 @@ def train_matrix(protocol_path, device='cuda'):
             train(manifest_path, out / 'training.yaml', folder, device=device,
                   sigma=sigma, method=method, max_train_batches=protocol['max_train_batches'],
                   experiment_hash=protocol['protocol_hash'])
+            synchronize(device)
             seconds = time.perf_counter() - start
             write_json(folder / 'budget.json', {'wall_seconds': seconds,
                        'cap_seconds': protocol['budget_seconds'], 'within_cap': seconds <= protocol['budget_seconds']})
@@ -253,7 +253,7 @@ def train_matrix(protocol_path, device='cuda'):
 
 
 def preflight(protocol_path):
-    """Validate EVERY run and noisy input before opening any held-out reference."""
+    """Validate every run and noisy input before opening any held-out reference."""
     protocol, manifest, manifest_path = load_protocol(protocol_path)
     out = Path(protocol_path).resolve().parent
     checkpoints = {}
@@ -393,14 +393,14 @@ def benchmark(protocol_path, device='cuda'):
                 model, _ = load_model(selected['path'], device, require_selected=True)
                 for shape in {tuple(row['shape'][1:]) for row in test_rows}:
                     infer_volume(model, np.zeros((1, *shape), dtype=np.float32), device)
-                function = lambda volume: infer_volume(model, volume, device)
+                predict = lambda volume: infer_volume(model, volume, device)
                 execution_device = device
             elif method == 'nlm':
-                function = lambda volume: nlm_volume(volume, sigma)
+                predict = lambda volume: nlm_volume(volume, sigma)
                 execution_device = 'cpu'
                 nlm_volume(np.zeros((1, *test_rows[0]['shape'][1:]), dtype=np.float32), sigma)
             else:
-                function = lambda volume: volume.copy()
+                predict = lambda volume: volume.copy()
                 execution_device = 'cpu'
             hardware = provenance(execution_device)
             for row in test_rows:
@@ -410,11 +410,11 @@ def benchmark(protocol_path, device='cuda'):
                 if file_hash(clean_path) != row['clean_sha256']:
                     raise ValueError('Held-out reference hash mismatch')
                 destination = results / 'predictions' / run_name(method, sigma) / (row['subject_id'] + '.npy')
-                prediction, times = timed_volume_file(function, noisy_path, destination, execution_device)
+                prediction, times = timed_volume_file(predict, noisy_path, destination, execution_device)
                 ref = load_volume(clean_path, unit_range=True)
                 if list(prediction.shape) != row['shape']:
                     raise ValueError('Prediction does not cover the complete volume')
-                scores = [{name: function(r, p) for name, function in METRICS.items()}
+                scores = [{name: metric(r, p) for name, metric in METRICS.items()}
                           for r, p in zip(ref, prediction)]
                 slice_rows.extend({'subject_id': row['subject_id'], 'sigma': sigma, 'method': method,
                                    'z': z, **score} for z, score in enumerate(scores))
@@ -427,8 +427,7 @@ def benchmark(protocol_path, device='cuda'):
                 rows.append(record)
                 write_json(results / 'subjects.partial.json', json_metrics(rows))
             del model
-            if str(device).startswith('cuda'):
-                torch.cuda.empty_cache()
+            empty_cache(device)
     grouped = defaultdict(list)
     for row in rows:
         grouped[(row['method'], row['sigma'])].append(row)

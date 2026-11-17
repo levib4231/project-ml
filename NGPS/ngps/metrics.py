@@ -35,7 +35,7 @@ def gmsd(ref: np.ndarray, pred: np.ndarray) -> float:
 
 
 def gradient_magnitude_similarity(ref: np.ndarray, pred: np.ndarray) -> float:
-    """Sobel magnitude similarity weighted by max magnitude; NOT FSIM."""
+    """Sobel magnitude similarity weighted by max magnitude. This is not FSIM."""
 
     gx_ref = scipy.ndimage.sobel(ref, axis=1)
     gy_ref = scipy.ndimage.sobel(ref, axis=0)

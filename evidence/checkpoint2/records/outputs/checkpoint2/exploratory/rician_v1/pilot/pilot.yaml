@@ -1,0 +1,26 @@
+ngps:
+  mask_threshold: 0.05
+  nafnet_dec_blocks:
+  - 1
+  - 1
+  - 1
+  - 1
+  nafnet_enc_blocks:
+  - 1
+  - 1
+  - 1
+  - 1
+  nafnet_middle_blocks: 1
+  nafnet_width: 16
+  patch_size: 7
+  rc_weight: 0.5
+  search_window: 15
+  topk: 4
+training:
+  batch_size: 1
+  crop_size: 128
+  epochs: 1
+  lr: 0.0002
+  num_workers: 0
+  seed: 42
+  weight_decay: 1.0e-05

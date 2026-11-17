@@ -1,0 +1,279 @@
+{
+  "protocol_hash": "390737626b638597496b4b99263af3ead636c6296b704ad9be23b3ffc1ad0f09",
+  "runs": [
+    {
+      "noise": "gaussian",
+      "variant": "full_ngps",
+      "method": "ngps",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/full_ngps/model_final.pth",
+      "checkpoint_sha256": "1a117b1a5d92824718da516fb3da9ff4129dbf0530f8d22833421f06fcee5c74",
+      "updates": 531,
+      "wall_seconds": 213.88582674998906,
+      "within_cap": true,
+      "training_seconds": 196.17519533300947,
+      "validation_seconds": 16.91955337500258,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.008164503131054776,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.007200455901663743,
+          "n2n": 0.004859056124698701,
+          "dynamic": 0.0023413997805276586,
+          "rc": 0.001928094428362809,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.04853323271336725
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0040414961355389745
+        }
+      ]
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_rc",
+      "method": "ngps",
+      "ablation": "no_rc",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_rc/model_final.pth",
+      "checkpoint_sha256": "630cb0d2d9de21eb8f282957d629b1f2dadd109de6164e20a40f1a33237ed2bd",
+      "updates": 531,
+      "wall_seconds": 205.48753158398904,
+      "within_cap": true,
+      "training_seconds": 185.37239500001306,
+      "validation_seconds": 19.36723016599717,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.007464282343553453,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.007464282343553453,
+          "n2n": 0.004995346080297832,
+          "dynamic": 0.0024689362752863,
+          "rc": 0.0022449008098267644,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.045757070041249334
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.00408807683764702
+        }
+      ]
+    },
+    {
+      "noise": "gaussian",
+      "variant": "no_dynamic",
+      "method": "ngps",
+      "ablation": "no_dynamic",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_dynamic/model_final.pth",
+      "checkpoint_sha256": "bd9452661aaba9ac6927effa86d5b7bbd75cb6240c178cbd8295610dcde79b51",
+      "updates": 531,
+      "wall_seconds": 212.4633807499922,
+      "within_cap": true,
+      "training_seconds": 194.1681418340013,
+      "validation_seconds": 17.57584499999939,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.005462873592909615,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.004694146583411008,
+          "n2n": 0.004694146583411008,
+          "dynamic": 0.0,
+          "rc": 0.0015374540053770603,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.01698321807277152
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003937355201046227
+        }
+      ]
+    },
+    {
+      "noise": "gaussian",
+      "variant": "adjacent",
+      "method": "adjacent",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/adjacent/model_final.pth",
+      "checkpoint_sha256": "92d4487a80418f55449e3ef39c29758d897e61cf62c0f6c3ed076d24c2c253f3",
+      "updates": 531,
+      "wall_seconds": 89.13805399999546,
+      "within_cap": true,
+      "training_seconds": 71.12504220899427,
+      "validation_seconds": 17.322639165999135,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.004911543906661077,
+          "gradient_l2_norm": 0.013706216514952439
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003993318461703772
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "full_ngps",
+      "method": "ngps",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/full_ngps/model_final.pth",
+      "checkpoint_sha256": "6d0a915131e7d4f3475bcf192bbf41f88ecb11256eb05b4a4f8b92f1a7e47e5a",
+      "updates": 531,
+      "wall_seconds": 158.40953862499737,
+      "within_cap": true,
+      "training_seconds": 150.87160570900596,
+      "validation_seconds": 6.778171082987683,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.006384584834586949,
+          "dynamic_active_fraction": 0.005385059421345339,
+          "dynamic_empty_fraction": 0.0423728813559322,
+          "static_active_fraction": 0.9946149405786546,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005615481268877616,
+          "n2n": 0.003457228532332836,
+          "dynamic": 0.0021582527270764436,
+          "rc": 0.001538207155726666,
+          "ic": 0.0,
+          "match_cost_mean": 7.693098913342714e-05,
+          "match_cost_max": 0.013246231712400913,
+          "gradient_l2_norm": 0.06250987852276382
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.002226411871606869
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "no_rc",
+      "method": "ngps",
+      "ablation": "no_rc",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_rc/model_final.pth",
+      "checkpoint_sha256": "e8cb3efe1386a9a81f4426ca8e83dad712e389e4d84f17f603305bb0ab85d53f",
+      "updates": 531,
+      "wall_seconds": 161.75742783400347,
+      "within_cap": true,
+      "training_seconds": 154.63327283300168,
+      "validation_seconds": 6.440777041003457,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.005889546653613616,
+          "dynamic_active_fraction": 0.005385059421345339,
+          "dynamic_empty_fraction": 0.0423728813559322,
+          "static_active_fraction": 0.9946149405786546,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005889546653613616,
+          "n2n": 0.003582918877264383,
+          "dynamic": 0.0023066277799118494,
+          "rc": 0.001816230613528707,
+          "ic": 0.0,
+          "match_cost_mean": 7.693098913342714e-05,
+          "match_cost_max": 0.013246231712400913,
+          "gradient_l2_norm": 0.06251849303295635
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0022514564126298125
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "no_dynamic",
+      "method": "ngps",
+      "ablation": "no_dynamic",
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_dynamic/model_final.pth",
+      "checkpoint_sha256": "7314b89eabfed293142d4d37e57e38c5bcddc50f186a2219e79e152235962694",
+      "updates": 531,
+      "wall_seconds": 98.16082166599517,
+      "within_cap": true,
+      "training_seconds": 92.08781570800056,
+      "validation_seconds": 5.437317000003532,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.003815170580068719,
+          "dynamic_active_fraction": 0.005385059421345339,
+          "dynamic_empty_fraction": 0.0423728813559322,
+          "static_active_fraction": 0.9946149405786546,
+          "static_empty_fraction": 0.0,
+          "recon": 0.00324511102584003,
+          "n2n": 0.00324511102584003,
+          "dynamic": 0.0,
+          "rc": 0.0011401191198988554,
+          "ic": 0.0,
+          "match_cost_mean": 7.693098913342714e-05,
+          "match_cost_max": 0.013246231712400913,
+          "gradient_l2_norm": 0.015383279890921704
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0021733677719704097
+        }
+      ]
+    },
+    {
+      "noise": "rician",
+      "variant": "adjacent",
+      "method": "adjacent",
+      "ablation": null,
+      "checkpoint": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/adjacent/model_final.pth",
+      "checkpoint_sha256": "85360289cc41ecdd9b112db364a5be29ea40b248289ba26aefec3a1f7390f04d",
+      "updates": 531,
+      "wall_seconds": 35.63590895899688,
+      "within_cap": true,
+      "training_seconds": 29.6074014580081,
+      "validation_seconds": 5.4149333750101505,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.003403505672597223,
+          "gradient_l2_norm": 0.012937431833171855
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0021889975207321885
+        }
+      ]
+    }
+  ]
+}

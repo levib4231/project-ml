@@ -1,0 +1,1161 @@
+{
+  "schema_version": 1,
+  "scope": "Local small review evidence; no medical arrays, predictions, weights or figures",
+  "files": {
+    "README.md": {
+      "sha256": "5ef2bf08ffda82a65617d73bf858b9289a30f4f36aa28552cf1450b7c212cad4",
+      "bytes": 6735,
+      "origin": "NGPS/docs/SUBMISSION_EVIDENCE.md"
+    },
+    "historical_sources/bb4ec5e39671c1a20ca10f08850ef10008d46ea98f247b0e4136c817b6474ac4.zip": {
+      "sha256": "bbcbdf8ffd24d753beaab91580cc2b32dd3ef8f35dfb39d6262cd5b1695901f9",
+      "bytes": 84712,
+      "origin": "outputs/checkpoint2/medical/runs/adjacent_s0.03/source_snapshot.zip"
+    },
+    "historical_sources/cc43049b91ec13a712b7798682eb05a52415b9c9482336abd4e5cb09c869986e.zip": {
+      "sha256": "8b4ea5cd989073c84fdc56cb2ce7028677c1d76719caf64c062e4b4e6c7373d4",
+      "bytes": 98623,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps32/source_snapshot.zip"
+    },
+    "historical_sources/e32518cd327956031116e93f0ab6de83a27a8f6bbff6a3a2690717018991bc29.zip": {
+      "sha256": "0c6ffcc86ca2edc58a60dd3cc9bb23140c611082281f0b3a46f60a4e14475994",
+      "bytes": 91381,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.03/source_snapshot.zip"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/REPORT.md": {
+      "sha256": "736ea816b93e767c843d184561ebc4739d1d9282a800ba06c72cff6f459633ec",
+      "bytes": 2493,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/REPORT.md"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/epochs_1.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/epochs_1.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/epochs_2.yaml": {
+      "sha256": "ee6a3a26e8eb11aec03b50cb273d1785342f7a193bd805aac633a37f4322a0ef",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/epochs_2.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/protocol.json": {
+      "sha256": "4cc19912ca83123d5bd05971c785f35769c4b664a0c19ca475458b02331bfd02",
+      "bytes": 8766,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/protocol.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/retrieval_diagnostics.json": {
+      "sha256": "de4312e42bb08080d7c17d30f6a1d7b506310580de53535713830d45ff6b063f",
+      "bytes": 1742,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/retrieval_diagnostics.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps32/metadata.json": {
+      "sha256": "cb52d8270d9108a5af8772b1533b0fb811896732078c90f72b79e212750a511b",
+      "bytes": 55913,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps32/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps32/pilot_budget.json": {
+      "sha256": "ed1f0769a0c2fe3cc7484245f4dd0055760d743456ae19fd789a376af3bce525",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps32/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps64/metadata.json": {
+      "sha256": "7a3a0d3a76c1af3ed204c8e2021329b36473697bc14065e1bd16c2450f9379bd",
+      "bytes": 56103,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps64/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps64/pilot_budget.json": {
+      "sha256": "4a35223d9162d70a3e4ae90e1d552d52d8936dffd19faa6a0bc8c394356674da",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/adjacent_steps64/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps32/metadata.json": {
+      "sha256": "850c7fb733bc7ba6a76c649199f159e8f925f8648260f8d69698ade970145cec",
+      "bytes": 55915,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps32/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps32/pilot_budget.json": {
+      "sha256": "18093bb46b1f7bc99583cbd4ef3c16763a5fd395858d0c0d8a1a0d27c58804b0",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps32/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps64/metadata.json": {
+      "sha256": "c27025e55738d5ba4f5c553521c1fdbbd1eec55d96865d2d63399ca419cab7f5",
+      "bytes": 56102,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps64/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps64/pilot_budget.json": {
+      "sha256": "a418ca37e4dc7b74df72c52b369f39d58e0aef5571903c627db83a392207d609",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/blindspot_steps64/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps32/metadata.json": {
+      "sha256": "ab6d6a37c4a07651dc5a80cffe4302e0cd0e6eb25f2d40080da7fc94662218bb",
+      "bytes": 56335,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps32/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps32/pilot_budget.json": {
+      "sha256": "084b028bdeb61c1a2a56d6feb0eb3b15e6782a2906e42ebb49318066c6863c80",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps32/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps64/metadata.json": {
+      "sha256": "dab0cb1068d3cbdacd2b1f42e27261ec5e1cf550d2846112cb7bbbd3571bed85",
+      "bytes": 56947,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps64/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps64/pilot_budget.json": {
+      "sha256": "2d3251043daaab720c04b3af41e22a6846634c597ee372bd652d40b2c7f4e755",
+      "bytes": 83,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_dynamic_steps64/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps32/metadata.json": {
+      "sha256": "8786535ee4d1fb1a0006b65059978446d775d1440d9d2a3efe108bb981007228",
+      "bytes": 56346,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps32/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps32/pilot_budget.json": {
+      "sha256": "78b229e3fdc411cd887e7a72834ea3f6be788470523ccc288be0a48bccfde47e",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps32/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps64/metadata.json": {
+      "sha256": "ae6a8f176aca6229e8cf61eac59550a2e05c7a3ca3f78417dca047763ff8bd2e",
+      "bytes": 56974,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps64/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps64/pilot_budget.json": {
+      "sha256": "d6c2ef3da345ca74d8372054b6e5dec111940f0e1cd27e7d566c976e6ed97909",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_no_rc_steps64/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps32/metadata.json": {
+      "sha256": "dc89dd90bbe5e6b3d14f2ba5941c6930ce7e2d989762b07b02f24a278e2c57c1",
+      "bytes": 56347,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps32/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps32/pilot_budget.json": {
+      "sha256": "af59efa8dde990c576e5a27db99207fe1e599988f21924eeb5b9a1d91d0be533",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps32/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps64/metadata.json": {
+      "sha256": "ff6568291b2fba649acd1b1eb2109cfe1499899eacf0ee89969d5a1b1ad35a79",
+      "bytes": 56973,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps64/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps64/pilot_budget.json": {
+      "sha256": "cf27c00a16c5887f20850ee649f3bc61e2feabbcf717f7400accbdedd9d3bb9a",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/runs/ngps_steps64/pilot_budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/comparison_pilot_v1/summary.json": {
+      "sha256": "15ca2a61f7dfd13bb0da3eb66aeb8b7b5645102ae5ccb267f0b843ba2332bb21",
+      "bytes": 11792,
+      "origin": "outputs/checkpoint2/exploratory/comparison_pilot_v1/summary.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/REPORT.md": {
+      "sha256": "9c538c3e700a7ab3265331d388b17950a8a8949472c7d72f6b0ac0606afd5bf8",
+      "bytes": 2641,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/REPORT.md"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/array_access_audit.json": {
+      "sha256": "cbbaf99852ae7569b0b4d2c021a06b6ac62104fd71d9bd52524c39bd65ba2e9e",
+      "bytes": 2011,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/array_access_audit.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/design.json": {
+      "sha256": "dd04faf153f34b8022c99ff1b88a560bfcf180fa8434fdf25920849b30b3b248",
+      "bytes": 8983,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/design.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/pilot/adjacent/metadata.json": {
+      "sha256": "5ce1064a40de9284d403c4539e69f84b6626e3d2aebac933c7bb5e5e25d0d622",
+      "bytes": 55630,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/pilot/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/pilot/blindspot/metadata.json": {
+      "sha256": "8f712cc51bd86dc6a2efab42d9e2a699f3da12177a90326048f9f4d4a69dd69e",
+      "bytes": 55631,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/pilot/blindspot/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/pilot/ngps/metadata.json": {
+      "sha256": "cb2f423a2538a78a74c2f13ca61c042a4126e11b8fe412425c038e28f39201ad",
+      "bytes": 56059,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/pilot/ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/pilot/pilot.json": {
+      "sha256": "040e35f8f2dbe843ff4df81d19d3e7e7ed02c4a9fff9789b1f45e4551c44b172",
+      "bytes": 2140,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/pilot/pilot.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/pilot/pilot.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/pilot/pilot.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/protocol.json": {
+      "sha256": "6a74ae40ebd124e3a6f5c46d588cc72bf65f345807c75ce7d4c421042faf6d2d",
+      "bytes": 2787,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/protocol.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/run_study.py": {
+      "sha256": "964b241989be1931acbd40da29185a9d84ac805acc764249f17e3ba43ab71f6b",
+      "bytes": 6971,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/run_study.py"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates1062/budget.json": {
+      "sha256": "4b92f3ecb2451f68bb84cf5e76b01775e9a1fbdb80f76b60fd45f28dd384ac9d",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates1062/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates1062/metadata.json": {
+      "sha256": "d0115645bf19f9af058f4e7e9cea5a4a7a4b616cc212b143ab313828264dc05b",
+      "bytes": 56178,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates1062/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates2148/budget.json": {
+      "sha256": "785bef06e45e913e2ce1035cf93a0be6ef8bcffc4a5e33cd97d5895e646c7400",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates2148/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates2148/metadata.json": {
+      "sha256": "2da191e910fa28c6010c501cbc9b3c5cfb4ac06905699563584049ebf0780238",
+      "bytes": 56181,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates2148/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates531/budget.json": {
+      "sha256": "afde95314b93b0d1be1e3e5acf682566063450561d753da49f0fb7d5d7c5ab97",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates531/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates531/metadata.json": {
+      "sha256": "5ba0c456500171e7c826d261538fbc336727c49b82be344c1da6cce7ed4484cd",
+      "bytes": 55986,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/adjacent_updates531/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates1062/budget.json": {
+      "sha256": "63fb4417c10018df8f63266e954e66236df0b1152da6f895007984723fdc4781",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates1062/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates1062/metadata.json": {
+      "sha256": "eef0299eb408b769f1db3be6c18b7457c963ab9da591ec04096ff5413e8fc135",
+      "bytes": 56178,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates1062/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates2148/budget.json": {
+      "sha256": "63b63af6809618467a607a414d328497c68adebe12112f0905fa40d7817e3d7a",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates2148/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates2148/metadata.json": {
+      "sha256": "cf606880e1efb19580753e264f8f6d95c27b49477d8524175a4c58349f713e8a",
+      "bytes": 56182,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates2148/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates531/budget.json": {
+      "sha256": "396c3505d1db82d8ae869ff4a9b227c78ba697b4198719fdeed8310124089bab",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates531/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates531/metadata.json": {
+      "sha256": "1fb7a6249eb2f4f78cc9f4da970ab94b18fa4ca1a1f6e3842eb466de02da19fe",
+      "bytes": 55985,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/blindspot_updates531/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates1062/budget.json": {
+      "sha256": "ca636c573cb415f4e11bec05d8e1baf424d102ba68008495d19d63cb6220a365",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates1062/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates1062/metadata.json": {
+      "sha256": "f476e9d7cc72d678cbada5793df9332c87fa66f1d28279bb4bfea8bda896144f",
+      "bytes": 57066,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates1062/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates2148/budget.json": {
+      "sha256": "1d65f5897052093b830b39d191c7731607a42c5f766c53c436aeddf3a055c355",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates2148/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates2148/metadata.json": {
+      "sha256": "75868a1d599aaed22dea0df5669f3a6f833e4826cd611aa78231fbaa256b0368",
+      "bytes": 57085,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates2148/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates531/budget.json": {
+      "sha256": "1528cce23833c1195830235a8dd394336a52d1ca0696568c5b119e8635291fe1",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates531/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates531/metadata.json": {
+      "sha256": "0f267eac25a02399640a77b2b40dfa9283f2419be81ae136f089343c2f7c44b8",
+      "bytes": 56436,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/runs/ngps_updates531/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/summary.json": {
+      "sha256": "aa9454ced0a72b2a3bdfd5930ec6ca0ac8894ccd5eba1c05246a232ca6ddf819",
+      "bytes": 11152,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/summary.json"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/updates_1062.yaml": {
+      "sha256": "ee6a3a26e8eb11aec03b50cb273d1785342f7a193bd805aac633a37f4322a0ef",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/updates_1062.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/updates_2148.yaml": {
+      "sha256": "ee6a3a26e8eb11aec03b50cb273d1785342f7a193bd805aac633a37f4322a0ef",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/updates_2148.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/convergence_v1/updates_531.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/convergence_v1/updates_531.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/experiment_index.json": {
+      "sha256": "f35098b1afcb4edb041253dd4f58f81665fa8339cf223ba4fbb9151d9ca57f86",
+      "bytes": 3458,
+      "origin": "outputs/checkpoint2/exploratory/experiment_index.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/REPORT.md": {
+      "sha256": "c02f204b709b2e98936fa16e806f5fb6ce00aa765a47643f2ce7d763d47e4878",
+      "bytes": 2881,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/REPORT.md"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/array_access_audit.json": {
+      "sha256": "70407f67ebffb257fa569db7465fc9bff4a4d4ee3695d28f23065812272c8afa",
+      "bytes": 2024,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/array_access_audit.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/design.json": {
+      "sha256": "e48e7674e032f1e63763d73fd93132124ac153ce1400b4ab41651dd466dd5f7f",
+      "bytes": 8966,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/design.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/adjacent/budget.json": {
+      "sha256": "5fb575286866788afb5b020a331b3811746c0743627526c98cd4e0e89a34eea9",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/adjacent/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/adjacent/metadata.json": {
+      "sha256": "b3bfd8e5bab7e7863cfefcfe63f02da179bc36b9bdcf33214d7b8ca832130cbd",
+      "bytes": 55915,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/full_ngps/budget.json": {
+      "sha256": "097829d0d5352e23229b3c08823beeec49f058dc0a650016e4389d36eaa813ba",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/full_ngps/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/full_ngps/metadata.json": {
+      "sha256": "6d1f61530fa482a791c6f96a4549c37e58d58d46af534ba4391c58b3260dd733",
+      "bytes": 56345,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/full_ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_dynamic/budget.json": {
+      "sha256": "e10c9b918ade3168e994735974d7b51f93bb81aac66c883bb0afbbb045262491",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_dynamic/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_dynamic/metadata.json": {
+      "sha256": "c5044516739767edcd7a79efcc5d1cb0b58ea74fbf8a2070abdcbf7dcfd4fa57",
+      "bytes": 56334,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_dynamic/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_rc/budget.json": {
+      "sha256": "a7612af17991fdcd612087eaa76af5402560e8c3bd4d0517df74e649ff9ad74d",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_rc/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_rc/metadata.json": {
+      "sha256": "33f61091d48dae677b22161e415524a71348b235b2ad650705b9055fb0cf4b21",
+      "bytes": 56351,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/pilot/ngps_no_rc/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/protocol.json": {
+      "sha256": "d2a623e846f7067ba068e5786cf1fc7ffeaf08d7721e108b8402b8e1b092c010",
+      "bytes": 5416,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/protocol.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/run_study.py": {
+      "sha256": "0233f9eb61b90fa854c4ea87b4c9b05597a9c1b5e39281e5d3394c5a3d0f6c3d",
+      "bytes": 7258,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/run_study.py"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/adjacent/budget.json": {
+      "sha256": "785bd6dbecfc3b1db75eb013c37a20f0081158cd7af5aa55c2044a1616966122",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/adjacent/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/adjacent/metadata.json": {
+      "sha256": "f526ed1bbe0c1ad526df853f02fc34454a885dfac9b810a6f7f58b312efe148e",
+      "bytes": 56180,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/full_ngps/budget.json": {
+      "sha256": "baa9d8bdb53b17b070772422ec203433d8d865727b160319d5e05540837d3358",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/full_ngps/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/full_ngps/metadata.json": {
+      "sha256": "5595507f86f0a87ccd2225c15cca4b0155a03c3b06f5d74e2426bf2980f14982",
+      "bytes": 57087,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/full_ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_dynamic/budget.json": {
+      "sha256": "28cb5f1ceb5c2da41b7654fc9b38bdcca239a89b90a1b65660776cc6039e04d8",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_dynamic/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_dynamic/metadata.json": {
+      "sha256": "185fcfeb5735e099420cbac342a9676a2b061584376873c6098dba4df24a773e",
+      "bytes": 57065,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_dynamic/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_rc/budget.json": {
+      "sha256": "3e99df8f0facc366dcdf1dce9567a4b0cbe9cb3ca7c81a6180e7ca81cbbc49c5",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_rc/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_rc/metadata.json": {
+      "sha256": "10bd9068018a29d0d39e80ad7946a6d9bd946360a898c53f7856e513c2c1f2f9",
+      "bytes": 57090,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/runs/ngps_no_rc/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/summary.json": {
+      "sha256": "4df490f43d8e548bf2c8fb05efa119dcac68097c3a60ef735877f656ac6c5d9c",
+      "bytes": 7877,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/summary.json"
+    },
+    "records/outputs/checkpoint2/exploratory/loss_ablation_v1/training.yaml": {
+      "sha256": "ee6a3a26e8eb11aec03b50cb273d1785342f7a193bd805aac633a37f4322a0ef",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/loss_ablation_v1/training.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/REPORT.md": {
+      "sha256": "7629f1de3b29ae4aea1cb9f3d82a3cab103acb705bd176bc4df7ca0f1e88ef93",
+      "bytes": 5006,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/REPORT.md"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/design.json": {
+      "sha256": "2f933fbadd4f2781f77c6fb75e4cfedc8e881decdfef91b5987a77f61734fa7d",
+      "bytes": 9484,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/design.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/finalize_report.py": {
+      "sha256": "36de50315dc26b67c9a112e84aacf546bb0684937ef443dadc55ad7bc60c4a04",
+      "bytes": 2763,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/finalize_report.py"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/adjacent/budget.json": {
+      "sha256": "749d2c25fbb0a8df171d999252dc73d49c626167dfeabd6efd95f1f050b87b7c",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/adjacent/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/adjacent/metadata.json": {
+      "sha256": "a6a4300421fc2583811d7adc2dc6f400de0eeb3f7262fc472ec2822433349b91",
+      "bytes": 55913,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/full_ngps/budget.json": {
+      "sha256": "bbfb6e4b8e29dffdaa2fdb27c7a8a384cf3af7ae63ee23c55004e6a4f54e65a9",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/full_ngps/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/full_ngps/metadata.json": {
+      "sha256": "a4765ec9ed683258da1711ebfb2c6199838d4fc006f86e19a1ae950ea9fcb1c8",
+      "bytes": 56348,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/full_ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_dynamic/budget.json": {
+      "sha256": "0aff03cbf7d9953b5af4be60b5053435c31b160f8eec3f33a475bf5681de25ee",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_dynamic/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_dynamic/metadata.json": {
+      "sha256": "fbb09b44ed735ea6df303070104b9ceaa2f300e7e73f9db786c1e95429ccd9cf",
+      "bytes": 56334,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_dynamic/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_rc/budget.json": {
+      "sha256": "e3261dc5faadce7efca116ceab48984a891e7ac1ae41e3884c2e9f106f1e94e2",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_rc/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_rc/metadata.json": {
+      "sha256": "fad005ee3210e1f15d960079a1d6efdc59193eb88046e495f8e672161f10cb12",
+      "bytes": 56353,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/gaussian/no_rc/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/adjacent/budget.json": {
+      "sha256": "7a25c22643b4178ae7858210d851590394c2cc3ad5c2936ec7a54b0af83c3d82",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/adjacent/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/adjacent/metadata.json": {
+      "sha256": "cba572141183fb528339a5f42647a446b3f10ee0ddbf6741b272109d459580a8",
+      "bytes": 56534,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/full_ngps/budget.json": {
+      "sha256": "95683da5b75e90303dd9788df85589c82bff404e3d9d27b6b7b9d52b449e73e2",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/full_ngps/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/full_ngps/metadata.json": {
+      "sha256": "df0f97137dc32f6b7d98439abf2b50d3169d19bf9082c01ff235c128607d1758",
+      "bytes": 56958,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/full_ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_dynamic/budget.json": {
+      "sha256": "8d314226fce13ee2b077fd0c6c96d13842ffecdc285f53d4a4165a01f271618c",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_dynamic/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_dynamic/metadata.json": {
+      "sha256": "540c785beda6502c10fdf06fd5d7b40b874e60f8248edac2fe7b30506b7c7def",
+      "bytes": 56953,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_dynamic/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_rc/budget.json": {
+      "sha256": "472dfca395d2075eb32b8b281989f2873cdf36e6024199403f7df75e448c0108",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_rc/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_rc/metadata.json": {
+      "sha256": "806dc2195543f123c8ff5b7df5b6faa017d2447e2c6f1e17f871acb89af8beb5",
+      "bytes": 56964,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/pilot/rician/no_rc/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/protocol.json": {
+      "sha256": "e3bcc6fa70a49d0a442d1793ea1bf20a58083a27e418b84217d203b1e48926a6",
+      "bytes": 10657,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/protocol.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/reporting_recovery.json": {
+      "sha256": "7f298a87c196dc4b55045ceab70ede18abfb5185e6df3d6e38386a0302f6b5d2",
+      "bytes": 447,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/reporting_recovery.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/run_study.py": {
+      "sha256": "e0fda45e60768cdfe4f4b5b0575c548aa383fcf6a1a677b59c6fe7d0cb4b2f30",
+      "bytes": 11904,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/run_study.py"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/adjacent/budget.json": {
+      "sha256": "9fc399ae178f478bd0fac950b730868292efb5b846f7781871c581b4ee75712c",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/adjacent/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/adjacent/metadata.json": {
+      "sha256": "244e4356743a573408f64a8106990fc78f56019f2b89002fbec62373fccddddd",
+      "bytes": 55986,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/full_ngps/budget.json": {
+      "sha256": "15fded13780f0b9dd3f192c2bde9e1dff0d7cff2ef975f09f5a30a562d59867a",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/full_ngps/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/full_ngps/metadata.json": {
+      "sha256": "73e7cd34577a29a88f8933b548d207dfb139f107729588aadb94669c756262ff",
+      "bytes": 56437,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/full_ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_dynamic/budget.json": {
+      "sha256": "cf455559a46aed6c9142cd53b54cf3dec2c33afb976650f05ae1364f11848c6e",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_dynamic/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_dynamic/metadata.json": {
+      "sha256": "25d9b941694017f1d6653d53e749588557afb9f7c99f4b29e56db233c90189ca",
+      "bytes": 56426,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_dynamic/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_rc/budget.json": {
+      "sha256": "78b82dc4672898971ae261e4980561b35ff181c580cdbadfe28c3cf42ddc04be",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_rc/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_rc/metadata.json": {
+      "sha256": "11b2e82e4d78c3a3d0fc5346d946238e2a430bd8a0027ea13743fb01e4e79b50",
+      "bytes": 56437,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/gaussian/no_rc/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/adjacent/budget.json": {
+      "sha256": "b75d64a5cdd70fc200729dc83b63cd9f0fc8d034990ca3db74c29c7a3f7abc45",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/adjacent/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/adjacent/metadata.json": {
+      "sha256": "672661304e1c0d1cff045163f4980f6cb1bb813afdc9b07ec3f5f1a616b6f5b0",
+      "bytes": 56606,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/full_ngps/budget.json": {
+      "sha256": "0c122ba5c54d41a4c4e2182d7133a4446ecaa9551d52d83d104d8ee4ef6223b7",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/full_ngps/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/full_ngps/metadata.json": {
+      "sha256": "dc25993ef7c3595b4c01d85bf12a76e4a1be5392fbeebb696d46102d6649953d",
+      "bytes": 57053,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/full_ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_dynamic/budget.json": {
+      "sha256": "03e8fd03fe1f67ed5a591288ac7323a639eb0a147a1f9fd00106a4394ca1c222",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_dynamic/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_dynamic/metadata.json": {
+      "sha256": "fd4f8466d65bf6959c868cce1c9e20f72d4982cbe3aab0501f0cf5fae61c89bd",
+      "bytes": 57042,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_dynamic/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_rc/budget.json": {
+      "sha256": "40a8d70bff213753eead47aa300e84f6c1d2891dfe5c362757440100134d2fd4",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_rc/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_rc/metadata.json": {
+      "sha256": "697772f2deacda386fc8083a1bc07374265daacb75bb0bca94c77a1f2a5a56d3",
+      "bytes": 57056,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/runs/rician/no_rc/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/scores.partial.json": {
+      "sha256": "3dbd15bcfadb21205c4c9d11d789ac2ca395d5fc651ebb487641212dd84fddfe",
+      "bytes": 25026,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/scores.partial.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/summary.json": {
+      "sha256": "35990bc6994ee320dd5456811de506c9f1dd0c50baf247e6bad645521b095848",
+      "bytes": 56294,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/summary.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/test_started.json": {
+      "sha256": "0f4c1b58186751a049da7794ecd96f8ee9a15081f85d3eeedb7942f162bc1078",
+      "bytes": 9824,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/test_started.json"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/training.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/training.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/noise_isolation_v1/training_access_audit.json": {
+      "sha256": "d95f2d8ee7a526fb730ab905ba52f0d512280cbd72c657a033657a268e77880e",
+      "bytes": 1968,
+      "origin": "outputs/checkpoint2/exploratory/noise_isolation_v1/training_access_audit.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/REPORT.md": {
+      "sha256": "8f23c2330cd97e2b2a5b83b37c7d9331aa64b3cb6c334d6cb9b053f1d20acffd",
+      "bytes": 3394,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/REPORT.md"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/design.json": {
+      "sha256": "cbdf26ae900cf43088aefd96db301a1874a8dc5e17f642ae3924e930b199a6f6",
+      "bytes": 1786,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/design.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/protocol.json": {
+      "sha256": "fbb2bd253992334922af8a27c5f9996b76fb9812972ecaa40d9b5f9cda680520",
+      "bytes": 2661,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/protocol.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/results/COMPLETE.json": {
+      "sha256": "f1c48405f615d6f158aeed583aa435fc011de7235b9f69b1ea8dea2dc340a00c",
+      "bytes": 202,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/results/COMPLETE.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/results/aggregates.csv": {
+      "sha256": "be7b61ec43655d156356cffb2f72dfa0d7b61dbe64c7534bd828b9cbd436ccd0",
+      "bytes": 7029,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/results/aggregates.csv"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/results/benchmark.json": {
+      "sha256": "ad80bdf85420d4996dd2588f7b8b95b07794dc2eccb744bb9cc642c0e6fa78b9",
+      "bytes": 48030,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/results/benchmark.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/results/subjects.csv": {
+      "sha256": "24112b14a07b0ecd17455662d88bf7bc49df5d477ac25246915c0531a08207d7",
+      "bytes": 8576,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/results/subjects.csv"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/results/success.csv": {
+      "sha256": "507fe7b9897b97390514243a5addc682b04b8da48b08a473416cab74fed1687f",
+      "bytes": 328,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/results/success.csv"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/results/worst_slices.csv": {
+      "sha256": "28a3606bd9e6841980ced770da7181b397795567435fc7e666e114eb8744e287",
+      "bytes": 5645,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/results/worst_slices.csv"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.03/budget.json": {
+      "sha256": "fe1f57e6c0ac65ea7a0d8a4ae55cc5de8f474f4a3ff6b5ff361a6633ec6bceb8",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.03/metadata.json": {
+      "sha256": "fa9b5eb7fc02f760ec2ccb35450c537f9c92b00453be31889dee1f46f4632687",
+      "bytes": 56376,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.06/budget.json": {
+      "sha256": "8bd798de0992ee646b6a1d75f8b5d45f56444e1304b0721001af04589d1783c7",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.06/metadata.json": {
+      "sha256": "2dfa91e3c0ff3ce2a8e07935347cf3a1f88aef343823937b3855ea3a1bf4395e",
+      "bytes": 56378,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.10/budget.json": {
+      "sha256": "dfd28cb84a193fded7bb8300bc4a97fbaeda08bcd695ff13a325fe6ab0116112",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.10/metadata.json": {
+      "sha256": "c351e9aa79ecdf09d0935bbcc2feb7ba18e6fb717b8f2a20a6e95ca4f69b4221",
+      "bytes": 56378,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/adjacent_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.03/budget.json": {
+      "sha256": "abf57f115db1db01793c3d34d113329f7356485f82828a902e20b3f0cf7dd54f",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.03/metadata.json": {
+      "sha256": "fa97c5b02774c7c799d850cbf40e366aa3891f6d94d7400f2fdc8fb4d4b715eb",
+      "bytes": 56380,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.06/budget.json": {
+      "sha256": "72a3ad3f519f78f92aa1f59178d0bb0558da61ef8ca341f221710fbbc0cf48bd",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.06/metadata.json": {
+      "sha256": "4a31e777716c0ec613bb882f297bcb1f3a7ccaf71ede16b2b24a131c24588b3b",
+      "bytes": 56381,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.10/budget.json": {
+      "sha256": "c083b9b5bba960646b92aa5be2f41b71db0abb9758ff5b81cfd3d6089d6e9a3e",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.10/metadata.json": {
+      "sha256": "714eb950072dd8f49bf069c691aa6b036b59d00427304b8d8066682988dc22db",
+      "bytes": 56380,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/blindspot_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.03/budget.json": {
+      "sha256": "eaa4c343c2eddf58f4c2f54d5ae8c3202c7098f0181a281874e065ee98a0723d",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.03/metadata.json": {
+      "sha256": "3d922b53091eeda9642424a498d253339209348a4c86b53f9f8e2cc599943b95",
+      "bytes": 56829,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.06/budget.json": {
+      "sha256": "7f0a0ab4b2ea433390b55e662fd9f3bc7d8c2699cf1de3c765cc627b6b035c95",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.06/metadata.json": {
+      "sha256": "1722b87deaee4a9d5b98a538173414560e918c271647934640b1d94c6e3c3c56",
+      "bytes": 56825,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.10/budget.json": {
+      "sha256": "d03f8885d7bbba71bea9091da11a7e5b6a9938996d87e65c38b1f375fe865985",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.10/metadata.json": {
+      "sha256": "59cc47dfa9b7b435bb3330882666affd52025df0d15bd5cce4458eb1c28c39e4",
+      "bytes": 56810,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/runs/ngps_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/test_started.json": {
+      "sha256": "63338e21ac8f8bd60eb0f4ca98a96e07f7ade2c8fda28c7da64b609afc1ba529",
+      "bytes": 1025,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/test_started.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/experiment/training.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/experiment/training.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/noise_tests.json": {
+      "sha256": "8a8493c9f5d27c615586ba9d7e80a6e640cc615b7f56f6228ff8199fe5e89be9",
+      "bytes": 312,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/noise_tests.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/pilot/adjacent/metadata.json": {
+      "sha256": "7f4d3ec2033187ee7482d99fc0c13bfee9ad4e84591cb67918fe1b7c67f4d7d5",
+      "bytes": 56248,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/pilot/adjacent/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/pilot/blindspot/metadata.json": {
+      "sha256": "164c0811040b9aaa43fa73fbb76708a7984e65b6e7baca83002622d8624f5912",
+      "bytes": 56250,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/pilot/blindspot/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/pilot/ngps/metadata.json": {
+      "sha256": "5ec1ddbd6038596d907d37057328d41d40c5afeb58d8b1b5b78a00cabb799120",
+      "bytes": 56676,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/pilot/ngps/metadata.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/pilot/pilot.json": {
+      "sha256": "e227e9b593cc2e9d6ef7b648e32c902748ef5ac80b6d96dc7b3738ed757582da",
+      "bytes": 2143,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/pilot/pilot.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/pilot/pilot.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/pilot/pilot.yaml"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/prepared/manifest.json": {
+      "sha256": "86a2277046c784b164e69185be8d99ebb9eba0c5eccd06e501eeaa8068c2ccc2",
+      "bytes": 45344,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/prepared/manifest.json"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/run_study.py": {
+      "sha256": "d3fd5f0cc15cdea8fa3c0d9f98eab5036604a04982fd0f38ef298503f743956f",
+      "bytes": 7237,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/run_study.py"
+    },
+    "records/outputs/checkpoint2/exploratory/rician_v1/training_access_audit.json": {
+      "sha256": "06faeca60e7dc923c464edbaf842ae2ca881a92496283b8e81702775ede16044",
+      "bytes": 3094,
+      "origin": "outputs/checkpoint2/exploratory/rician_v1/training_access_audit.json"
+    },
+    "records/outputs/checkpoint2/local-verification/brainweb_verification.json": {
+      "sha256": "bce944903422b2428b34dd76800115099c94a341dc8fd853858570213d0652a2",
+      "bytes": 28191,
+      "origin": "outputs/checkpoint2/local-verification/brainweb_verification.json"
+    },
+    "records/outputs/checkpoint2/medical/evidence/WORKLOAD_DECISION.json": {
+      "sha256": "1f39f674b48d305fa7bc1f91fe1453de49ee3e4e453d1ee0801e9f5eb3a72140",
+      "bytes": 459,
+      "origin": "outputs/checkpoint2/medical/evidence/WORKLOAD_DECISION.json"
+    },
+    "records/outputs/checkpoint2/medical/evidence/brainweb_verification.json": {
+      "sha256": "7f19ffb748bd204bd3e6a3911bb7bf586468aaf6453a0d9e34131b27ba08dcbe",
+      "bytes": 28191,
+      "origin": "outputs/checkpoint2/medical/evidence/brainweb_verification.json"
+    },
+    "records/outputs/checkpoint2/medical/evidence/checkpoint2_budgeted.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/medical/evidence/checkpoint2_budgeted.yaml"
+    },
+    "records/outputs/checkpoint2/medical/evidence/pilot.json": {
+      "sha256": "bc999d6592ef05fe84b7ed0354ada37c786abaf4e465fc553f64f312bb4fecac",
+      "bytes": 1613,
+      "origin": "outputs/checkpoint2/medical/evidence/pilot.json"
+    },
+    "records/outputs/checkpoint2/medical/evidence/prepared/manifest.json": {
+      "sha256": "7dbfcb892a37deae2594bc5fa82c4070c5d968dc9634a9fdbb5f3dfe454e4962",
+      "bytes": 44690,
+      "origin": "outputs/checkpoint2/medical/evidence/prepared/manifest.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_pilot/pilot.json": {
+      "sha256": "ef67bc23c192c2a7349c7999a5982bafdc214b9dae9e07aa8e398a799bf25952",
+      "bytes": 2139,
+      "origin": "outputs/checkpoint2/medical/mps_full_pilot/pilot.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_pilot/pilot.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/medical/mps_full_pilot/pilot.yaml"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_prepared/manifest.json": {
+      "sha256": "f490b721550e263c58f9c972ecd087dcffeb075fbd381ffcb863f28fdbb86422",
+      "bytes": 44729,
+      "origin": "outputs/checkpoint2/medical/mps_full_prepared/manifest.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/protocol.json": {
+      "sha256": "ff6a3a79ebb6d56b2d3848d246579685eb5eb6832709ecd7fca82356f63319df",
+      "bytes": 2509,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/protocol.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/results/COMPLETE.json": {
+      "sha256": "8478599a801e133debffc6badd5abf8e1a44ef30eb157206096614c03e651d23",
+      "bytes": 202,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/results/COMPLETE.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/results/aggregates.csv": {
+      "sha256": "321bf74376c5e76bdb29a6f0ebd7d761e4cfb556d689f94b4beaf3fb57e89485",
+      "bytes": 7068,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/results/aggregates.csv"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/results/benchmark.json": {
+      "sha256": "4f1998e4d7718c094a254d7732648fdd1e9a81ae9104bb260003dd5f3b022e05",
+      "bytes": 47648,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/results/benchmark.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/results/subjects.csv": {
+      "sha256": "adefdff769fa18148604bcdb8d00d95666a7dccb9d20a3011216a3b57d40c738",
+      "bytes": 8573,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/results/subjects.csv"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/results/success.csv": {
+      "sha256": "003f3eca3f1e65db4bf6b03917546a6de934e5b4ade84c385290fd4bc9a2fc46",
+      "bytes": 329,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/results/success.csv"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/results/worst_slices.csv": {
+      "sha256": "90689c1f639bbc4394e180e642273ec8c7f2df77f24005522dfd4f109fb2a106",
+      "bytes": 5571,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/results/worst_slices.csv"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.03/budget.json": {
+      "sha256": "32fbf69972567751281562e9ed18bc2bd6b40d64a3be5e55f8b0654ad0fc3b8b",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.03/metadata.json": {
+      "sha256": "35731aef8702723931dafc4dd31f9689bf005eca8c4160cf56b208824f9ae362",
+      "bytes": 55350,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.06/budget.json": {
+      "sha256": "a4f068bcdf3548c248399cef484ba3cc3f1171f36fac0be74de809fef5700a34",
+      "bytes": 87,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.06/metadata.json": {
+      "sha256": "e3c3b9300d91a8f823c8172a4466efc8727036c718b43f03fb5de2585c5bd550",
+      "bytes": 55349,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.10/budget.json": {
+      "sha256": "3c15c13b85cc632c5193b105b3a765ba67bf7882aa6578ea96868aab456de777",
+      "bytes": 86,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.10/metadata.json": {
+      "sha256": "fa66fb688a7aab1574f636b434689f24da64a98b8fcc033f25ea89c04e6f76a9",
+      "bytes": 55345,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/adjacent_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.03/budget.json": {
+      "sha256": "25f48ae2a30de50b64ea5b8375773897a4bf757cb1b2511d34bb39a4ab8a712b",
+      "bytes": 87,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.03/metadata.json": {
+      "sha256": "6f438281497ef10450e5c1764d28a9731c2fc0d9067cbe8d126fccf8e84374e8",
+      "bytes": 55350,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.06/budget.json": {
+      "sha256": "82ef5226d7fda96d2daf30ee8fdc2813bd2f0df3f3f5e39c04bd2ba2e4443cd6",
+      "bytes": 87,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.06/metadata.json": {
+      "sha256": "2be011b5c502e5e1a90cd0f895893d5384e92741ad97bfae5dee3a6886e300d0",
+      "bytes": 55347,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.10/budget.json": {
+      "sha256": "ec4fe60c1d22a2be79011c997966e4e7254de52d2940db7c99aff152ce5409ae",
+      "bytes": 87,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.10/metadata.json": {
+      "sha256": "03ff80b1c3c1943ae94f64882c3c1a3970c24908dd8632fd781469c45d907f79",
+      "bytes": 55348,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/blindspot_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.03/budget.json": {
+      "sha256": "a6b9446baf6d1944a900f3a401ef804167db83af64fb8925033a8296da572821",
+      "bytes": 87,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.03/metadata.json": {
+      "sha256": "0e643ffbfa8b487c6cba2308e54ce5c96efa499ebe710c59f913f459c25e8009",
+      "bytes": 55802,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.06/budget.json": {
+      "sha256": "f2b81a8746e2af22f715468903e3555a2acbc7235f4404cf0ddf36b3aa6c78c2",
+      "bytes": 87,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.06/metadata.json": {
+      "sha256": "1d782185b29d3eaeb56a3c83d7a96d8119c230f912042904396a352f2cac9140",
+      "bytes": 55801,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.10/budget.json": {
+      "sha256": "65a52c29ba610de65945fabb906695f0adae8d50df460ae7e562b081f02efba9",
+      "bytes": 87,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.10/metadata.json": {
+      "sha256": "2603473dfd02d3e0dfe33029610299bf82356dcfff72c85b321ea4abe8174742",
+      "bytes": 55780,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/runs/ngps_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/test_started.json": {
+      "sha256": "6c6ae696ee673f934f9e4f58ef4cc46d0518432196c3aa470259acc7670faf1c",
+      "bytes": 1025,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/test_started.json"
+    },
+    "records/outputs/checkpoint2/medical/mps_full_run/training.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/medical/mps_full_run/training.yaml"
+    },
+    "records/outputs/checkpoint2/medical/protocol.json": {
+      "sha256": "4301bc78f9e347a630a8cacd4aa3c31ac7c374cfe4efe0cb992396bac1d5e947",
+      "bytes": 2499,
+      "origin": "outputs/checkpoint2/medical/protocol.json"
+    },
+    "records/outputs/checkpoint2/medical/results/COMPLETE.json": {
+      "sha256": "9e35dc46fe0c5256f1d5987729eda1dd9b93b3da323e449608cc6c4e8b35c2d6",
+      "bytes": 202,
+      "origin": "outputs/checkpoint2/medical/results/COMPLETE.json"
+    },
+    "records/outputs/checkpoint2/medical/results/aggregates.csv": {
+      "sha256": "3e88e55e97307ad176f1bdc82c11f69eacbf8c3f89390a7e82f877e0df538621",
+      "bytes": 7041,
+      "origin": "outputs/checkpoint2/medical/results/aggregates.csv"
+    },
+    "records/outputs/checkpoint2/medical/results/benchmark.json": {
+      "sha256": "aabd962fc6506d217c6715dae2af68a55db318d5b7984118991adb12f3f88742",
+      "bytes": 47177,
+      "origin": "outputs/checkpoint2/medical/results/benchmark.json"
+    },
+    "records/outputs/checkpoint2/medical/results/subjects.csv": {
+      "sha256": "aee1f88bdf431295a193e4a8950194927b8ba1a869d8efc63ff187a0908705b5",
+      "bytes": 8454,
+      "origin": "outputs/checkpoint2/medical/results/subjects.csv"
+    },
+    "records/outputs/checkpoint2/medical/results/success.csv": {
+      "sha256": "1002c67d00f6912db21587c5aea8b620f39b4fbeaed0a11b8bf5f617da840d26",
+      "bytes": 326,
+      "origin": "outputs/checkpoint2/medical/results/success.csv"
+    },
+    "records/outputs/checkpoint2/medical/results/worst_slices.csv": {
+      "sha256": "52df690361ea9a06273605f63a61a0cab888238b0b01b3785e91146342ce8a81",
+      "bytes": 5571,
+      "origin": "outputs/checkpoint2/medical/results/worst_slices.csv"
+    },
+    "records/outputs/checkpoint2/medical/runs/adjacent_s0.03/budget.json": {
+      "sha256": "3ce58ff1c2036c0e55494963f3ed5fef548ea28917f05260bedde5814fb75732",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/medical/runs/adjacent_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/adjacent_s0.03/metadata.json": {
+      "sha256": "7787cfb3ddd83bc71f34722cd07cdf5060dbcfc78b91acd4b30d5cbb9725fe87",
+      "bytes": 54845,
+      "origin": "outputs/checkpoint2/medical/runs/adjacent_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/adjacent_s0.06/budget.json": {
+      "sha256": "c7f62814ef4476f2af596fbbd7250708fcb5351dc46c4b6da5afba820bc41399",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/medical/runs/adjacent_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/adjacent_s0.06/metadata.json": {
+      "sha256": "e968d52ec3f62a0fc377b537ae41bfe93acfcfa06734c99e88d287300d2394bb",
+      "bytes": 54843,
+      "origin": "outputs/checkpoint2/medical/runs/adjacent_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/adjacent_s0.10/budget.json": {
+      "sha256": "f3b2670d82521dccf02d86f2bf5db3d59599cd72305bb1538dca0d12c494e421",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/medical/runs/adjacent_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/adjacent_s0.10/metadata.json": {
+      "sha256": "51273919c3705910b381b3415c414a7fcdac7cf9b8194787723e00184665e685",
+      "bytes": 54842,
+      "origin": "outputs/checkpoint2/medical/runs/adjacent_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/blindspot_s0.03/budget.json": {
+      "sha256": "c0253fcbee42daa4542706382cafa54c37a536c81a2df8700c774361ede48fad",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/medical/runs/blindspot_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/blindspot_s0.03/metadata.json": {
+      "sha256": "eb5d015c5e5e2b1d4c834965fa9ed80ee20a36c75c3e0c3dd56739ba0cb1ca6e",
+      "bytes": 54844,
+      "origin": "outputs/checkpoint2/medical/runs/blindspot_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/blindspot_s0.06/budget.json": {
+      "sha256": "97384ebeb1962ba3ca9864a73516cb6a5551c830e18f1d99b601fe192861d907",
+      "bytes": 84,
+      "origin": "outputs/checkpoint2/medical/runs/blindspot_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/blindspot_s0.06/metadata.json": {
+      "sha256": "48f44132dacbd4865d0d079a1fefcfde3954c59c033b93cf11c39d3b5c510e07",
+      "bytes": 54843,
+      "origin": "outputs/checkpoint2/medical/runs/blindspot_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/blindspot_s0.10/budget.json": {
+      "sha256": "551a2a4a4054d24c3c99b82ef66ba6f2370a67f4775bb2f50fa70bce263c3fff",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/medical/runs/blindspot_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/blindspot_s0.10/metadata.json": {
+      "sha256": "b5e67e6b80800c7cfc0f8f37438427c3fcae825aaf5b4db424ed8d168b4ff7df",
+      "bytes": 54841,
+      "origin": "outputs/checkpoint2/medical/runs/blindspot_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/ngps_s0.03/budget.json": {
+      "sha256": "4fe9a8731c08a5f69c1d940d01a4138eabc2994d562784b3e531ae68a6f9e6cc",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/medical/runs/ngps_s0.03/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/ngps_s0.03/metadata.json": {
+      "sha256": "e58d818a62bda9c13e4dadf777c4d8ba5bffa714680a5ed47a435052136d95df",
+      "bytes": 55296,
+      "origin": "outputs/checkpoint2/medical/runs/ngps_s0.03/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/ngps_s0.06/budget.json": {
+      "sha256": "3a529c1297ab7366bb62d5b27898d9cad1aafc22a0d1af92d112bcf6be9373f7",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/medical/runs/ngps_s0.06/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/ngps_s0.06/metadata.json": {
+      "sha256": "9a763ab852f174901c3bbab8c9dbe44f98195811bfc9b5182b9f38ecc48039ac",
+      "bytes": 55295,
+      "origin": "outputs/checkpoint2/medical/runs/ngps_s0.06/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/ngps_s0.10/budget.json": {
+      "sha256": "2aedae3f18cd2a027115a4a86a981226f0aee127bbc172c8dbd784862a0ac5bc",
+      "bytes": 85,
+      "origin": "outputs/checkpoint2/medical/runs/ngps_s0.10/budget.json"
+    },
+    "records/outputs/checkpoint2/medical/runs/ngps_s0.10/metadata.json": {
+      "sha256": "dced2db62bbf864012c6fc6a66b10de28f6409aa4584fc577bcc4fff33e01bc8",
+      "bytes": 55273,
+      "origin": "outputs/checkpoint2/medical/runs/ngps_s0.10/metadata.json"
+    },
+    "records/outputs/checkpoint2/medical/test_started.json": {
+      "sha256": "ffcb4c9356a88b156c42f13cad09282f070772f0df4654ae833f70ec31de9899",
+      "bytes": 1025,
+      "origin": "outputs/checkpoint2/medical/test_started.json"
+    },
+    "records/outputs/checkpoint2/medical/training.yaml": {
+      "sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+      "bytes": 347,
+      "origin": "outputs/checkpoint2/medical/training.yaml"
+    }
+  }
+}

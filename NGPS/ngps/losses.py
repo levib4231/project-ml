@@ -52,10 +52,12 @@ def masked_mse(
 class NGPSHybridLoss(nn.Module):
     """Static N2N + NGPS dynamic target + regional consistency."""
 
-    def __init__(self, lambda_rc: float = 0.5, normalize_by_active_pixels: bool = True) -> None:
+    def __init__(self, lambda_rc: float = 0.5, normalize_by_active_pixels: bool = True,
+                 include_dynamic: bool = True) -> None:
         super().__init__()
         self.lambda_rc = lambda_rc
         self.normalize_by_active_pixels = normalize_by_active_pixels
+        self.include_dynamic = include_dynamic
 
     def _mse(self, pred: torch.Tensor, target: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
         return masked_mse(pred, target, mask, self.normalize_by_active_pixels)
@@ -76,6 +78,8 @@ class NGPSHybridLoss(nn.Module):
         static_next = 1.0 - mask_next
         n2n = 0.5 * (self._mse(out_center, raw_prev, static_prev) + self._mse(out_center, raw_next, static_next))
         dynamic = 0.5 * (self._mse(out_center, target_prev, mask_prev) + self._mse(out_center, target_next, mask_next))
+        if not self.include_dynamic:
+            dynamic = out_center.new_zeros(())
         recon = n2n + dynamic
 
         if out_prev is None or out_next is None:

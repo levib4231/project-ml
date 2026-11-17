@@ -1,0 +1,261 @@
+{
+  "protocol_hash": "7711525ade81fc61eb26c68a8bb2a57969ce6340b05805e0784b1e6a5949c7b6",
+  "runs": [
+    {
+      "variant": "full_ngps",
+      "method": "ngps",
+      "ablation": null,
+      "updates": 2148,
+      "wall_seconds": 326.6605110829987,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.006912207283388331,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.006344860771695218,
+          "n2n": 0.004438380779068937,
+          "dynamic": 0.001906479990864875,
+          "rc": 0.0011346930100537447,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.04296575638064958
+        },
+        {
+          "epoch": 2,
+          "loss": 0.005633879259135054,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005468928747250242,
+          "n2n": 0.0040147163958533265,
+          "dynamic": 0.0014542123473185856,
+          "rc": 0.0003299010275227704,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.03253845530028804
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.004008194032338494
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.00397735304594581
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "training_samples": 1074,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      },
+      "training_seconds": 313.34233337600017,
+      "validation_seconds": 6.373877124999126
+    },
+    {
+      "variant": "ngps_no_rc",
+      "method": "ngps",
+      "ablation": "no_rc",
+      "updates": 2148,
+      "wall_seconds": 323.1120659169992,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.006476053279552269,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.006476053279552269,
+          "n2n": 0.004512578982155722,
+          "dynamic": 0.001963474302558819,
+          "rc": 0.0013273389841121184,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.04072967143855066
+        },
+        {
+          "epoch": 2,
+          "loss": 0.005469989596070025,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005469989596070025,
+          "n2n": 0.004027940429360354,
+          "dynamic": 0.0014420491670890498,
+          "rc": 0.00039962841073682814,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.03155151938670965
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0040291505560081185
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.004028677893542378
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "training_samples": 1074,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      },
+      "training_seconds": 310.860072458001,
+      "validation_seconds": 5.726210708000508
+    },
+    {
+      "variant": "ngps_no_dynamic",
+      "method": "ngps",
+      "ablation": "no_dynamic",
+      "updates": 2148,
+      "wall_seconds": 327.2825643340002,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.004770192349749293,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.0043391277926871676,
+          "n2n": 0.0043391277926871676,
+          "dynamic": 0.0,
+          "rc": 0.000862129104975107,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.013709091315946925
+        },
+        {
+          "epoch": 2,
+          "loss": 0.004068024748948435,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.003977851774604225,
+          "n2n": 0.003977851774604225,
+          "dynamic": 0.0,
+          "rc": 0.00018034596260690916,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.009504023903275855
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003952294340950317
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.003955409767798164
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "training_samples": 1074,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      },
+      "training_seconds": 314.87216250000165,
+      "validation_seconds": 5.760496165999939
+    },
+    {
+      "variant": "adjacent",
+      "method": "adjacent",
+      "ablation": null,
+      "updates": 2148,
+      "wall_seconds": 131.7304874170004,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.004482922300755339,
+          "gradient_l2_norm": 0.011942865725240741
+        },
+        {
+          "epoch": 2,
+          "loss": 0.0040378083639259635,
+          "gradient_l2_norm": 0.009019106533508436
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003950565258644563
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.00395196154336419
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "training_samples": 1074,
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39141888,
+        "driver_memory_bytes": 1447788544
+      },
+      "training_seconds": 119.4479834169997,
+      "validation_seconds": 5.972850041000129
+    }
+  ],
+  "test_scoring_performed": false,
+  "clean_reference_arrays_loaded": false
+}

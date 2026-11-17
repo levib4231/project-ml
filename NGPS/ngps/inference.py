@@ -7,12 +7,13 @@ import torch
 
 from datasets.volume_folder import validate_volume
 from .config import NGPSConfig
+from .device import synchronize
 from .nafnet import build_nafnet
 from .seed import seed_everything
 
 
 def validate_selection(metadata):
-    """Reject non-selected checkpoints before any held-out data are opened."""
+    """Reject checkpoints that were not selected in advance, before any held-out data opens."""
     selection = metadata.get("selection", {})
     epochs = metadata.get("training_config", {}).get("epochs")
     if (selection.get("rule") != "fixed_final_epoch"
@@ -49,12 +50,10 @@ def timed_inference(function, volume, device="cpu"):
 
     Excludes file I/O and model loading. No warmup; first-volume overhead remains.
     """
-    if str(device).startswith("cuda"):
-        torch.cuda.synchronize(device)
+    synchronize(device)
     start = time.perf_counter()
     result = function(volume)
-    if str(device).startswith("cuda"):
-        torch.cuda.synchronize(device)
+    synchronize(device)
     elapsed = time.perf_counter() - start
     return validate_volume(result), elapsed
 
@@ -72,13 +71,11 @@ def timed_volume_file(function, noisy_path, prediction_path, device="cpu"):
     if prediction_path.exists():
         raise FileExistsError(prediction_path)
     prediction_path.parent.mkdir(parents=True, exist_ok=True)
-    if str(device).startswith("cuda"):
-        torch.cuda.synchronize(device)
+    synchronize(device)
     start = time.perf_counter()
     volume = load_volume(noisy_path)
     prediction, prediction_seconds = timed_inference(function, volume, device)
     np.save(prediction_path, prediction)
-    if str(device).startswith("cuda"):
-        torch.cuda.synchronize(device)
+    synchronize(device)
     return prediction, {"inference_seconds": prediction_seconds,
                         "volume_seconds": time.perf_counter() - start}

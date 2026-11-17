@@ -63,7 +63,7 @@ def evaluate(manifest_path, output_prefix, method="nlm", checkpoint=None, sigma=
             noisy = load_volume(noisy_path)
             function = (lambda v: infer_volume(model, v, device)) if model is not None else (lambda v: nlm_volume(v, level))
             pred, seconds = timed_inference(function, noisy, device if model is not None else "cpu")
-            # This is the ONLY experiment path that opens held-out clean arrays.
+            # This is the only experiment path that opens held-out clean arrays.
             clean = load_volume(clean_path, unit_range=True)
             row = {"subject_id": subject["subject_id"], "sigma": level,
                    "method": training["method"] if training else "nlm",

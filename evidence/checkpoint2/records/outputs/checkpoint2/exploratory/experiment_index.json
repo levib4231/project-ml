@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "preservation": "Historical protocols, checkpoints, predictions, metrics and failure evidence remain unchanged. Historical source hashes differ from new runtime code.",
+  "historical": [
+    {
+      "path": "outputs/checkpoint2/medical",
+      "label": "Original frozen T4 medical benchmark",
+      "protocol_hash": "f9bff72264a7676f80361f80320729f1572870d0d3415a2b256ca1e615678a8f",
+      "epochs": 1,
+      "optimizer_steps": 555,
+      "all_targets_met": false
+    },
+    {
+      "path": "outputs/checkpoint2/medical/mps_full_run",
+      "label": "Independent MPS medical benchmark",
+      "protocol_hash": "7506bdb7ea5efdf5e32bb9816a422a7fd61d40a75a99b5f8a6ab66ccbf36160c",
+      "epochs": 1,
+      "optimizer_steps": 531,
+      "all_targets_met": false
+    }
+  ],
+  "pretest_failures": [
+    {
+      "config": "NGPS/configs/checkpoint2.yaml",
+      "epochs": 10,
+      "pilot": "outputs/checkpoint2/medical/mps_full_pilot/pilot.json",
+      "attempt": "MPS freeze at 600 seconds per run",
+      "outcome": "Rejected before training/testing because projected full validation/setup exceeded cap",
+      "followup": "Independent one-epoch MPS workload frozen before testing"
+    }
+  ],
+  "completed_followups": [
+    {
+      "path": "outputs/checkpoint2/exploratory/noise_isolation_v1",
+      "kind": "Exploratory paired Gaussian/Rician component-removal isolation",
+      "updates": 531,
+      "sigma": 0.06,
+      "production_runs_completed": 8,
+      "test_scoring": true,
+      "interpretation": "Dynamic-loss contribution flips from negative Gaussian to positive Rician; Rician volume-MSE gain mainly low-intensity error reduction, not proof of better anatomical matching",
+      "reporting_recovery": "Post-scoring subject-key aggregation failure fixed without retraining or rescoring"
+    },
+    {
+      "path": "outputs/checkpoint2/exploratory/rician_v1",
+      "kind": "Exploratory BrainWeb/Rician retraining and frozen test benchmark",
+      "updates": 531,
+      "sigmas": [0.03, 0.06, 0.10],
+      "production_runs_completed": 9,
+      "test_subjects": ["subject20", "subject44"],
+      "test_scoring": true,
+      "all_targets_met": false,
+      "positive_signal": "NGPS PSNR exceeds trained comparators at sigma0.06 only; already exposed test subjects, not confirmatory"
+    },
+    {
+      "path": "outputs/checkpoint2/exploratory/loss_ablation_v1",
+      "kind": "Exploratory full-workload noisy-only loss ablations",
+      "updates": 2148,
+      "sigma": 0.06,
+      "variants": ["full_ngps", "ngps_no_rc", "ngps_no_dynamic", "adjacent"],
+      "production_runs_completed": 4,
+      "test_scoring": false,
+      "clean_reference_arrays_loaded": false
+    },
+    {
+      "path": "outputs/checkpoint2/exploratory/convergence_v1",
+      "kind": "Exploratory full-training noisy-only convergence study",
+      "updates": [531, 1062, 2148],
+      "sigma": 0.06,
+      "methods": ["ngps", "blindspot", "adjacent"],
+      "production_runs_completed": 9,
+      "training_subjects": 6,
+      "validation_slices": 358,
+      "test_scoring": false,
+      "clean_reference_arrays_loaded": false
+    },
+    {
+      "path": "outputs/checkpoint2/exploratory/comparison_pilot_v1",
+      "kind": "Exploratory noisy-only convergence and loss-ablation feasibility pilot",
+      "updates": [32, 64],
+      "sigma": 0.06,
+      "subject": "subject04",
+      "test_scoring": false,
+      "clean_reference_selection": false
+    }
+  ]
+}

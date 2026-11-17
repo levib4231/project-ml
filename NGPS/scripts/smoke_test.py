@@ -9,11 +9,12 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from ngps import NGPSConfig, NGPSHybridLoss, NeighborGuidedPatchSampler, build_nafnet
+from ngps.device import preferred_device, require_device
 
 
 def main() -> None:
     cfg = NGPSConfig()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = require_device(preferred_device())
     model = build_nafnet(cfg).to(device)
     sampler = NeighborGuidedPatchSampler(cfg).to(device)
     criterion = NGPSHybridLoss(lambda_rc=cfg.rc_weight)

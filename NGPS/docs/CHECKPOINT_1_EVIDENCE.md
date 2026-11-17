@@ -1,19 +1,26 @@
-# Checkpoint 1 – Reproducibility and Initial Evidence
+# Checkpoint 1: reproducibility and initial evidence
 
-This document records the first verified implementation checkpoint for the NGPS project. It is evidence of a working, reproducible starting point, not a scientific performance claim.
+This document records the first verified implementation checkpoint for the NGPS
+project. It shows a working, reproducible starting point, not a scientific
+performance claim.
 
 ## Repository and scope
 
 - Repository: `https://github.com/levib4231/project-ml`
-- Base commit inspected: `1113ee1` – initial commit
+- Base commit inspected: `1113ee1` (initial commit)
 - Subject manifest: `NGPS/configs/subjects_v1.json`
-- Manifest contents: 10 subjects, deterministic 6 train / 2 validation / 2 held-out test split
-- Forbidden source/output scope checked: no `Data/Clean/`, PDF, or `Figure_1.png` changes
-- Clean-reference training/selection: documented as prohibited by the implementation protocol
+- Manifest contents: 10 subjects, deterministic 6 train / 2 validation / 2
+  held-out test split
+- Forbidden source and output scope checked: no changes to `Data/Clean/`, PDFs or
+  `Figure_1.png`
+- Clean-reference training and selection: prohibited by the implementation
+  protocol and documented as such
 
 ## Reproduced verification
 
-The commands below were run from the repository root. Runtime tests used the existing project environment at `/tmp/project-ml-venv/bin/python`, which contains the project’s Torch, OpenCV, pytest, scikit-image, and NumPy dependencies.
+The commands below ran from the repository root. Runtime tests used the existing
+project environment at `/tmp/project-ml-venv/bin/python`, which has the project's
+Torch, OpenCV, pytest, scikit-image and NumPy dependencies.
 
 ### Static checks
 
@@ -32,7 +39,11 @@ PASS
 27 passed, 170 subtests passed in 3.54s
 ```
 
-The tests cover deterministic subject splitting and seeds, manifest leakage, data validation and normalization, unclipped noise generation, guide and mask behavior, sampler bounds and diagnostics, NAFNet residual behavior, loss arithmetic, baselines, subject-level metrics, configuration validation, and a synthetic end-to-end path.
+The tests cover deterministic subject splitting and seeds, manifest leakage,
+data validation and normalization, unclipped noise generation, guide and mask
+behavior, sampler bounds and diagnostics, NAFNet residual behavior, loss
+arithmetic, baselines, subject-level metrics, configuration validation and a
+synthetic end-to-end path.
 
 ### Existing model smoke test
 
@@ -65,25 +76,29 @@ Observed output:
 Synthetic train/infer/evaluate PASS: 2 held-out subjects, standalone volume inference 0.002382s
 ```
 
-This confirms the code can construct synthetic data, train without clean-reference checkpoint selection, run standalone volume inference, and produce held-out evaluation artifacts for two subjects.
+This confirms the code can build synthetic data, train without clean-reference
+checkpoint selection, run standalone volume inference and produce held-out
+evaluation artifacts for two subjects.
 
 ## What this does and does not establish
 
-Established by the checks above:
+What the checks establish:
 
 - the repository compiles;
 - the new tests pass in the project runtime environment;
-- deterministic manifest/noise/data-validation behavior is exercised;
-- the training, inference, and evaluation path runs end to end on synthetic data;
-- the held-out split is present and separated by subject;
+- deterministic manifest, noise and data-validation behavior is exercised;
+- the training, inference and evaluation path runs end to end on synthetic data;
+- the held-out split exists and is separated by subject;
 - sampler diagnostics and active/empty mask fractions are observable.
 
-Not established yet:
+What they do not establish:
 
-- BrainWeb intensity scale, orientation, and conversion provenance;
+- BrainWeb intensity scale, orientation or conversion provenance;
 - medical-data training results;
 - superiority over published baselines;
 - clinical usefulness or downstream-task benefit;
-- exact reproduction of the NGPS paper’s CT or synthetic-Rician MRI numbers.
+- exact reproduction of the NGPS paper's CT or synthetic-Rician MRI numbers.
 
-The next evidence step is to verify the real BrainWeb conversion and run the same manifest-based protocol on the actual held-out subjects before making any scientific claim.
+The next evidence step is to verify the real BrainWeb conversion and run the
+same manifest-based protocol on the actual held-out subjects before making any
+scientific claim.

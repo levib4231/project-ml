@@ -1,0 +1,66 @@
+{
+  "package": {
+    "files": 231,
+    "bytes": 5226016,
+    "status": "verified"
+  },
+  "benchmarks": [
+    {
+      "path": "outputs/checkpoint2/exploratory/rician_v1/experiment/results/benchmark.json",
+      "protocol_hash": "82ac9e01a109fd0cbecaad76afdf1856db0ed39f4c9400231c1a8556d6ecb3bb",
+      "rows": 30,
+      "all_targets_met": false
+    },
+    {
+      "path": "outputs/checkpoint2/medical/mps_full_run/results/benchmark.json",
+      "protocol_hash": "7506bdb7ea5efdf5e32bb9816a422a7fd61d40a75a99b5f8a6ab66ccbf36160c",
+      "rows": 30,
+      "all_targets_met": false
+    },
+    {
+      "path": "outputs/checkpoint2/medical/results/benchmark.json",
+      "protocol_hash": "f9bff72264a7676f80361f80320729f1572870d0d3415a2b256ca1e615678a8f",
+      "rows": 30,
+      "all_targets_met": false
+    }
+  ],
+  "source_archives": [
+    "bb4ec5e39671c1a20ca10f08850ef10008d46ea98f247b0e4136c817b6474ac4",
+    "cc43049b91ec13a712b7798682eb05a52415b9c9482336abd4e5cb09c869986e",
+    "e32518cd327956031116e93f0ab6de83a27a8f6bbff6a3a2690717018991bc29"
+  ],
+  "historical_source_warning": "Historical protocols must be run with their archived source, not relabeled with the current source hash.",
+  "current_source_tree_sha256": "4f3cd67fe666fe216577082c785c062c815ae3f8d7214d16cbb0581af84ab4b4",
+  "exploratory_studies": [
+    {
+      "study": "comparison_pilot_v1",
+      "runs_verified": 10
+    },
+    {
+      "study": "convergence_v1",
+      "runs_verified": 9
+    },
+    {
+      "study": "loss_ablation_v1",
+      "runs_verified": 4
+    },
+    {
+      "study": "noise_isolation_v1",
+      "runs_verified": 8
+    }
+  ],
+  "local_data": {
+    "outputs/checkpoint2/medical/mps_full_prepared/manifest.json": {
+      "manifest_hash": "ed8b1c8c57c4ffa4bff50feb7fe0abba0a608465b6b97d697ad1cc5887716ead",
+      "files_verified": 50
+    },
+    "outputs/checkpoint2/exploratory/rician_v1/prepared/manifest.json": {
+      "manifest_hash": "abf9b356201035e3a0c365f5af1cf2393d0786fe2fb5e723c9250265075a0270",
+      "files_verified": 50
+    }
+  },
+  "large_artifacts": {
+    "checkpoints_verified": 27,
+    "predictions_verified": 90
+  }
+}

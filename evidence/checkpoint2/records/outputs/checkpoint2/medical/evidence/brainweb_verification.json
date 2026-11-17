@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "status": "verified_fixed_reference",
+  "verified_at_utc": "2026-11-11T20:23:54.573929+00:00",
+  "source_manifest_hash": "2ed1fc79c4f8bbb75a68e5e1af313130278d467a19f8ba6c0efa0595e8e422ae",
+  "normalization": {
+    "policy": "already-unit",
+    "historical_real_intensity_divisor": 4095,
+    "note": "Course fixed scale, not a claim that MINC real intensity spans 0..4095."
+  },
+  "dataset_page": "https://brainweb.bic.mni.mcgill.ca/brainweb/anatomic_normal_20.html",
+  "terms_page": "https://brainweb.bic.mni.mcgill.ca/brainweb/#references",
+  "terms": "Public download with requested citations; no explicit redistribution license established. Obtain data directly; do not bundle volumes.",
+  "reference_limitation": "Public T1 images are fixed reference signals, not demonstrated noise-free anatomy. MINC history refers to pn3_rf20 coil settings. Metrics quantify recovery of these references after added Gaussian noise, not clinical effectiveness or removal of native artifacts.",
+  "subjects": [
+    {
+      "subject_id": "subject04",
+      "source_sha256": "5daf62d84e7eeb59796fc52f81a160314ed9a731f4192319eb82d2f10ac55178",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject04_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject04_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "ef867ce38f9f15a1e5261ef89eef604aa65d8bab6f6fa89c5cc42c07756e4a1e",
+      "decompressed_minc_sha256": "d75d9adbcc4abe6595337ec210eba2d5b3448d4d860d82c554df3884043d9419",
+      "local_minc_sha256": "ef867ce38f9f15a1e5261ef89eef604aa65d8bab6f6fa89c5cc42c07756e4a1e",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:00:21 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject04/classes//subject04_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject04/classes//subject04all.mnc /data/ipl/ipl7/broche/subjects/subject04/classes//subject04_bck.mnc\nWed Feb  1 21:20:29 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject04/classes/subject04_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject04/classes/subject04_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject04_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject05",
+      "source_sha256": "c17641d714bd9d59e355a2a074b7aa282d1f2e1450977e835b30bc63715883e6",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject05_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject05_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "95e3be43407ce1677ef258164f365b2210c157ebfb0fcd979bfff2472b72e01a",
+      "decompressed_minc_sha256": "835e74ce356a878862739545206065dfbbcdc9826b46dbecc0c57d243f3dddfb",
+      "local_minc_sha256": "95e3be43407ce1677ef258164f365b2210c157ebfb0fcd979bfff2472b72e01a",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:06:06 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject05/classes//subject05_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject05/classes//subject05all.mnc /data/ipl/ipl7/broche/subjects/subject05/classes//subject05_bck.mnc\nWed Feb  1 21:29:45 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject05/classes/subject05_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject05/classes/subject05_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject05_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject06",
+      "source_sha256": "cca2bfbb21cfef3533efe86ea4f95367c56f60b99adf47100a9b2c9da446640d",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject06_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject06_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "d6f9acd54f29faa9dbe48646139e92052431c3989e02f806c57e39d9c237afbf",
+      "decompressed_minc_sha256": "94d2c628c428ff9323ef073044c05eb4692a9c46d968173c669c206b533d8260",
+      "local_minc_sha256": "d6f9acd54f29faa9dbe48646139e92052431c3989e02f806c57e39d9c237afbf",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:11:00 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject06/classes//subject06_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject06/classes//subject06all.mnc /data/ipl/ipl7/broche/subjects/subject06/classes//subject06_bck.mnc\nWed Feb  1 21:38:52 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject06/classes/subject06_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject06/classes/subject06_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject06_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject18",
+      "source_sha256": "64cc65af874041489d5b137665260966f7bdc2589bfc8bd3dfc157d0debeb40d",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject18_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject18_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "b942a24f45402fb9326a51f048d542be6d1e1a385efc5610dcd8d7a8f485e5ad",
+      "decompressed_minc_sha256": "0ac19416834da43171dcb2adbf355ba62e938def4324611bef1a1e835f7c2046",
+      "local_minc_sha256": "b942a24f45402fb9326a51f048d542be6d1e1a385efc5610dcd8d7a8f485e5ad",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:15:56 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject18/classes//subject18_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject18/classes//subject18all.mnc /data/ipl/ipl7/broche/subjects/subject18/classes//subject18_bck.mnc\nWed Feb  1 21:47:55 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject18/classes/subject18_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject18/classes/subject18_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject18_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject20",
+      "source_sha256": "145c3bbe79c357bce15975c46f30f6dc0b9e040d5bacb9cbd8024ea7ebc7a384",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject20_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject20_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "819d6660dfb8bbf149d8b5ac4b5f2e5162bd67a6ea65ac660a0c77cc7f27213e",
+      "decompressed_minc_sha256": "9654c5d0c3e29def3baf8bff3b780879e8e541a34bd5ba05930ff9839b6379a0",
+      "local_minc_sha256": "819d6660dfb8bbf149d8b5ac4b5f2e5162bd67a6ea65ac660a0c77cc7f27213e",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:20:47 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject20/classes//subject20_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject20/classes//subject20all.mnc /data/ipl/ipl7/broche/subjects/subject20/classes//subject20_bck.mnc\nWed Feb  1 21:57:06 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject20/classes/subject20_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject20/classes/subject20_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject20_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject38",
+      "source_sha256": "064492bf4abe3d00f7737b3928eb0d983524c5fdc5c82914693e6075bbda058d",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject38_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject38_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "1b6ad6127da111703773c219997326bddada4f7784172629995e5870485377d7",
+      "decompressed_minc_sha256": "ad5631481a13df7c8f261ef19f1422677afe7bbb3125fafbafb1d9af66b5cc31",
+      "local_minc_sha256": "1b6ad6127da111703773c219997326bddada4f7784172629995e5870485377d7",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:25:56 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject38/classes//subject38_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject38/classes//subject38all.mnc /data/ipl/ipl7/broche/subjects/subject38/classes//subject38_bck.mnc\nWed Feb  1 22:06:17 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject38/classes/subject38_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject38/classes/subject38_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject38_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject41",
+      "source_sha256": "a573f391e82cd7356c6161ff36e3bca8ae216036521108ca210f03090aaa3f93",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject41_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject41_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "5704557ac63ad202be98b2a4bafd8d99461f88067c5fd6043e33face869f0804",
+      "decompressed_minc_sha256": "7f93753e12187cfce883f2682037a50f6c3b795a3fd8dffbece72f2aa189ab6a",
+      "local_minc_sha256": "5704557ac63ad202be98b2a4bafd8d99461f88067c5fd6043e33face869f0804",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:30:51 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject41/classes//subject41_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject41/classes//subject41all.mnc /data/ipl/ipl7/broche/subjects/subject41/classes//subject41_bck.mnc\nWed Feb  1 22:15:30 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject41/classes/subject41_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject41/classes/subject41_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject41_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject42",
+      "source_sha256": "1c640359f91b5c9fece08ce1a99efc6efb9e4b12328ff4c25f792ef098e41c6e",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject42_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject42_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "c371353ab92897b3d8ff93fb6403b856f460260caef3fbd3d053ed2ffb320c97",
+      "decompressed_minc_sha256": "40a27b6d2d319b982cf476c7569584eafc67f9e2feb0d9b1a931a68cc4de37b7",
+      "local_minc_sha256": "c371353ab92897b3d8ff93fb6403b856f460260caef3fbd3d053ed2ffb320c97",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:35:53 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject42/classes//subject42_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject42/classes//subject42all.mnc /data/ipl/ipl7/broche/subjects/subject42/classes//subject42_bck.mnc\nWed Feb  1 22:24:36 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject42/classes/subject42_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject42/classes/subject42_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject42_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject43",
+      "source_sha256": "7e34f440f3a0e304b258e63745ff6c81dfddf29cd3097959edcf0d1a7e00298e",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject43_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject43_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "a6327f62bc783bd99ffe0e11a2b8e233fc9f8b70957fc9fdae4a01f9a334c1dc",
+      "decompressed_minc_sha256": "5004095b0580b43eb688be5913b6296e008b26bc01202814f96d42bf85535ebd",
+      "local_minc_sha256": "a6327f62bc783bd99ffe0e11a2b8e233fc9f8b70957fc9fdae4a01f9a334c1dc",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:40:32 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject43/classes//subject43_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject43/classes//subject43all.mnc /data/ipl/ipl7/broche/subjects/subject43/classes//subject43_bck.mnc\nWed Feb  1 22:33:45 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject43/classes/subject43_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject43/classes/subject43_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject43_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    },
+    {
+      "subject_id": "subject44",
+      "source_sha256": "53853146babdb942d5595744286707df780b83afa6a3213c2e1089e7a5edaf62",
+      "source_page": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1?alias=subject44_t1w&download=1",
+      "download_post_url": "https://brainweb.bic.mni.mcgill.ca/cgi/brainweb1",
+      "alias": "subject44_t1w",
+      "format": "minc",
+      "compression": "gnuzip",
+      "authoritative_gzip_sha256": "b63480f26e469137b78c0ee985e12bbc6dcf31133e3d2ffc6942308e05ad07b9",
+      "decompressed_minc_sha256": "e960c03dfc1eecf4924b783e0250a311ff4768b2ecc2125cdefe1c5fcbe115e7",
+      "local_minc_sha256": "b63480f26e469137b78c0ee985e12bbc6dcf31133e3d2ffc6942308e05ad07b9",
+      "orientation": {
+        "zspace": {
+          "step_mm": 1.0,
+          "start_mm": -72.25
+        },
+        "yspace": {
+          "step_mm": 1.0,
+          "start_mm": -145.75
+        },
+        "xspace": {
+          "step_mm": 1.0,
+          "start_mm": -127.75
+        }
+      },
+      "history": "Wed Feb  1 17:45:16 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/minccalc -expression A[0] /data/ipl/ipl7/broche/subjects/subject44/classes//subject44_bck_m.mnc /data/ipl/ipl7/broche/subjects/subject44/classes//subject44all.mnc /data/ipl/ipl7/broche/subjects/subject44/classes//subject44_bck.mnc\nWed Feb  1 22:42:42 2006>>> /data/ipl/ipl10/broche/script/perl/pipeline/quarantine/mrisim -fuzzy /data/ipl/ipl7/broche/subjects/subject44/classes/subject44_bck.mnc:0,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_csf_v.mnc:1,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_gm_v.mnc:2,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_wm_v.mnc:3,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_fat_v.mnc:4,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_muscles_v.mnc:5,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_muscles_skin_v.mnc:6,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_skull_v.mnc:7,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_vessels.mnc:8,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_fat2_v.mnc:9,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_dura_v.mnc:10,/data/ipl/ipl7/broche/subjects/subject44/classes/subject44_marrow_v.mnc:11 -sequence /data/ipl/ipl7/broche/subjects/simul/t1//t1_icbm.seq -tissue /data/ipl/ipl7/broche/subjects/simul/t1//tissue_modif_t1_4.prm -coil /data/ipl/ipl7/broche/subjects/simul/t1//coil_t1_1mm_pn3_rf20.rf -voxel_dim 1 1 1 /data/ipl/ipl7/broche/subjects/simul/t1//subject44_t1w_p4.mnc -verbose\n",
+      "conversion": "MINC real scaling; float32; clip [0,4095]; divide by 4095",
+      "conversion_max_abs_error": 0.0
+    }
+  ]
+}

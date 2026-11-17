@@ -1,0 +1,401 @@
+{
+  "protocol_hash": "1d29a5bce4428dba3f68665be95020da8fa7df1ff9c89a285851cbfbb1d15f43",
+  "runs": [
+    {
+      "run": "ngps_steps32",
+      "optimizer_steps": 32,
+      "wall_seconds": 21.304618541999844,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.01986511770519428,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.015344260988058522,
+          "n2n": 0.008730209650821052,
+          "dynamic": 0.006614051395445131,
+          "rc": 0.009041713303304277,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.1163763381773606
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.012147492787335068
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 143063552,
+        "driver_memory_bytes": 1447772160
+      }
+    },
+    {
+      "run": "blindspot_steps32",
+      "optimizer_steps": 32,
+      "wall_seconds": 3.8826052499998696,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.01415268681012094,
+          "gradient_l2_norm": 0.07559707039035857
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.011789787909947336
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39141888,
+        "driver_memory_bytes": 1447772160
+      }
+    },
+    {
+      "run": "adjacent_steps32",
+      "optimizer_steps": 32,
+      "wall_seconds": 4.103762458000347,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.008757865172810853,
+          "gradient_l2_norm": 0.03693973837653175
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.012389060342684388
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39141888,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "run": "ngps_no_rc_steps32",
+      "optimizer_steps": 32,
+      "wall_seconds": 10.987237915999685,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.01559619783074595,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.01559619783074595,
+          "n2n": 0.00885140200261958,
+          "dynamic": 0.006744795697159134,
+          "rc": 0.00926722027361393,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.10804639849811792
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.01257589232409373
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "run": "ngps_no_dynamic_steps32",
+      "optimizer_steps": 32,
+      "wall_seconds": 10.992952207999224,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.012885294010629877,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.0085131082450971,
+          "n2n": 0.0085131082450971,
+          "dynamic": 0.0,
+          "rc": 0.008744371676584706,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.04989721323363483
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.011629730521235615
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "run": "ngps_steps64",
+      "optimizer_steps": 64,
+      "wall_seconds": 15.713107124999624,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.01986511770519428,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.015344260988058522,
+          "n2n": 0.008730209650821052,
+          "dynamic": 0.006614051395445131,
+          "rc": 0.009041713303304277,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.1163763381773606
+        },
+        {
+          "epoch": 2,
+          "loss": 0.015057293756399304,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.011793915298767388,
+          "n2n": 0.007159419998060912,
+          "dynamic": 0.004634495169739239,
+          "rc": 0.00652675679884851,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.07226414268370718
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.012147492787335068
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.010200654505752027
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "run": "blindspot_steps64",
+      "optimizer_steps": 64,
+      "wall_seconds": 6.602579499999592,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.01415268681012094,
+          "gradient_l2_norm": 0.07559707039035857
+        },
+        {
+          "epoch": 2,
+          "loss": 0.012147327943239361,
+          "gradient_l2_norm": 0.09201997017953545
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.011789787909947336
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.00942470267182216
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39141888,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "run": "adjacent_steps64",
+      "optimizer_steps": 64,
+      "wall_seconds": 6.511168291999638,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.008757865172810853,
+          "gradient_l2_norm": 0.03693973837653175
+        },
+        {
+          "epoch": 2,
+          "loss": 0.00718995307397563,
+          "gradient_l2_norm": 0.0209633604681585
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.012389060342684388
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.010029408382251859
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39141888,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "run": "ngps_no_rc_steps64",
+      "optimizer_steps": 64,
+      "wall_seconds": 16.32203791699976,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.01559619783074595,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.01559619783074595,
+          "n2n": 0.00885140200261958,
+          "dynamic": 0.006744795697159134,
+          "rc": 0.00926722027361393,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.10804639849811792
+        },
+        {
+          "epoch": 2,
+          "loss": 0.012380509549984708,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.012380509549984708,
+          "n2n": 0.007439457447617315,
+          "dynamic": 0.004941052116919309,
+          "rc": 0.007120364301954396,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.06209525233134627
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.01257589232409373
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.010892827005591244
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "run": "ngps_no_dynamic_steps64",
+      "optimizer_steps": 64,
+      "wall_seconds": 16.3270387499997,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.012885294010629877,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.0085131082450971,
+          "n2n": 0.0085131082450971,
+          "dynamic": 0.0,
+          "rc": 0.008744371676584706,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.04989721323363483
+        },
+        {
+          "epoch": 2,
+          "loss": 0.009568575100274757,
+          "dynamic_active_fraction": 0.005434989929199219,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9945650100708008,
+          "static_empty_fraction": 0.0,
+          "recon": 0.006701960854115896,
+          "n2n": 0.006701960854115896,
+          "dynamic": 0.0,
+          "rc": 0.005733228390454315,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011744991729756293,
+          "match_cost_max": 0.003763688262552023,
+          "gradient_l2_norm": 0.034148513223044574
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.011629730521235615
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.008977007732028142
+        }
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 66067968,
+        "driver_memory_bytes": 1447788544
+      }
+    }
+  ],
+  "clean_references_accessed": false,
+  "test_scoring_performed": false
+}

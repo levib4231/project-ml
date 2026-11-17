@@ -13,6 +13,7 @@ from datasets.manifest import load_manifest, manifest_hash, noisy_items
 from datasets.triplet_dataset import VolumeTripletDataset
 from .baselines import adjacent_loss, blindspot_loss
 from .config import load_config
+from .device import memory_stats, preferred_device, require_device, reset_peak_memory, synchronize
 from .guide import make_misalignment_mask
 from .losses import NGPSHybridLoss, NSN2NLoss
 from .nafnet import build_nafnet
@@ -33,10 +34,15 @@ def mask_diagnostics(prev, next_):
 def train(manifest_path, config_path, output_dir, device="cpu", sigma=0.06,
           method="ngps", central_fraction=1.0, save_every=5,
           max_train_batches=None, center_slices=None, train_subjects=None,
-          max_val_batches=None, experiment_hash=None):
+          max_val_batches=None, experiment_hash=None, ablation=None,
+          gradient_diagnostics=False):
     cfg, train_cfg, raw_cfg = load_config(config_path)
     if method not in {"ngps", "nsn2n", "adjacent", "blindspot"} or save_every < 1:
         raise ValueError("Invalid method or save interval")
+    if ablation not in {None, "no_rc", "no_dynamic"}:
+        raise ValueError("Unknown NGPS ablation")
+    if ablation is not None and method != "ngps":
+        raise ValueError("Loss ablations require method=ngps")
     seed_everything(train_cfg.seed)
     manifest = load_manifest(manifest_path, prepared=True)
     for name, value in (("max_train_batches", max_train_batches),
@@ -47,7 +53,7 @@ def train(manifest_path, config_path, output_dir, device="cpu", sigma=0.06,
         available = {r["subject_id"] for r in manifest["subjects"] if r["split"] == "train"}
         if not train_subjects or not set(train_subjects) <= available:
             raise ValueError("Pilot subjects must belong to the training split")
-    device = torch.device(device)
+    device = require_device(device)
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
     if any(out.iterdir()):
@@ -79,7 +85,8 @@ def train(manifest_path, config_path, output_dir, device="cpu", sigma=0.06,
     val_loader = DataLoader(datasets["val"], batch_size=1, shuffle=False, num_workers=0)
     model = build_nafnet(cfg).to(device)
     sampler = NeighborGuidedPatchSampler(cfg).to(device)
-    hybrid = NGPSHybridLoss(cfg.rc_weight)
+    hybrid = NGPSHybridLoss(0.0 if ablation == "no_rc" else cfg.rc_weight,
+                            include_dynamic=ablation != "no_dynamic")
     nsn2n = NSN2NLoss(cfg.rc_weight, float(raw_cfg.get("nsn2n", {}).get("lambda_ic", 1.0)))
     optimizer = torch.optim.AdamW(model.parameters(), lr=train_cfg.lr, weight_decay=train_cfg.weight_decay)
     mask_rng = torch.Generator().manual_seed(train_cfg.seed)
@@ -98,18 +105,20 @@ def train(manifest_path, config_path, output_dir, device="cpu", sigma=0.06,
                               "clean_references_used": False},
                 "validation_protocol": "fixed random masked noisy pixels, all interior val slices; monitor only",
                 "validation_history": [], "training_history": [], "epoch": 0}
+    if ablation is not None or gradient_diagnostics:
+        metadata["exploratory"] = {"ablation": ablation,
+                                   "gradient_diagnostics": gradient_diagnostics,
+                                   "normalization": "Original active-pixel means; disabled terms are zero-weighted; no rescaling"}
     write_json(out / "config.json", raw_cfg)
     write_json(out / "manifest.json", manifest)
-    if device.type == "cuda":
-        torch.cuda.synchronize(device)
-        torch.cuda.reset_peak_memory_stats(device)
+    synchronize(device)
+    reset_peak_memory(device)
     started = time.perf_counter()
     training_seconds = 0.0
     for epoch in range(1, train_cfg.epochs + 1):
         model.train()
         records = []
-        if device.type == "cuda":
-            torch.cuda.synchronize(device)
+        synchronize(device)
         epoch_start = time.perf_counter()
         for batch_index, batch in enumerate(loader):
             if max_train_batches is not None and batch_index >= max_train_batches:
@@ -138,14 +147,20 @@ def train(manifest_path, config_path, output_dir, device="cpu", sigma=0.06,
                 raise ValueError("Non-finite training loss")
             optimizer.zero_grad(set_to_none=True)
             loss.backward()
+            if gradient_diagnostics:
+                # Observe without clipping or modifying gradients.
+                norms = torch.stack([p.grad.detach().norm(2) for p in model.parameters()
+                                     if p.grad is not None])
+                norm = norms.norm(2)
+                if not torch.isfinite(norm):
+                    raise ValueError("Non-finite gradient norm")
+                diagnostics["gradient_l2_norm"] = float(norm)
             optimizer.step()
             records.append({"loss": float(loss.detach()), **diagnostics})
-        if device.type == "cuda":
-            torch.cuda.synchronize(device)
+        synchronize(device)
         training_seconds += time.perf_counter() - epoch_start
         model.eval()
-        if device.type == "cuda":
-            torch.cuda.synchronize(device)
+        synchronize(device)
         validation_start = time.perf_counter()
         val_rng = torch.Generator().manual_seed(train_cfg.seed + 1)
         val_losses = []
@@ -154,8 +169,7 @@ def train(manifest_path, config_path, output_dir, device="cpu", sigma=0.06,
                 if max_val_batches is not None and batch_index >= max_val_batches:
                     break
                 val_losses.append(float(blindspot_loss(model, batch[0].to(device), val_rng)))
-        if device.type == "cuda":
-            torch.cuda.synchronize(device)
+        synchronize(device)
         metadata["validation_seconds"] = time.perf_counter() - validation_start
         val_loss = float(np.mean(val_losses))
         if not np.isfinite(val_loss):
@@ -164,7 +178,9 @@ def train(manifest_path, config_path, output_dir, device="cpu", sigma=0.06,
         metadata["optimizer_steps"] = epoch * len(records)
         metadata["training_seconds"] = training_seconds
         metadata["elapsed_seconds"] = time.perf_counter() - started
-        metadata["peak_cuda_memory_bytes"] = (torch.cuda.max_memory_allocated(device)
+        synchronize(device)
+        metadata["device_memory"] = memory_stats(device)
+        metadata["peak_cuda_memory_bytes"] = (metadata["device_memory"]["peak_memory_bytes"]
                                                if device.type == "cuda" else None)
         metadata["training_history"].append({"epoch": epoch, **{
             key: float((np.max if key == "match_cost_max" else np.mean)([r[key] for r in records]))
@@ -187,7 +203,7 @@ def main(default_method="ngps"):
     parser.add_argument("--method", choices=["ngps", "nsn2n", "adjacent", "blindspot"], default=default_method)
     parser.add_argument("--config", default=f"configs/{default_method}_nafnet_default.yaml")
     parser.add_argument("--output-dir", required=True)
-    parser.add_argument("--device", default="cpu")
+    parser.add_argument("--device", default=preferred_device())
     parser.add_argument("--central-fraction", type=float, default=1.0)
     parser.add_argument("--save-every", type=int, default=5)
     parser.add_argument("--max-train-batches", type=int)

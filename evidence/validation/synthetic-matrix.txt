@@ -1,0 +1,10 @@
+{'epoch': 1, 'loss': 0.04882257059216499, 'dynamic_active_fraction': 0.5815972089767456, 'dynamic_empty_fraction': 0.0, 'static_active_fraction': 0.4184027910232544, 'static_empty_fraction': 0.0, 'recon': 0.04721628129482269, 'n2n': 0.015901969745755196, 'dynamic': 0.031314313411712646, 'rc': 0.003212578594684601, 'ic': 0.0, 'match_cost_mean': 0.007096535991877317, 'match_cost_max': 0.09367521852254868, 'noisy_validation_mse': 0.027023299131542444}
+{'epoch': 1, 'loss': 0.04391678422689438, 'noisy_validation_mse': 0.027144226478412747}
+{'epoch': 1, 'loss': 0.0382353700697422, 'noisy_validation_mse': 0.02702256734482944}
+{'epoch': 1, 'loss': 0.0602116622030735, 'dynamic_active_fraction': 0.5798611044883728, 'dynamic_empty_fraction': 0.0, 'static_active_fraction': 0.4201388955116272, 'static_empty_fraction': 0.0, 'recon': 0.05583291873335838, 'n2n': 0.019938405603170395, 'dynamic': 0.03589451313018799, 'rc': 0.008757486939430237, 'ic': 0.0, 'match_cost_mean': 0.007309972308576107, 'match_cost_max': 0.11156696826219559, 'noisy_validation_mse': 0.03184733772650361}
+{'epoch': 1, 'loss': 0.04878224432468414, 'noisy_validation_mse': 0.03189443831797689}
+{'epoch': 1, 'loss': 0.04407346248626709, 'noisy_validation_mse': 0.03182702022604644}
+{'epoch': 1, 'loss': 0.09164999425411224, 'dynamic_active_fraction': 0.680555522441864, 'dynamic_empty_fraction': 0.0, 'static_active_fraction': 0.319444477558136, 'static_empty_fraction': 0.0, 'recon': 0.07872152328491211, 'n2n': 0.035934023559093475, 'dynamic': 0.042787499725818634, 'rc': 0.02585694007575512, 'ic': 0.0, 'match_cost_mean': 0.009366235695779324, 'match_cost_max': 0.08175458014011383, 'noisy_validation_mse': 0.040138112381100655}
+{'epoch': 1, 'loss': 0.06085559353232384, 'noisy_validation_mse': 0.040203798562288284}
+{'epoch': 1, 'loss': 0.06082206219434738, 'noisy_validation_mse': 0.04016038682311773}
+Checkpoint2 synthetic nine-run benchmark PASS: /private/tmp/ngps-submission-checks.3RJepX/matrix/experiment/results

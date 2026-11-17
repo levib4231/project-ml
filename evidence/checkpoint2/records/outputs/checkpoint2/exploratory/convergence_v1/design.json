@@ -1,0 +1,155 @@
+{
+  "kind": "exploratory_noisy_only_convergence",
+  "device": "mps",
+  "manifest_path": "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/manifest.json",
+  "manifest_hash": "ed8b1c8c57c4ffa4bff50feb7fe0abba0a608465b6b97d697ad1cc5887716ead",
+  "source_tree_sha256": "cc43049b91ec13a712b7798682eb05a52415b9c9482336abd4e5cb09c869986e",
+  "hardware": {
+    "commit": "d5d86223fdee5135c00f53050eadfd681118c7ce",
+    "git_dirty": true,
+    "source": {
+      "files_sha256": {
+        "LICENSE": "54ab637ba237608268d25f810ee75756589796a02e2e06a3fbcd40886dcb2a8f",
+        "README.md": "1531d48d4e7a16df109ca35a10b323bb8cb1d6baa26fc63438b2d43d373769ff",
+        "configs/checkpoint2.yaml": "371f9ad64dc9f1006d6a69f27428d413560af0e1652a5fc3ecb359a1b6ac729c",
+        "configs/ngps_nafnet_default.yaml": "8df9976edc5566ce330eddf935ce0ee11a24b98a9805ce01565f158a0203b4d9",
+        "configs/nsn2n_nafnet_default.yaml": "8784c30d6e80521dcad2e2667a39d9663aa4d032a159225eb91df9ef4951c206",
+        "configs/subjects_v1.json": "620d846dc9ca67dd87adb60df9f782c110a7dd48ddaf826fa663352682628cc5",
+        "configs/synthetic_cpu.yaml": "9bcf506e00b60fa06700dfe33fb1908bbde543eb1f395e409461da468990885e",
+        "configs/synthetic_demo.yaml": "c850caa2ff67793dcf9d77c0b5fdb7d698e826d69c064620bf651a6848db6e29",
+        "datasets/__init__.py": "9420e8f07f7af27d40162d5cffa11c4baa9a3167e720e4a381cfd782da2703f3",
+        "datasets/manifest.py": "fd915ce9db799a876e01a1138d48356a27d1151ae0fc322fdf093e8e17a50cd8",
+        "datasets/preparation.py": "769a9d5e2db9ef16e49512fe60f7cdd89684a0c5a7cf76934b87db0d666212ce",
+        "datasets/synthetic.py": "7ebef2e4b5b9481906c18fdc7e2b75c5143c780ad4f644b0872f3d026f840185",
+        "datasets/triplet_dataset.py": "1e410b0e5dbe475b2ceed10631853d29af188fdad71d58494a88a9c65ecae0af",
+        "datasets/volume_folder.py": "020e5910d5321e880236266a6c64081e4b80740bf27ee31a4ef6980ca8cfa03a",
+        "docs/CHECKPOINT_1_EVIDENCE.md": "56e3256b27d67a3c9b9e5696962a6a969d4f694f82c5cd144231b64c703cd225",
+        "docs/CHECKPOINT_2.md": "bd4ebf62cce31d133622840c444dc0f9517ebe4130030006aed557341f6d07e7",
+        "docs/DATA.md": "2457bef10db599c87a0610a054b48b79cde699ee375f4c553f413ea5fd1c1acf",
+        "docs/EXPLORATORY_COMPARISON.md": "3ad2b7ac02ff03529f9db2c8393b61e893cc419e8e93739990bfcbe6af1432fc",
+        "docs/METHOD_MAPPING.md": "f6cf52a22d80248e903db107679807c948766b13938e67c0f15c7e11fdb10e8d",
+        "docs/PROTOCOL_GUIDELINES.md": "8060b8fd5a5fdb434ced901ba8d1cf5335a5ed281743117c7a2959e6a4276019",
+        "docs/REPRODUCIBILITY.md": "6952a2d9474f9119b6b3dae5d48abad7677a05e05070da863c06cf4a0c4acd1c",
+        "ngps/__init__.py": "bf00b4987ed6a0634313b0ae23772cebd221784052a073c5ec5e4c9c7ac75b7f",
+        "ngps/baselines.py": "811d6010267c2decbbda41445baa54ba9ba134fb33639840f94c2990fdb1426b",
+        "ngps/checkpoint2.py": "9938cd87787317c310c636682f243f087e891e1717374f5cb7edbbe274ccb52c",
+        "ngps/comparison.py": "855fef73cc95a3b4fbb5c7ea4a268cc59735ae1b742fccf42690b09041644f62",
+        "ngps/config.py": "f67d3b74c77b935ddf3a499c1d63af20894c0158bd55b9a59d94985c7e03462c",
+        "ngps/device.py": "8c1d4c0b620ba2eaba909cf38576d813eede60c76cf152b766ee53c3147955ec",
+        "ngps/evaluation.py": "9242b246f8d5e8f5883808de1057494542c6787c177bc0f14efae8363b02985b",
+        "ngps/guide.py": "f03db8b387d916852b5a99ea9ac866ac7656e9f3cc79e01d49a735581e0a42dd",
+        "ngps/inference.py": "ef6b76d8979486c31ec88304ff0ebba57b8bc343e569f245af65b7731c845245",
+        "ngps/losses.py": "e12d39f73c776a63f2c1870f78071e2142cb9c27f83c1930b6474e779e7669d6",
+        "ngps/metrics.py": "5edcfebf3afce02bcff1c9f577e299470665cc60c69ce59396ea1f82a3d529e0",
+        "ngps/nafnet.py": "4dc40ee62150cbb2e22eadcb5145bc18a172ec2bce0c02785f4edfc095255aa8",
+        "ngps/provenance.py": "68bd808f201d74436b28d9e3944dc7d9aa9268e77b37f0c5a289099ad5043ff3",
+        "ngps/sampler.py": "e3c141727808af34ec32edfd2d64a2e44ecde97785002b34d58a54723bfdd7a7",
+        "ngps/seed.py": "bede852c816966dc81597c5882e354ef4ca441ab9bbaa1c5439fd5ba73025915",
+        "ngps/training.py": "f0e6d016ddb8958fc6689ba5b73d5183937a390a16a78d1c3757c57d13404f59",
+        "notebooks/checkpoint2_colab.ipynb": "e5355cb3629dde167003cfab97fcd47220fa343702b4f7ac0295ed74a47fb8f5",
+        "pyproject.toml": "4c95eb631e7ec77d0f058183231fe8e2017458eff73dc1ead8e7da7243006871",
+        "requirements-colab.txt": "37e51f1d335f69e4c10e7ae22d5cca6f79a113adc2128d48c7069cb128855cc2",
+        "requirements.txt": "cfe332c1542b8e081c21059ff4662eb4af6059c559e61f7d997a4c2013b03366",
+        "scripts/checkpoint2.py": "32b403870cad189d01292d1df3da3b21c3d7c7b1dc449b4c9deb19c4e8696557",
+        "scripts/comparison_pilot.py": "0862e1bc2d4d9b2135698e3092410f0d70069c280524f417affc0f7b9455f6b6",
+        "scripts/evaluate_manifest.py": "8111dce5add8756013b4d91cfb86e86275aef4d5e19a0787b6a9acfc356fd345",
+        "scripts/evaluate_volume.py": "07e0d74e2013753b14e01ab26899d2af111da8044c32115a048874d4c3c0aa41",
+        "scripts/export_checkpoint2_source.py": "88db6f479ab259d16019fafa18ec58c49d43565c5f3d6c51a459063296d58cfb",
+        "scripts/infer_volume.py": "adf98b03f21083d508f647b10af3a4447ba5cdc3dcb2b007607f9f3715b5d6e0",
+        "scripts/make_synthetic_demo_data.py": "54a73228a3832f78b44c67e822475894cb2e7fd04ef11541f2e0df3e5d7f6fef",
+        "scripts/prepare_data.py": "5288f77529a53af05b2e020676837bf8b123b03211db8f2dac1eb0afe6100d96",
+        "scripts/smoke_test.py": "aa19c194ad5ff9f793ae109c9e2ee975e98704eae203a3e40ca6b3d28abcc7dd",
+        "scripts/synthetic_pipeline.py": "747e347f9115417e9a04d0d9d8f13a85482907e1d067109b2804b0654445baea",
+        "scripts/train_ngps.py": "d14832ff788bb45a2c6ba318643b902eea261384c84d389f235fe169e2fb6e43",
+        "scripts/train_nsn2n.py": "c242c75301174caf26fd701e14cbe20fe8d77470ab3acb340b8bbc74b06f3ed6",
+        "scripts/verify_brainweb.py": "b2cb94e94986d87a91100b312a92761d66cbc11e7eb0dfdfdd807806ef05461c",
+        "tests/test_checkpoint2.py": "a1d5af33945e80282ea38b123f37b27c59130138ed4714d1ed66f8da9f6952bc",
+        "tests/test_comparison.py": "12b1489a66ead735c68cf052d2f973d450f72f44e84c79ab3286ebd75027e4a6",
+        "tests/test_config_crop.py": "25376d73f90f111235329e329a2b459fc804cfe4dfb9c76be42b16423a981c6a",
+        "tests/test_correctness.py": "176153a111bddaf355c1f32422bbd7a1af025492635408fd8b71dce146f8fdb2",
+        "tests/test_device.py": "d8de94c8153d53ba0831bee4716667f5be19f0ef3961aa35683506bae0e1eec3",
+        "tests/test_sampler_losses.py": "802175327a12ad004f47e2e6f0075af1979d4d105ec1485d2607408b1f76e498"
+      },
+      "tree_sha256": "cc43049b91ec13a712b7798682eb05a52415b9c9482336abd4e5cb09c869986e"
+    },
+    "device": "mps",
+    "device_name": "Apple MPS (arm64)",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.13",
+    "torch": "2.13.0",
+    "numpy": "2.4.6",
+    "torch_threads": 8,
+    "dependencies": {
+      "numpy": "2.4.6",
+      "scipy": "1.18.1",
+      "skimage": "0.26.0",
+      "cv2": "5.0.0",
+      "yaml": "6.0.3",
+      "torch": "2.13.0"
+    }
+  },
+  "sigma": 0.06,
+  "methods": [
+    "ngps",
+    "blindspot",
+    "adjacent"
+  ],
+  "base_config": {
+    "ngps": {
+      "mask_threshold": 0.05,
+      "nafnet_dec_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_enc_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_middle_blocks": 1,
+      "nafnet_width": 16,
+      "patch_size": 7,
+      "rc_weight": 0.5,
+      "search_window": 15,
+      "topk": 4
+    },
+    "training": {
+      "batch_size": 1,
+      "crop_size": 128,
+      "epochs": 1,
+      "lr": 0.0002,
+      "num_workers": 0,
+      "seed": 42,
+      "weight_decay": 1e-05
+    }
+  },
+  "schedules": [
+    {
+      "updates": 531,
+      "epochs": 1,
+      "batches_per_epoch": 531
+    },
+    {
+      "updates": 1062,
+      "epochs": 2,
+      "batches_per_epoch": 531
+    },
+    {
+      "updates": 2148,
+      "epochs": 2,
+      "batches_per_epoch": 1074
+    }
+  ],
+  "budget_seconds_per_run": 3600,
+  "budget_reason": "Independent MPS convergence follow-up with longer matched schedules and full noisy validation; pilot projection must pass before production. Not a transferred T4 budget.",
+  "selection": "Fixed final epoch; all schedules reported; no winner/model selection",
+  "validation": "All interior slices of subjects05/38; fixed masked noisy monitoring only",
+  "training": "All six agreed training subjects; full dataset shuffle; identical initialization, deterministic crops and sample order at shared epochs across objectives",
+  "test_scoring": false,
+  "clean_reference_tuning": false,
+  "limitations": "Sigma0.06 only, seed42 only; noisy validation is not unbiased clean-risk or a cross-objective ranking. Schedules restart independently; not resumes. 531/1062 share a 531-batch epoch cap; 2148 uses all1074 batches/epoch.",
+  "design_hash": "7e9c68bdd3f6eaec8949be8527dbadf8e389e807426e9d4a61c9f331272383c6"
+}

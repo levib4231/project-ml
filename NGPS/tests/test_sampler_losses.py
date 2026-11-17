@@ -63,7 +63,7 @@ class SamplerOracleTests(unittest.TestCase):
                             oracle = brute_force_ssd(center.detach(), neighbor.detach(), patch_size, 3)
                             actual_ssd = sampler._ssd_stack(center, neighbor).detach()
                             torch.testing.assert_close(actual_ssd, oracle, rtol=0, atol=0)
-                            # Only borrow tie ordering, after checking EVERY candidate
+                            # Only borrow tie ordering after checking every candidate
                             # independently. Equal SSDs need not imply equal raw values.
                             indices = actual_ssd.topk(topk, dim=1, largest=False).indices
                             selected = oracle.gather(1, indices)

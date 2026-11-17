@@ -1,0 +1,25 @@
+{
+  "allowed": [
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_000/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_001/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_002/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_003/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_005/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_006/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_007/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_008/noisy_0.06.npy"
+  ],
+  "load_count": 174,
+  "loaded_paths": [
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_000/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_001/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_002/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_003/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_005/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_006/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_007/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_008/noisy_0.06.npy"
+  ],
+  "forbidden_loads": 0,
+  "scope": "pilot and all production training"
+}

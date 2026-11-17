@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "samples": 1000000,
+  "zero_signal_empirical_mean": 0.12529630959033966,
+  "zero_signal_empirical_variance": 0.00429538544267416,
+  "nonzero_signal_empirical_mean": 0.18748995661735535,
+  "nonzero_signal_theoretical_mean": 0.18749357494056157,
+  "deterministic": true,
+  "clipped": false
+}

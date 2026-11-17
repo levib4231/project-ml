@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "kind": "medical",
+  "upstream_revision": "c1ab8bcb2dfa80926c7846048b42356546257f8d",
+  "manifest": "../prepared/manifest.json",
+  "manifest_hash": "8c410870d0bbdeb541337e1518fc88fc22673b53eaa4259864800db8713b7305",
+  "source_tree_sha256": "bb4ec5e39671c1a20ca10f08850ef10008d46ea98f247b0e4136c817b6474ac4",
+  "training_config": {
+    "ngps": {
+      "mask_threshold": 0.05,
+      "nafnet_dec_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_enc_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_middle_blocks": 1,
+      "nafnet_width": 16,
+      "patch_size": 7,
+      "rc_weight": 0.5,
+      "search_window": 15,
+      "topk": 4
+    },
+    "training": {
+      "batch_size": 1,
+      "crop_size": 128,
+      "epochs": 1,
+      "lr": 0.0002,
+      "num_workers": 0,
+      "seed": 42,
+      "weight_decay": 1e-05
+    }
+  },
+  "config_sha256": "ae7cd96c338c0a381ba07492e592d170d05f6057a1e4ff26010ff3caab7f32d2",
+  "methods": [
+    "ngps",
+    "blindspot",
+    "adjacent"
+  ],
+  "controls": [
+    "nlm",
+    "noisy"
+  ],
+  "sigmas": [
+    0.03,
+    0.06,
+    0.1
+  ],
+  "seed": 42,
+  "max_train_batches": 555,
+  "budget_seconds": 600,
+  "budget_revision_reason": null,
+  "pilot_projection": {
+    "projected_seconds": 599.9584952554543,
+    "safety_factor": 1.5,
+    "pilot_sha256": "bc999d6592ef05fe84b7ed0354ada37c786abaf4e465fc553f64f312bb4fecac"
+  },
+  "figure_coordinates": {
+    "subject20": {
+      "z": 90,
+      "y": 128,
+      "x": 128,
+      "radius": 32
+    },
+    "subject44": {
+      "z": 90,
+      "y": 128,
+      "x": 128,
+      "radius": 32
+    }
+  },
+  "selection": "fixed_final_epoch",
+  "primary_metric": "PSNR",
+  "success": "At every sigma NGPS mean subject PSNR >= max(blindspot, adjacent); tolerance0dB",
+  "tolerance_db": 0.0,
+  "clipping": false,
+  "reference_limitation": "Public T1 images are fixed reference signals, not demonstrated noise-free anatomy. MINC history refers to pn3_rf20 coil settings. Metrics quantify recovery of these references after added Gaussian noise, not clinical effectiveness or removal of native artifacts.",
+  "loss_convention": "Course active-pixel normalized static/dynamic reconstruction and RC; RC weight0.5. Paper RC uses an unnormalized sum.",
+  "tuning": "No clean-reference tuning; common configuration and fixed final epoch. No post-test changes to this protocol.",
+  "protocol_hash": "f9bff72264a7676f80361f80320729f1572870d0d3415a2b256ca1e615678a8f"
+}

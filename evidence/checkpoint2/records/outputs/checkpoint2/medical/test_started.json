@@ -1,0 +1,15 @@
+{
+  "protocol_hash": "f9bff72264a7676f80361f80320729f1572870d0d3415a2b256ca1e615678a8f",
+  "checkpoint_sha256": {
+    "ngps_s0.03": "0b72af6226021f09575f2bbd8ca57dc3b25d649ac2e1666610b60bba1f0dbdac",
+    "blindspot_s0.03": "16770e54560a4dabe600139a9659f09a1f5d8fb0c57696b7f5723f80b1f9e98a",
+    "adjacent_s0.03": "ee7a3ae0bc098022e3dbd56370ed4ad85c82d8a914006cb2115f57160d294278",
+    "ngps_s0.06": "260eb20299dfde5f3905db6da80fda48bf1cfe049a159a89f8b61684a7aa5ed9",
+    "blindspot_s0.06": "ba97822c706e80073eb93d8935f49721e74d66919de00856c7ea240aea7c9451",
+    "adjacent_s0.06": "cb9d701b9d2e403f4cf163a615d4d3f01b31333ed4edba73f7a0eec1d628002c",
+    "ngps_s0.10": "1d012cf17d1aa45f96e1cd4573c12fdf4fe37a196c27e26b748164ce992d76b3",
+    "blindspot_s0.10": "1470dd752a29015c7eb183133ee1a10aa4b2db2e0f5490413bd17ffaa308ead0",
+    "adjacent_s0.10": "266a1fdeeb6b0e0247f49f5da0431c83c821e858a584c3a1f8f946ef66a764c5"
+  },
+  "note": "Testing has started. Failed/partial attempts must be reported; do not tune this experiment."
+}

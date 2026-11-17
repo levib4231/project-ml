@@ -26,9 +26,9 @@ class NeighborGuidedPatchSampler(nn.Module):
 
     For every pixel p in the center slice, the sampler compares the guide patch
     around p to guide patches in a local window of the neighboring slice. The
-    Top-K matched coordinates are then used to retrieve raw center-pixel values
-    from that neighbor. This keeps structural matching and raw noisy target
-    retrieval decoupled.
+    Top-K matched coordinates then supply raw center-pixel values from that
+    neighbor, which keeps structural matching and noisy target retrieval
+    separate.
     """
 
     def __init__(self, cfg: NGPSConfig = NGPSConfig()) -> None:
@@ -47,6 +47,14 @@ class NeighborGuidedPatchSampler(nn.Module):
         if not torch.isfinite(x).all():
             raise ValueError(f"{name} contains non-finite values.")
 
+    def _check_inputs(self, guide_center, guide_neighbor, raw_neighbor) -> None:
+        for name, image in [("center", guide_center), ("neighbor", guide_neighbor), ("raw", raw_neighbor)]:
+            self._validate_image(image, name)
+            if image.shape != guide_center.shape:
+                raise ValueError("Sampler inputs must have matching shapes")
+            if image.device != guide_center.device or image.dtype != guide_center.dtype:
+                raise ValueError("Sampler inputs must share device and dtype")
+
     def _shift_stack(self, image: torch.Tensor) -> torch.Tensor:
         """Stack all local-window shifts along the channel dimension."""
 
@@ -60,14 +68,21 @@ class NeighborGuidedPatchSampler(nn.Module):
         return torch.cat(shifts, dim=1)
 
     def _ssd_stack(self, guide_center: torch.Tensor, guide_neighbor: torch.Tensor) -> torch.Tensor:
-        # Extend BOTH images before shifting and computing differences. Padding
-        # an already-computed SSD map with zeros artificially rewards boundaries.
+        # Pad both images before shifting and differencing. Padding an
+        # already-computed SSD map with zeros would reward boundary patches.
         radius = self.cfg.patch_size // 2
         center = F.pad(guide_center, (radius,) * 4, mode="replicate")
         neighbor = F.pad(guide_neighbor, (radius,) * 4, mode="replicate")
         diff_sq = (center - self._shift_stack(neighbor)).pow(2)
         kernel = self.ssd_kernel.to(device=diff_sq.device, dtype=diff_sq.dtype)
         return F.conv2d(diff_sq, kernel, groups=self.num_shifts)
+
+    def _select(self, guide_center, guide_neighbor, raw_neighbor):
+        ssd = self._ssd_stack(guide_center, guide_neighbor)
+        top_values, top_indices = torch.topk(ssd, k=self.cfg.topk, dim=1, largest=False)
+        shifted_raw = self._shift_stack(raw_neighbor)
+        top_raw = torch.gather(shifted_raw, dim=1, index=top_indices)
+        return top_values, top_indices, top_raw
 
     @torch.no_grad()
     def forward_direction(
@@ -79,21 +94,13 @@ class NeighborGuidedPatchSampler(nn.Module):
     ) -> torch.Tensor | Tuple[torch.Tensor, torch.Tensor]:
         """Return the NGPS target for one neighbor direction.
 
-        If ``return_cost`` is true, the second return value is the Top-K mean SSD
-        cost divided by patch area. This is useful for reliability diagnostics
-        or calibrated match-cost gating.
+        If ``return_cost`` is true, the second return value is the mean Top-K SSD
+        cost divided by patch area. That value is useful for reliability
+        diagnostics or calibrated match-cost gating.
         """
 
-        for name, image in [("center", guide_center), ("neighbor", guide_neighbor), ("raw", raw_neighbor)]:
-            self._validate_image(image, name)
-            if image.shape != guide_center.shape:
-                raise ValueError("Sampler inputs must have matching shapes")
-            if image.device != guide_center.device or image.dtype != guide_center.dtype:
-                raise ValueError("Sampler inputs must share device and dtype")
-        ssd = self._ssd_stack(guide_center, guide_neighbor)
-        top_values, top_indices = torch.topk(ssd, k=self.cfg.topk, dim=1, largest=False)
-        shifted_raw = self._shift_stack(raw_neighbor)
-        top_raw = torch.gather(shifted_raw, dim=1, index=top_indices)
+        self._check_inputs(guide_center, guide_neighbor, raw_neighbor)
+        top_values, _, top_raw = self._select(guide_center, guide_neighbor, raw_neighbor)
         target = top_raw.mean(dim=1, keepdim=True).detach()
         if not return_cost:
             return target
@@ -103,18 +110,17 @@ class NeighborGuidedPatchSampler(nn.Module):
     @torch.no_grad()
     def match_details(self, guide_center, guide_neighbor, raw_neighbor):
         """Export selected coordinates and raw values, including replicated edges."""
-        # Run the same validation and target calculation as the training path.
-        target, cost = self.forward_direction(guide_center, guide_neighbor, raw_neighbor, True)
-        ssd = self._ssd_stack(guide_center, guide_neighbor)
-        values, indices = torch.topk(ssd, k=self.cfg.topk, dim=1, largest=False)
+        self._check_inputs(guide_center, guide_neighbor, raw_neighbor)
+        top_values, indices, top_raw = self._select(guide_center, guide_neighbor, raw_neighbor)
         height, width = raw_neighbor.shape[-2:]
         yy = torch.arange(height, device=indices.device)[None, None, :, None]
         xx = torch.arange(width, device=indices.device)[None, None, None, :]
         y = (yy + indices // self.cfg.search_window - self.pad).clamp(0, height - 1)
         x = (xx + indices % self.cfg.search_window - self.pad).clamp(0, width - 1)
+        target = top_raw.mean(dim=1, keepdim=True).detach()
+        cost = top_values.mean(dim=1, keepdim=True).detach() / float(self.cfg.patch_size**2)
         return {"target": target, "cost": cost, "y": y, "x": x,
-                "raw_values": torch.gather(self._shift_stack(raw_neighbor), 1, indices),
-                "patch_ssd": values}
+                "raw_values": top_raw, "patch_ssd": top_values}
 
     @torch.no_grad()
     def forward(

@@ -2,46 +2,60 @@
 
 CPSC 4430/6430, Fall 2026. Aanand Mani Subedi, Levi Bates, Evan Dang, and Abdul Nasir Abdullah.
 
-This project adapts **Neighbor-Guided Patch Sampling (NGPS)** to a controlled
-BrainWeb T1 experiment. The research question is whether guide-based local
-matching preserves anatomy better than same-coordinate neighboring-slice
-supervision under the same data, noise and compute budget.
+This project adapts Neighbor-Guided Patch Sampling (NGPS) to a controlled
+BrainWeb T1 experiment. We are asking whether guide-based local matching
+preserves anatomy better than same-coordinate neighboring-slice supervision when
+the data, noise and compute budget are held fixed.
 
-**Team repository:** <https://github.com/levib4231/project-ml>
+- Team repository: <https://github.com/levib4231/project-ml>
+- Original paper: [Cho and Yoo, NGPS (2026)](https://arxiv.org/abs/2606.23200)
+- Authors' code: <https://github.com/cv-cho/NGPS>
 
-**Original paper:** [Cho and Yoo, NGPS (2026)](https://arxiv.org/abs/2606.23200)
+The code here is a course implementation, not a verified copy of the authors'
+version; numerical equivalence has not been established. The Checkpoint 1
+protocol below was documented against `5ae9934f027e3ceb735c7a6135f428495c1960a2`
+on October 23, 2026. For the current runtime and source-verification evidence,
+use the Checkpoint 2 workflow. The presentation lives in SharePoint.
 
-**Authors' original code:** <https://github.com/cv-cho/NGPS>
+## Submission evidence
 
-The team code is a course implementation. Numerical equivalence to the authors'
-implementation has not been established. The historical Checkpoint 1 protocol below
-was documented against `5ae9934f027e3ceb735c7a6135f428495c1960a2` on October 23,
-2026. Use the Checkpoint 2 workflow for the integrated local runtime and current
-source-verification evidence. The presentation stays in SharePoint.
+The **original frozen Gaussian/T4 benchmark is the primary result**: NGPS did
+not meet the predeclared criterion at any noise level. Later MPS, convergence,
+Rician and ablation experiments are separately labeled exploratory work, not a
+replacement result or paper reproduction. See the
+[submission evidence guide](NGPS/docs/SUBMISSION_EVIDENCE.md) and
+[small review package](evidence/checkpoint2/README.md) for protocols, tables,
+archived source, failure records, access instructions and verification commands.
+Medical arrays, weights and full-volume predictions are not bundled in Git.
 
 ## Checkpoint 2 implementation
 
-The local runtime now integrates upstream `c1ab8bcb2dfa80926c7846048b42356546257f8d`.
-See the [Checkpoint 2 workflow](NGPS/docs/CHECKPOINT_2.md) and
-[Colab notebook](NGPS/notebooks/checkpoint2_colab.ipynb) for verified data, the GPU
-pilot, a frozen nine-run matrix, diagnostics, and full-volume benchmarking.
-All ten local MINC sources and historical conversions have been verified against
-authoritative downloads; they are fixed reference signals with the documented
-native-artifact limitation. All nine medical runs and the held-out benchmark are
-complete on a Colab Tesla T4. Each run used seed 42 and the frozen matched workload
-of one final epoch / 555 optimizer steps; all completed within 600 seconds.
+The local runtime integrates upstream commit
+`c1ab8bcb2dfa80926c7846048b42356546257f8d`. The
+[Checkpoint 2 workflow](NGPS/docs/CHECKPOINT_2.md) and
+[Colab notebook](NGPS/notebooks/checkpoint2_colab.ipynb) cover the verified data,
+the GPU pilot, the frozen nine-run matrix, diagnostics and full-volume
+benchmarking.
 
-[Saved experiment and review archive](https://drive.google.com/drive/u/0/folders/1wR-t6YkAgddA5yVvpo1Lqi-9nyHQqXTM)
-contain nine selected checkpoints, 30 full-volume predictions, six comparison
+We checked all ten local MINC sources and the historical conversions against
+fresh downloads. They are fixed reference signals with the limitations recorded
+in the workflow, not noise-free anatomy. The nine medical runs and the held-out
+benchmark finished on a Colab Tesla T4. Each run used seed 42 and the frozen
+workload of one final epoch, or 555 optimizer steps, and each finished inside 600
+seconds.
+
+The [saved experiment and review archive](https://drive.google.com/drive/u/0/folders/1wR-t6YkAgddA5yVvpo1Lqi-9nyHQqXTM)
+holds nine selected checkpoints, 30 full-volume predictions, six comparison
 figures, metrics, timing, diagnostics and the frozen protocol. The review ZIP
-omits full predictions and duplicate epoch checkpoints; the originals remain in
-`experiment-budgeted-v2/results/predictions` in Drive. Its CRC verification passed.
-Individual downloads are now saved under `outputs/checkpoint2/medical`, including
-all nine selected checkpoints and all 30 prediction volumes. Their SHA-256 hashes
-match the frozen benchmark. See `download_inventory.json` in that folder for the
-complete local file inventory. The originals remain in Drive.
+leaves out full predictions and duplicate epoch checkpoints; those originals are
+still in `experiment-budgeted-v2/results/predictions` in Drive, and the ZIP
+passed CRC verification. Local copies of the same files sit under
+`outputs/checkpoint2/medical`, including all nine selected checkpoints and all 30
+prediction volumes, with SHA-256 hashes that match the frozen benchmark.
+`download_inventory.json` in that folder lists everything; Drive still has the
+originals.
 
-**NGPS did not meet the predeclared zero-deficit PSNR target at any sigma.**
+NGPS missed the predeclared zero-deficit PSNR target at every sigma.
 Adjacent-target training was the strongest required trained comparator:
 
 | Sigma | NGPS mean subject PSNR | Adjacent PSNR | NGPS gap (dB) |
@@ -50,55 +64,58 @@ Adjacent-target training was the strongest required trained comparator:
 | 0.06 | 35.3161 | 36.0157 | -0.6996 |
 | 0.10 | 34.0128 | 34.7421 | -0.7293 |
 
-These are fixed-reference results for test subjects 20 and 44, equally weighted.
-No post-test tuning was performed. Local validation passed 36 tests; hosted
-validation passed 35 with one expected local-inventory skip, plus the synthetic
-nine-run benchmark. Report, slides, recording and submission ZIP remain separate.
-See `outputs/checkpoint2/implementation_status.json` for exact source/protocol hashes.
+These are fixed-reference results for test subjects 20 and 44, weighted equally
+per subject. This frozen benchmark had no post-test tuning; later exploratory
+follow-ups are documented separately above. At benchmark time, local validation
+passed 36 tests. Hosted validation passed 35, with one expected skip for the
+missing local inventory, plus the synthetic nine-run benchmark. The report,
+slides, recording and submission ZIP are separate deliverables. Exact source and
+protocol hashes are in `outputs/checkpoint2/implementation_status.json`.
 
-To reproduce the completed experiment, use the saved source archive
-`checkpoint2-source-colab312.zip` and frozen `experiment-budgeted-v2/protocol.json`
-with its `training.yaml`, prepared manifest and original Drive directory layout.
-The starter repository config is not the frozen one-epoch production config.
-The Colab URL is an execution log, including the rejected pilot and pause/resume
-history; use the repository notebook for a fresh run, not Run all on that log.
+To rerun the completed experiment, take the saved source archive
+`checkpoint2-source-colab312.zip` and the frozen `experiment-budgeted-v2/protocol.json`
+with its `training.yaml`, prepared manifest and original Drive layout. The starter
+repository config is not the frozen one-epoch production config. The Colab URL
+is an execution log with a rejected pilot and pause/resume history; for a fresh
+run, use the repository notebook rather than Run all on that log.
 
 ## Current evidence and status
 
 | Capability | Current integrated status |
 |---|---|
 | NGPS guide generation, sampling, losses and NAFNet | Implemented; architecture version 2 |
-| Gaussian volume preparation | Implemented; explicit normalization and **unclipped** additive noise |
+| Gaussian volume preparation | Implemented; explicit normalization, no clipping of noisy values |
 | Agreed 6/2/2 subject IDs | Committed in `NGPS/configs/subjects_v1.json` |
 | NLM, masked blind spot, naive adjacent targets and NGPS | Implemented |
 | NS-N2N-style objective | Additional local comparator; not a validated external reproduction |
 | Synthetic pipeline | Repository evidence log records end-to-end synthetic checks |
-| Medical preparation/pilots and benchmark results | Complete; frozen nine-run experiment and full two-subject benchmark saved in Drive |
-| Source provenance and intensity scale | Verified local sources/conversion; fixed-reference limitation recorded |
+| Medical preparation, pilots and benchmark results | Complete; frozen nine-run experiment and full two-subject benchmark saved in Drive |
+| Source provenance and intensity scale | Verified local sources and conversion; fixed-reference limitation recorded |
 | Confidence-weighted NGPS | Proposed; costs are exposed, but loss weighting is not implemented |
 | Course metrics | PSNR, SSIM and normalized HFEN implemented |
-| Additional metrics | GMSD and explicitly named `SobelGradientMagnitudeSimilarity`; not FSIM |
+| Additional metrics | GMSD and `SobelGradientMagnitudeSimilarity`; not FSIM |
 | Complete-volume prediction timer | Implemented; includes transfers/assembly, excludes disk I/O and model load |
 | End-to-end volume timer including load/save | Implemented and recorded separately from prediction-only timing |
 
-The local checkout now uses the integrated manifest-based runtime. Prepared
-Checkpoint 2 observations live under `outputs/checkpoint2/prepared`, separately
-from the historical `Data/Noisy` folder. Historical manifests are retained in
-`NGPS/manifests/archive`. The detailed workflow above supersedes older setup status. A historical
-`docs/report/checkpoint1_report.md`, if present locally, is superseded by the
-revised Word report. Presence of code or a synthetic check does not establish
-medical performance. See the existing [synthetic evidence log](NGPS/docs/CHECKPOINT_1_EVIDENCE.md).
+The local checkout runs the integrated manifest-based runtime. Prepared
+Checkpoint 2 observations live under `outputs/checkpoint2/prepared`, separate
+from the historical `Data/Noisy` folder, and historical manifests are kept in
+`NGPS/manifests/archive`. The workflow above replaces older setup notes. If a
+`docs/report/checkpoint1_report.md` exists locally, the revised Word report
+supersedes it. Code or a synthetic check does not establish medical performance;
+see the [synthetic evidence log](NGPS/docs/CHECKPOINT_1_EVIDENCE.md) for what
+those checks do cover.
 
 ## Agreed course protocol
 
 | Item | Decision |
 |---|---|
 | Planned data source | [BrainWeb: 20 normal-brain anatomical models](https://brainweb.bic.mni.mcgill.ca/brainweb/anatomic_normal_20.html) |
-| Training subjects | **04, 06, 18, 41, 42, 43** |
-| Validation subjects | **05, 38** |
-| Held-out test subjects | **20, 44** |
+| Training subjects | 04, 06, 18, 41, 42, 43 |
+| Validation subjects | 05, 38 |
+| Held-out test subjects | 20, 44 |
 | Intended corruption | `y = x + epsilon`, `epsilon ~ Normal(0, sigma²)` |
-| Noise levels | **sigma = 0.03, 0.06, 0.10**, on normalized `[0,1]` intensities |
+| Noise levels | sigma = 0.03, 0.06, 0.10, on normalized `[0,1]` intensities |
 | Matched methods | NLM; masked-pixel blind spot; unmasked same-coordinate neighbor; NGPS |
 | Deep backbone | NAFNet for all learned objectives |
 | Selection | Predeclared final epoch; noisy-only masked validation is monitoring only; freeze before clean test scoring |
@@ -107,16 +124,16 @@ medical performance. See the existing [synthetic evidence log](NGPS/docs/CHECKPO
 | Pilot plan | Subject 04, sigma 0.06, 16 center slices, one epoch, batch 1 |
 | Compute target | Measure the pilot, then fix an identical workload cap below 10 GPU minutes per deep run |
 
-Generate noise **after** assigning subjects. Keep every slice, patch, adjacent
-pair and noise draw with its subject. Reuse the same corrupted observations
-across comparison methods. Clean references may generate noisy observations and
-score frozen predictions. They must not enter training targets, guides, masks,
-validation scores, thresholds or checkpoint selection.
+Assign subjects to splits before generating noise. Keep every slice, patch,
+adjacent pair and noise draw inside its subject. All comparison methods see the
+same corrupted observations. Clean references may generate noisy observations
+and score frozen predictions, but they must not enter training targets, guides,
+masks, validation scores, thresholds or checkpoint selection.
 
-The paper evaluates IXI-T1 MRI with synthetic **Rician** noise labeled
-5%/7%/9%; the percentage reference is not fully specified. These levels are not
-numerically interchangeable with our Gaussian sigma values. The project is a
-course adaptation, and phantom experiments do not establish clinical performance.
+The paper evaluates IXI-T1 MRI with synthetic Rician noise labeled 5%/7%/9%,
+though the percentage reference is not fully specified. Those levels are not
+numerically interchangeable with our Gaussian sigmas. This is a course
+adaptation, and phantom experiments say nothing about clinical performance.
 
 ## Method and data flow
 
@@ -180,7 +197,7 @@ In a schematic example, raw values 0.61, 0.65, 0.62 and 0.64 produce target
 The code computes dense candidate costs; the dynamic reconstruction loss uses
 retrieved values only where the directional mask is one.
 
-Define the **current local implementation's** normalized masked error:
+Define the normalized masked error used by the local implementation:
 
 $$E_m(a,b)=\frac{\sum_p m(p)[a(p)-b(p)]^2}{\max(\sum_p m(p),\epsilon)},\qquad\epsilon=10^{-8}.$$
 
@@ -195,13 +212,13 @@ $$\mathcal L_{\rm total}=\mathcal L_{\rm static}+\mathcal L_{\rm dynamic}+0.5\ma
 Masks and retrieved targets are detached from autograd. When a region is empty,
 its numerator is zero and the denominator clamp makes that term zero.
 
-**Paper/code distinction:** paper Eqs. 7–8 use active-region reconstruction
-normalization with an additive epsilon. Paper Eq. 9 expresses regional
-consistency as an **unnormalized masked squared L2 sum**. The local code
-normalizes that regional term by active pixels as well. Therefore lambda 0.5
-does not have the same scale in both definitions. These documents describe the
-local implementation explicitly and do not claim exact paper equivalence.
-Changing the code or choosing a replacement weight is a separate experiment.
+How the paper differs: Eqs. 7–8 normalize reconstruction error by active
+region and add an epsilon. Eq. 9 writes regional consistency as an unnormalized
+masked squared L2 sum. The local code normalizes the regional term by active
+pixels as well, so lambda 0.5 does not carry the same scale in both definitions.
+These documents describe the local implementation and do not claim exact paper
+equivalence. Changing the code or choosing a replacement weight is a separate
+experiment.
 
 ## Installation and repository layout
 
@@ -261,10 +278,10 @@ python NGPS/scripts/prepare_data.py \
 Otherwise use `--normalization fixed-range --lower L --upper U`, replacing
 `L` and `U` with independently justified, predeclared bounds. Do not infer
 normalization from held-out outcomes. Sources outside declared bounds are
-rejected. The generator uses NumPy default_rng with per-subject/per-sigma
-stable seeds, adds independent Gaussian noise, and **does not clip** noisy values
-or predictions. This preserves the stated corruption model. Clean normalized
-volumes must be in `[0,1]`; noisy volumes may leave that range.
+rejected. The generator uses NumPy default_rng with stable per-subject,
+per-sigma seeds and adds independent Gaussian noise without clipping noisy
+values or predictions. That preserves the stated corruption model. Clean
+normalized volumes must be in `[0,1]`; noisy volumes may leave that range.
 
 The output manifest records normalization, NumPy version, seeds, paths and
 hashes. Each subject has `clean.npy` and `noisy_0.03.npy`,
@@ -274,7 +291,7 @@ held-out clean arrays are opened by evaluation after the checkpoint is frozen.
 
 ### Runnable synthetic demonstration
 
-Use a **fresh** scratch directory outside the repository:
+Use a fresh scratch directory outside the repository:
 
 ```bash
 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python NGPS/scripts/synthetic_pipeline.py \
@@ -306,10 +323,12 @@ Repeat separately for sigma 0.03, 0.06 and 0.10 with fresh run directories.
 For neural comparisons change `--method` to `adjacent` or `blindspot`;
 keep the same backbone, manifest, noise draws and measured workload budget.
 The additional `nsn2n` objective is a project-local comparator. NLM is evaluated
-without training. Use `--device cuda` only on a configured CUDA machine.
+without training. Use `--device cuda` on a configured CUDA machine or
+`--device mps` on Apple Silicon with an MPS-enabled PyTorch build. Re-measure
+budgets separately for each hardware backend.
 
-Current training selects **the predeclared final epoch**. A fixed random masked
-noisy validation MSE is monitoring only; it does not select a best epoch. Run
+Current training selects the predeclared final epoch. A fixed random masked
+noisy validation MSE is monitoring only; it does not choose a best epoch. Run
 outputs include `config.json`, `manifest.json`, `metadata.json`,
 `source_snapshot.zip`, periodic `model_E*.pth` and `model_final.pth`.
 Metadata includes seed, method, sigma, environment, manifest/hash, checkpoint
@@ -375,13 +394,13 @@ $$\operatorname{SSIM}(x,\hat x)=
 {(\mu_x^2+\mu_{\hat x}^2+C_1)(\sigma_x^2+\sigma_{\hat x}^2+C_2)}.$$
 
 Higher is better. `mu` is the local mean, `sigma²` the local variance and
-`sigma_x,x_hat` the covariance. The current implementation uses scikit-image with a **7 by 7
-uniform window**, sample covariance factor `49/48`, `C1=(0.01 L)^2`, and
+`sigma_x,x_hat` the covariance. The current implementation uses scikit-image with
+a 7 by 7 uniform window, sample covariance factor `49/48`, `C1=(0.01 L)^2` and
 `C2=(0.03 L)^2`. It reflects boundaries during filtering and excludes a
 three-pixel border before spatial averaging. For smaller images it shrinks to
 the largest odd window no larger than seven and requires at least three pixels
-per dimension. This uniform-window configuration differs from the original
-paper's Gaussian-window implementation; record it when comparing scores.
+per dimension. That uniform window differs from the original paper's Gaussian
+window, so record it when comparing scores.
 
 For normalized HFEN, define `H` using
 [SciPy's Laplacian-of-Gaussian operator](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.gaussian_laplace.html):
@@ -399,44 +418,49 @@ For metric `m`, calculate a subject score before the group mean:
 $$m_s=\frac{1}{D_s}\sum_{z=1}^{D_s}m(x_s^z,\hat x_s^z),\qquad
 \bar m=\frac{1}{S}\sum_{s=1}^{S}m_s.$$
 
-Use equal subject weights, not pooled slices. Current GitHub aggregation reports the equal-subject mean, **population standard
-deviation** and subject count separately per sigma. It does not compute a
-Student-t interval. With two test subjects, avoid strong inferential claims.
-PSNR is averaged
-as per-slice dB values, not recomputed from pooled MSE. The course report uses
-PSNR, SSIM and HFEN; the evaluator also emits GMSD and `SobelGradientMagnitudeSimilarity`, which must not be relabeled as reference FSIM. The older local checkout calls its gradient proxy `fsim_proxy`.
+Use equal subject weights, not pooled slices. Current GitHub aggregation reports
+the equal-subject mean, population standard deviation and subject count
+separately per sigma. It does not compute a Student-t interval, and with two
+test subjects you should avoid strong inferential claims. PSNR is averaged as
+per-slice dB values, not recomputed from pooled MSE. The course report uses
+PSNR, SSIM and HFEN. The evaluator also emits GMSD and
+`SobelGradientMagnitudeSimilarity`, which must not be relabeled as reference
+FSIM. The older local checkout calls its gradient proxy `fsim_proxy`.
 
 ### Complete-volume timing protocol
 
 $$T_{\rm volume}=t_{\rm end}-t_{\rm start}\quad\text{seconds; lower is better}.$$
 
 Use a monotonic clock. Load the model and perform warmup before the timed
-region. Synchronize the GPU immediately before starting and before stopping.
+region, and synchronize the GPU immediately before starting and before stopping.
 Start before reading a noisy volume; stop after preprocessing, denoising all
 slices, volume assembly and saving the output. Report hardware, volume shape,
 clipping policy, warmup and each subject's time. Include required inference
-preprocessing for every method; NGPS guide matching is training-only. This end-to-end measurement is implemented separately. `timed_inference` measures the
-whole prediction volume including transfers/assembly, has no warmup, and excludes
-disk I/O and model loading. Keep its `inference_seconds` label distinct from the
-broader `T_volume` above; use the separate synchronized load-to-save measurement
-for the broader time. Do not silently compare the two scopes.
+preprocessing for every method; NGPS guide matching is training-only.
+
+The end-to-end measurement exists as a separate path. `timed_inference`
+measures the whole prediction volume including transfers and assembly, with no
+warmup, and excludes disk I/O and model loading. Keep its `inference_seconds`
+label distinct from the broader `T_volume` above, and use the synchronized
+load-to-save measurement for the broader time. Do not compare the two scopes as
+if they measured the same thing.
 
 ## Validation and next actions
 
-Existing checks can be run from the repository root:
+You can run the existing checks from the repository root:
 
 ```bash
 python NGPS/scripts/smoke_test.py
 python -m unittest discover -s NGPS/tests -v
 ```
 
-These checks concern software behavior. They do not establish medical
-performance. Provenance, normalization, preparation, pilot, the matched nine-run matrix
-and medical benchmark are complete as recorded above. Confidence weighting remains
-proposed. Any corrective experiment must be labeled separately and must preserve
-the original frozen settings and unmet target.
-See [implementation gaps](docs/report/implementation_gaps.md) for issues found
-while reconciling the report with the code.
+These checks concern software behavior and do not establish medical performance.
+Provenance, normalization, preparation, the pilot, the matched nine-run matrix
+and the medical benchmark are complete as recorded above. Confidence weighting
+is still proposed. Any corrective experiment needs its own label and has to
+preserve the original frozen settings and the unmet target. See
+[implementation gaps](docs/report/implementation_gaps.md) for issues found while
+reconciling the report with the code.
 
 ## References and attribution
 

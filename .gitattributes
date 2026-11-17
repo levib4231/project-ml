@@ -1,0 +1,4 @@
+# Historical evidence is byte-preserved: inventory hashes must survive checkout.
+evidence/checkpoint2/** -text
+# Python's csv writer emitted CRLF; keep it without treating CR as stray space.
+evidence/checkpoint2/**/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

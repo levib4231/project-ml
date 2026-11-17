@@ -1,0 +1,22 @@
+{
+  "load_count": 208,
+  "loaded_paths": [
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject04/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject05/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject06/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject18/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject38/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject41/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject42/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/exploratory/rician_v1/prepared/subject43/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_000/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_001/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_002/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_003/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_005/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_006/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_007/noisy_0.06.npy",
+    "/Users/levibates/Projects/Project ML/outputs/checkpoint2/medical/mps_full_prepared/subject_008/noisy_0.06.npy"
+  ],
+  "forbidden_loads": 0
+}

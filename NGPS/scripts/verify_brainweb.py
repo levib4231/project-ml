@@ -1,7 +1,8 @@
 """Verify all local MINC sources against freshly downloaded BrainWeb volumes.
 
-Retains HTTP receipts and hashes, not a claim of a redistribution license.
-Uses MINC1 headers to audit the historical NiBabel conversion without rewriting it.
+Keep the HTTP receipts and hashes. They do not establish a redistribution
+license. The script uses MINC1 headers to audit the historical NiBabel
+conversion without rewriting it.
 """
 from __future__ import annotations
 

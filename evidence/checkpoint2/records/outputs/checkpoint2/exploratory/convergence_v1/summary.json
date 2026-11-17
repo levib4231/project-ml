@@ -1,0 +1,422 @@
+{
+  "protocol_hash": "25e1c7b6b1db0f4b812b4a35882c164af5b394123c7bb7118212eb59dd0691e4",
+  "runs": [
+    {
+      "method": "ngps",
+      "updates": 531,
+      "epochs": 1,
+      "wall_seconds": 150.3635384170011,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.008164503131054776,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.007200455901663743,
+          "n2n": 0.004859056124698701,
+          "dynamic": 0.0023413997805276586,
+          "rc": 0.001928094428362809,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.04853323271336725
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0040414961355389745
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 65412096,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "blindspot",
+      "updates": 531,
+      "epochs": 1,
+      "wall_seconds": 51.076241291999395,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.006090536434729558,
+          "gradient_l2_norm": 0.03452778162904743
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003986058047811329
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 38682624,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "adjacent",
+      "updates": 531,
+      "epochs": 1,
+      "wall_seconds": 55.90099666700007,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.004911543906661077,
+          "gradient_l2_norm": 0.013706216514952439
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003993318461703772
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 38682624,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "ngps",
+      "updates": 1062,
+      "epochs": 2,
+      "wall_seconds": 262.0862466670005,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.008164503131054776,
+          "dynamic_active_fraction": 0.012738588839600988,
+          "dynamic_empty_fraction": 0.0009416195856873823,
+          "static_active_fraction": 0.987261411160399,
+          "static_empty_fraction": 0.0,
+          "recon": 0.007200455901663743,
+          "n2n": 0.004859056124698701,
+          "dynamic": 0.0023413997805276586,
+          "rc": 0.001928094428362809,
+          "ic": 0.0,
+          "match_cost_mean": 0.00012137888228327164,
+          "match_cost_max": 0.01526955422013998,
+          "gradient_l2_norm": 0.04853323271336725
+        },
+        {
+          "epoch": 2,
+          "loss": 0.00569596839016356,
+          "dynamic_active_fraction": 0.013096696239406779,
+          "dynamic_empty_fraction": 0.0,
+          "static_active_fraction": 0.9869033037605932,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005516310952070631,
+          "n2n": 0.004032040992225546,
+          "dynamic": 0.0014842699607220354,
+          "rc": 0.00035931487722723986,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011980395152493558,
+          "match_cost_max": 0.012363803572952747,
+          "gradient_l2_norm": 0.03602154368338247
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.0040414961355389745
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.004008286876484294
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 65413120,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "blindspot",
+      "updates": 1062,
+      "epochs": 2,
+      "wall_seconds": 97.1391469579994,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.006090536434729558,
+          "gradient_l2_norm": 0.03452778162904743
+        },
+        {
+          "epoch": 2,
+          "loss": 0.004096863967613817,
+          "gradient_l2_norm": 0.01843033544017658
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003986058047811329
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.0039412213792483315
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39010304,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "adjacent",
+      "updates": 1062,
+      "epochs": 2,
+      "wall_seconds": 99.92267958299999,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.004911543906661077,
+          "gradient_l2_norm": 0.013706216514952439
+        },
+        {
+          "epoch": 2,
+          "loss": 0.004066592178407446,
+          "gradient_l2_norm": 0.009016079776402976
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003993318461703772
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.003916523005038125
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39010304,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "ngps",
+      "updates": 2148,
+      "epochs": 2,
+      "wall_seconds": 492.63775316600004,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.006912207283388331,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.006344860771695218,
+          "n2n": 0.004438380779068937,
+          "dynamic": 0.001906479990864875,
+          "rc": 0.0011346930100537447,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.04296575638064958
+        },
+        {
+          "epoch": 2,
+          "loss": 0.005633879259135054,
+          "dynamic_active_fraction": 0.012963151132594273,
+          "dynamic_empty_fraction": 0.0013966480446927375,
+          "static_active_fraction": 0.9870368488674057,
+          "static_empty_fraction": 0.0,
+          "recon": 0.005468928747250242,
+          "n2n": 0.0040147163958533265,
+          "dynamic": 0.0014542123473185856,
+          "rc": 0.0003299010275227704,
+          "ic": 0.0,
+          "match_cost_mean": 0.00011982227647041333,
+          "match_cost_max": 0.016737589612603188,
+          "gradient_l2_norm": 0.03253845530028804
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.004008194032338494
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.00397735304594581
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 65413120,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "blindspot",
+      "updates": 2148,
+      "epochs": 2,
+      "wall_seconds": 217.3078544580003,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.005085128863095835,
+          "gradient_l2_norm": 0.026029882730579688
+        },
+        {
+          "epoch": 2,
+          "loss": 0.004055686898137577,
+          "gradient_l2_norm": 0.017062780950253126
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003946959837105687
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.003908223004272863
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39010304,
+        "driver_memory_bytes": 1447788544
+      }
+    },
+    {
+      "method": "adjacent",
+      "updates": 2148,
+      "epochs": 2,
+      "wall_seconds": 221.9905370839988,
+      "within_cap": true,
+      "training_history": [
+        {
+          "epoch": 1,
+          "loss": 0.004482922300755339,
+          "gradient_l2_norm": 0.011942865725240741
+        },
+        {
+          "epoch": 2,
+          "loss": 0.0040378083639259635,
+          "gradient_l2_norm": 0.009019106533508436
+        }
+      ],
+      "validation_history": [
+        {
+          "epoch": 1,
+          "noisy_masked_mse": 0.003950565258644563
+        },
+        {
+          "epoch": 2,
+          "noisy_masked_mse": 0.00395196154336419
+        }
+      ],
+      "training_subjects": [
+        "subject04",
+        "subject06",
+        "subject18",
+        "subject41",
+        "subject42",
+        "subject43"
+      ],
+      "device_memory": {
+        "backend": "mps",
+        "peak_memory_bytes": null,
+        "current_memory_bytes": 39010304,
+        "driver_memory_bytes": 1447788544
+      }
+    }
+  ],
+  "test_scoring_performed": false,
+  "clean_reference_arrays_loaded": false
+}

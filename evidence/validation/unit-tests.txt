@@ -1,0 +1,56 @@
+test_coordinates_retrieve_original_raw_values_at_edges (test_checkpoint2.DiagnosticTests.test_coordinates_retrieve_original_raw_values_at_edges) ... ok
+test_load_to_save_timer_order_and_no_overwrite (test_checkpoint2.DiagnosticTests.test_load_to_save_timer_order_and_no_overwrite) ... ok
+test_metrics_against_independent_calculations (test_checkpoint2.DiagnosticTests.test_metrics_against_independent_calculations) ... ok
+test_budget_failure_not_silently_skipped (test_checkpoint2.ExperimentTests.test_budget_failure_not_silently_skipped) ... ok
+test_freeze_rejects_changed_configuration_and_medical_shortcuts (test_checkpoint2.ExperimentTests.test_freeze_rejects_changed_configuration_and_medical_shortcuts) ... ok
+test_missing_matrix_rejected_before_clean_or_test_arrays (test_checkpoint2.ExperimentTests.test_missing_matrix_rejected_before_clean_or_test_arrays) ... ok
+test_nine_runs_and_complete_benchmark_with_leakage_guards (test_checkpoint2.ExperimentTests.test_nine_runs_and_complete_benchmark_with_leakage_guards) ... ok
+test_pilot_projects_full_validation_and_freezes_equal_workload (test_checkpoint2.ExperimentTests.test_pilot_projects_full_validation_and_freezes_equal_workload) ... ok
+test_receipt_must_bind_source_and_every_subject (test_checkpoint2.ExperimentTests.test_receipt_must_bind_source_and_every_subject) ... ok
+test_diagnostics_do_not_change_training (test_comparison.ComparisonTests.test_diagnostics_do_not_change_training) ... ok
+test_loss_ablation_arithmetic_and_default (test_comparison.ComparisonTests.test_loss_ablation_arithmetic_and_default) ... ok
+test_noisy_only_matched_pilot_and_no_overwrite (test_comparison.ComparisonTests.test_noisy_only_matched_pilot_and_no_overwrite) ... ok
+test_invalid_method_scalars (test_config_crop.ConfigTests.test_invalid_method_scalars) ... ok
+test_invalid_training_scalars (test_config_crop.ConfigTests.test_invalid_training_scalars) ... ok
+test_non_mapping (test_config_crop.ConfigTests.test_non_mapping) ... ok
+test_unknown_keys (test_config_crop.ConfigTests.test_unknown_keys) ... ok
+test_valid_defaults_and_configs (test_config_crop.ConfigTests.test_valid_defaults_and_configs) ... ok
+test_aligned_rectangular_and_equal_crops (test_config_crop.CropTests.test_aligned_rectangular_and_equal_crops) ... ok
+test_full_slices_and_invalid_options (test_config_crop.CropTests.test_full_slices_and_invalid_options) ... ok
+test_mixed_sizes_batch_and_alignment (test_config_crop.CropTests.test_mixed_sizes_batch_and_alignment) ... ok
+test_too_small_and_insufficient_depth_fail_at_construction (test_config_crop.CropTests.test_too_small_and_insufficient_depth_fail_at_construction) ... ok
+test_data_validation_and_normalization (test_correctness.DataTests.test_data_validation_and_normalization) ... ok
+test_deterministic_split_and_seeds (test_correctness.DataTests.test_deterministic_split_and_seeds) ... ok
+test_manifest_leakage (test_correctness.DataTests.test_manifest_leakage) ... ok
+test_noise_is_deterministic_unclipped (test_correctness.DataTests.test_noise_is_deterministic_unclipped) ... ok
+test_versioned_source_manifest_metadata (test_correctness.DataTests.test_versioned_source_manifest_metadata) ... ok
+test_global_residual_and_odd_shape (test_correctness.MethodTests.test_global_residual_and_odd_shape) ... ok
+test_guide_mask_and_diagnostics (test_correctness.MethodTests.test_guide_mask_and_diagnostics) ... ok
+test_losses_empty_and_active (test_correctness.MethodTests.test_losses_empty_and_active) ... ok
+test_real_baselines (test_correctness.MethodTests.test_real_baselines) ... ok
+test_sampler_shapes_bounds_and_boundary_cost (test_correctness.MethodTests.test_sampler_shapes_bounds_and_boundary_cost) ... ok
+test_subject_aggregation_and_metrics (test_correctness.MethodTests.test_subject_aggregation_and_metrics) ... ok
+test_all_objectives_never_open_clean_and_metadata (test_correctness.PipelineTests.test_all_objectives_never_open_clean_and_metadata) ... ok
+test_synthetic_end_to_end (test_correctness.PipelineTests.test_synthetic_end_to_end) ... ok
+test_cpu_device_contract (test_device.DeviceTests.test_cpu_device_contract) ... ok
+test_mps_device_contract_and_memory_telemetry (test_device.DeviceTests.test_mps_device_contract_and_memory_telemetry) ... ok
+test_preferred_device_is_supported (test_device.DeviceTests.test_preferred_device_is_supported) ... ok
+test_invalid_guide_inputs (test_sampler_losses.GuideRegressionTests.test_invalid_guide_inputs) ... ok
+test_nonconstant_out_of_range_float32_matches_explicit_filters (test_sampler_losses.GuideRegressionTests.test_nonconstant_out_of_range_float32_matches_explicit_filters) ... ok
+test_asymmetric_masks_arithmetic_and_gradients (test_sampler_losses.LossArithmeticTests.test_asymmetric_masks_arithmetic_and_gradients) ... ok
+test_nsn2n_ic_detaches_neighbor_prediction_targets (test_sampler_losses.LossArithmeticTests.test_nsn2n_ic_detaches_neighbor_prediction_targets) ... ok
+test_all_shift_ssds_raw_topk_both_directions_and_detach (test_sampler_losses.SamplerOracleTests.test_all_shift_ssds_raw_topk_both_directions_and_detach) ... ok
+test_inventory_and_tampering (test_submission.SubmissionTests.test_inventory_and_tampering) ... ok
+test_uninventoried_files_and_prohibited_arrays (test_submission.SubmissionTests.test_uninventoried_files_and_prohibited_arrays) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 8.391s
+
+OK
+{'epoch': 1, 'loss': 0.051465207089980446, 'dynamic_active_fraction': 0.6021412114302317, 'dynamic_empty_fraction': 0.0, 'static_active_fraction': 0.39785878856976825, 'static_empty_fraction': 0.0, 'recon': 0.04696665704250336, 'n2n': 0.018527672936518986, 'dynamic': 0.028438984726866085, 'rc': 0.008997100094954172, 'ic': 0.0, 'match_cost_mean': 0.0072302961101134615, 'match_cost_max': 0.11156696826219559, 'noisy_validation_mse': 0.03162802231963724}
+{'epoch': 1, 'loss': 0.022963899187743664, 'dynamic_active_fraction': 0.6021412114302317, 'dynamic_empty_fraction': 0.0, 'static_active_fraction': 0.39785878856976825, 'static_empty_fraction': 0.0, 'noisy_validation_mse': 0.03201701119542122}
+{'epoch': 1, 'loss': 0.048029618648191295, 'noisy_validation_mse': 0.0316413362743333}
+{'epoch': 1, 'loss': 0.03773574779431025, 'noisy_validation_mse': 0.031595806241966784}
+{'epoch': 1, 'loss': 0.03773574779431025, 'noisy_validation_mse': 0.031595806241966784}
+{'epoch': 1, 'loss': 0.051465207089980446, 'dynamic_active_fraction': 0.6021412114302317, 'dynamic_empty_fraction': 0.0, 'static_active_fraction': 0.39785878856976825, 'static_empty_fraction': 0.0, 'recon': 0.04696665704250336, 'n2n': 0.018527672936518986, 'dynamic': 0.028438984726866085, 'rc': 0.008997100094954172, 'ic': 0.0, 'match_cost_mean': 0.0072302961101134615, 'match_cost_max': 0.11156696826219559, 'noisy_validation_mse': 0.03162802231963724}
+Synthetic train/infer/evaluate PASS: 2 held-out subjects, standalone volume inference 0.001408s; artifacts: /var/folders/cw/y9cp38bd5nxfqk8x_pfy7sl40000gn/T/tmpnfpx5v96

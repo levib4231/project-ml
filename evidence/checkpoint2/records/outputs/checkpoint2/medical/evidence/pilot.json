@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "kind": "pilot",
+  "manifest_hash": "8c410870d0bbdeb541337e1518fc88fc22673b53eaa4259864800db8713b7305",
+  "source_tree_sha256": "bb4ec5e39671c1a20ca10f08850ef10008d46ea98f247b0e4136c817b6474ac4",
+  "config": {
+    "ngps": {
+      "mask_threshold": 0.05,
+      "nafnet_dec_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_enc_blocks": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "nafnet_middle_blocks": 1,
+      "nafnet_width": 16,
+      "patch_size": 7,
+      "rc_weight": 0.5,
+      "search_window": 15,
+      "topk": 4
+    },
+    "training": {
+      "batch_size": 1,
+      "crop_size": 128,
+      "epochs": 1,
+      "lr": 0.0002,
+      "num_workers": 0,
+      "seed": 42,
+      "weight_decay": 1e-05
+    }
+  },
+  "device": "cuda",
+  "measurements": {
+    "ngps": {
+      "optimizer_steps": 16,
+      "training_seconds": 9.47852982600034,
+      "validation_seconds": 0.12206308900022123,
+      "peak_cuda_memory_bytes": 215372288,
+      "wall_seconds": 14.120494119000796
+    },
+    "blindspot": {
+      "optimizer_steps": 16,
+      "training_seconds": 0.630440525999802,
+      "validation_seconds": 0.09865598099986528,
+      "peak_cuda_memory_bytes": 85633024,
+      "wall_seconds": 3.5795981889996256
+    },
+    "adjacent": {
+      "optimizer_steps": 16,
+      "training_seconds": 1.118174567999631,
+      "validation_seconds": 0.18587671099976433,
+      "peak_cuda_memory_bytes": 85501952,
+      "wall_seconds": 5.450150988000132
+    }
+  },
+  "note": "Subject04, sigma0.06, 16 center slices, one epoch, batch1. Not held-out evidence."
+}

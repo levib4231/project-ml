@@ -8,6 +8,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ngps.checkpoint2 import (benchmark, export_diagnostics, freeze, pilot,
                              prepare_verified, train_matrix)
+from ngps.device import preferred_device
 
 
 def main():
@@ -23,7 +24,7 @@ def main():
         command.add_argument('--config', required=True)
         command.add_argument('--output-dir', required=True)
         if name == 'pilot':
-            command.add_argument('--device', default='cuda')
+            command.add_argument('--device', default=preferred_device())
         else:
             command.add_argument('--pilot')
             command.add_argument('--max-train-batches', type=int)
@@ -33,7 +34,7 @@ def main():
     for name in ('train', 'benchmark'):
         command = commands.add_parser(name)
         command.add_argument('--protocol', required=True)
-        command.add_argument('--device', default='cuda')
+        command.add_argument('--device', default=preferred_device())
     diagnostic = commands.add_parser('diagnostics')
     diagnostic.add_argument('--manifest', required=True)
     diagnostic.add_argument('--config', required=True)
