@@ -53,6 +53,13 @@ class DiagnosticTests(unittest.TestCase):
         self.assertAlmostEqual(ssim(ref, pred), structural_similarity(ref, pred, data_range=1, win_size=7))
         expected = np.linalg.norm(gaussian_laplace(ref, 1.5)-gaussian_laplace(pred,1.5)) / (np.linalg.norm(gaussian_laplace(ref,1.5))+1e-8)
         self.assertAlmostEqual(hfen(ref,pred), expected)
+    def test_ssim_smallest_supported_shape(self):
+        image = np.ones((3, 3), dtype=np.float32)
+        self.assertAlmostEqual(ssim(image, image), 1.0)
+
+        too_small = np.ones((2, 3), dtype=np.float32)
+        with self.assertRaisesRegex(ValueError, "spatial dimensions >= 3"):
+             ssim(too_small, too_small)
 
     def test_load_to_save_timer_order_and_no_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
