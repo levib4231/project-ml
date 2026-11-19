@@ -59,7 +59,7 @@ class DiagnosticTests(unittest.TestCase):
 
         too_small = np.ones((2, 3), dtype=np.float32)
         with self.assertRaisesRegex(ValueError, "spatial dimensions >= 3"):
-             ssim(too_small, too_small)
+            ssim(too_small, too_small)
 
     def test_load_to_save_timer_order_and_no_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
